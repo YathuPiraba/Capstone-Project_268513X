@@ -1,0 +1,17 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# Direct project dependencies, pinned to versions verified locally on Python 3.12.14.
+numpy==2.5.4
+pandas==3.1.0
+scipy==1.18.1
+scikit-learn==1.9.1
+h5py==3.16.0
+matplotlib==3.11.2
+seaborn==0.13.2
+PyYAML==6.0.3
+xgboost==3.4.1
+jupyterlab==4.6.5
+ipykernel==7.4.0
+pytest==9.2.0
+torch==2.15.0+cpu
+

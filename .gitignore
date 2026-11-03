@@ -1,0 +1,47 @@
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Local data and model artifacts
+data/
+datasets/
+checkpoints/
+models/
+artifacts/
+outputs/
+runs/
+*.h5
+*.hdf5
+*.ckpt
+*.pt
+*.pth
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary files and logs
+.tmp/
+tmp/
+temp/
+*.log
+*.tmp
+*.bak
+~$*
+
