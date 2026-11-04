@@ -10,7 +10,12 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Local data and model artifacts
-data/
+/data/raw/metr-la/*
+!/data/raw/metr-la/adj_mx_METR-LA.pkl
+!/data/raw/metr-la/graph_sensor_ids.txt
+
+/data/raw/pems-bay/
+
 datasets/
 checkpoints/
 models/

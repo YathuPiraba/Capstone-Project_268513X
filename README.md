@@ -1,82 +1,89 @@
-# UrbanFlow AI
+# UrbanFlow AI - Spatio-Temporal Graph Learning for Urban Traffic Forecasting and Analysis
 
-UrbanFlow AI investigates whether spatial road-network relationships improve
-multi-horizon traffic-speed forecasting on METR-LA. Local development uses
-ordinary Python modules and scripts so reusable code can also run on Kaggle or
-Google Colab without Kaggle-specific notebook dependencies.
+UrbanFlow AI is an MSc Data Science and Artificial Intelligence capstone project investigating short-term traffic-speed forecasting on the METR-LA road-sensor network.
 
-## Prerequisites
+## Research question
 
-- Windows 10 or 11 with PowerShell
-- Git
-- Python 3.11 preferred; Python 3.12 is supported and was used for the verified
-  local environment
-- VS Code with the Microsoft **Python** (`ms-python.python`) and **Jupyter**
-  (`ms-toolsai.jupyter`) extensions
+> To what extent does incorporating spatial road-network relationships improve multi-horizon traffic-speed forecasting compared with conventional and temporal-only forecasting approaches?
 
-Install the extensions from VS Code's Extensions view, or run:
+The study does not assume that a graph model will perform best. Negative or mixed results are valid if fair held-out experiments show that spatial information provides limited or conditional benefit.
 
-```powershell
-code --install-extension ms-python.python
-code --install-extension ms-toolsai.jupyter
+## Dataset and forecasting setup
+
+METR-LA contains traffic speeds from **207 sensors** across **34,272 observations** sampled every five minutes. Task 02 verified these dimensions, the timestamp cadence, and sensor ordering across the speed data and graph metadata.
+
+Later experiments will use 12 historical steps (60 minutes) to predict 12 future steps (60 minutes), with evaluation at **+15, +30, and +60 minutes** (output steps 3, 6, and 12). Dataset sources, paths, hashes, and safety notes are in [data/README.md](data/README.md).
+
+## Planned models
+
+The planned comparison is **Persistence**, **Historical Average**, **XGBoost**, one **LSTM or GRU**, and one **spatio-temporal graph neural network (ST-GNN)**.
+
+These forecasting models have not yet been implemented.
+
+## Current repository structure
+
+```text
+Capstone-Project_268513X/
+|-- README.md
+|-- requirements.txt
+|-- data/
+|   |-- README.md
+|   `-- raw/                         # Local METR-LA and optional PEMS-BAY files
+|-- notebooks/
+|   `-- 01_metr_la_eda.ipynb        # Completed Task 02 notebook
+|-- scripts/check_environment.py
+|-- src/data/inspection.py          # Dataset inspection helpers
+`-- tests/test_data_inspection.py
 ```
 
-## Local environment setup (PowerShell)
+Preprocessing, model, evaluation, backend, and frontend components are planned work and are not currently implemented.
 
-From the repository root, create and activate the virtual environment:
+## Local setup
+
+From the repository root in PowerShell:
 
 ```powershell
-py -3.11 -m venv .venv
+py -3.12 -m venv .venv
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 .\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-If Python 3.11 is unavailable, use a compatible Python 3.12 interpreter, for
-example `py -3.12 -m venv .venv`. The checked local environment uses Python
-3.12.14 and CPU-only PyTorch. The PyTorch CPU wheel index is recorded in
-`requirements.txt`; no CUDA packages are required for local smoke testing.
+The verified local environment uses Python 3.12.14 and CPU-only PyTorch. Place the required METR-LA files as described in [data/README.md](data/README.md) before running the notebook or tests.
 
-## VS Code and Jupyter
+## Run the EDA notebook
 
-1. Open the repository folder in VS Code.
-2. Run **Python: Select Interpreter** from the Command Palette and choose
-   `.venv\Scripts\python.exe`.
-3. Open a notebook, choose **Select Kernel**, then select **Python Environments**
-   and the `.venv` interpreter (displayed as `Python (UrbanFlow AI)` when the
-   optional local kernel registration is present).
-4. If the kernel is not listed, activate `.venv` and run:
+In VS Code, open `notebooks/01_metr_la_eda.ipynb`, select `.venv\Scripts\python.exe` as the kernel, and choose **Run All**.
 
-   ```powershell
-   python -m ipykernel install --user --name urbanflow-ai --display-name "Python (UrbanFlow AI)"
-   ```
+If needed, register the environment as a named Jupyter kernel:
 
-Notebook checkpoint directories are ignored, while `.ipynb` source files remain
-trackable. Clear large or unnecessary cell outputs before committing notebooks.
+```powershell
+python -m ipykernel install --user --name urbanflow-ai --display-name "Python (UrbanFlow AI)"
+```
 
-## Verify the environment
+After registration, the notebook can also be executed from PowerShell:
+
+```powershell
+python -m nbconvert --to notebook --execute --inplace notebooks/01_metr_la_eda.ipynb --ExecutePreprocessor.kernel_name=urbanflow-ai --ExecutePreprocessor.timeout=300
+```
+
+## Testing
 
 With `.venv` activated:
 
 ```powershell
 python scripts/check_environment.py
-python -m pytest
+python -m pytest -q
 ```
 
-The environment script checks package imports and versions, runs small NumPy and
-PyTorch operations, and reports CUDA availability for information only. Pytest
-may report that no tests were collected until project tests are added.
+The current tests check METR-LA dimensions, timestamp consistency, and exact graph sensor alignment.
 
-## Local development and Kaggle responsibilities
+## Current progress
 
-Use local Windows development for notebooks, preprocessing, baseline models,
-unit tests, FastAPI and Vue development, and Git work. Use Kaggle GPU sessions
-for computationally expensive LSTM/GRU and ST-GNN training. GitHub remains the
-source of truth for source code, configuration, experiment metadata, and
-documentation; datasets and model checkpoints stay outside Git.
+| Task | Status |
+| --- | --- |
+| Task 01 - Environment setup | **Completed** |
+| Task 02 - METR-LA inspection and EDA | **Completed** |
+| Task 03 - Leakage-safe preprocessing | **Not started** |
 
-PyTorch Geometric and PyTorch Geometric Temporal are intentionally not installed
-yet. Before Kaggle ST-GNN training, select versions that match Kaggle's Python,
-PyTorch, CUDA, and platform wheel availability. Keep graph-learning dependencies
-in a separate Kaggle-specific specification once that environment is confirmed.
+Only Tasks 01 and 02 are complete. Chronological splitting, preprocessing, forecasting windows, model training, evaluation, and the demonstration application remain planned work.
