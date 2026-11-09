@@ -16,9 +16,7 @@ Later experiments will use 12 historical steps (60 minutes) to predict 12 future
 
 ## Planned models
 
-The planned comparison is **Persistence**, **Historical Average**, **XGBoost**, one **LSTM or GRU**, and one **spatio-temporal graph neural network (ST-GNN)**.
-
-These forecasting models have not yet been implemented.
+The planned comparison is **Persistence**, **Historical Average**, **XGBoost**, one **LSTM or GRU**, and one **spatio-temporal graph neural network (ST-GNN)**. Task 04 implements the two deterministic baselines; learned forecasting models remain future work.
 
 ## Current repository structure
 
@@ -31,14 +29,17 @@ Capstone-Project_268513X/
 |   `-- raw/                         # Local METR-LA and optional PEMS-BAY files
 |-- notebooks/
 |   |-- 01_metr_la_eda.ipynb        # Completed Task 02 notebook
-|   `-- 02_metr_la_preprocessing.ipynb # Completed Task 03 notebook
+|   |-- 02_metr_la_preprocessing.ipynb # Completed Task 03 notebook
+|   `-- 03_metr_la_baselines.ipynb  # Completed Task 04 notebook
 |-- scripts/check_environment.py
 |-- scripts/smoke_preprocessing.py  # Real-data Task 03 verification
 |-- src/data/                       # Inspection, preprocessing, and windows
 `-- tests/                          # Data integrity and preprocessing tests
 ```
 
-Forecasting models, evaluation, backend, and frontend components remain planned work.
+Task 04 adds reusable baseline models under `src/models/`, shared masked metrics
+under `src/evaluation/`, and `scripts/run_baselines.py`. Backend and frontend
+components remain planned work.
 
 ## Leakage-safe preprocessing
 
@@ -103,8 +104,42 @@ zero/validity masks, 12-input/12-output windows, forecast horizons, and
 time-of-day feature alignment.
 Extreme-case tests cover all-zero input windows, sensors with no valid training
 readings, and validation/test input context crossing a split boundary while
-targets remain wholly inside their assigned split. Masked MAE/RMSE integration
-tests will be added with the shared metric implementation in Task 04.
+targets remain wholly inside their assigned split. Task 04 tests cover
+persistence, training-only historical averages, fallbacks, and masked MAE/RMSE.
+
+## Task 04 baselines
+
+Run the deterministic baselines from the repository root after placing the
+verified METR-LA CSV at the documented path:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\run_baselines.py
+```
+
+Persistence repeats the last value in each 60-minute input window. Historical
+Average uses only training rows to calculate a per-sensor mean for each
+five-minute slot of the week, with a training-only per-sensor fallback for a
+slot without finite observations. Exact zeros remain recorded values when the
+Historical Average is fitted.
+
+The script evaluates the locked chronological test windows at forecast steps
+3, 6, and 12 (+15, +30, and +60 minutes). Primary masked MAE/RMSE excludes
+finite exact-zero targets because Task 02 found their meaning uncertain. A
+second sensitivity policy includes all finite targets, including zeros. Both
+policies use the same saved targets and forecasts, and metrics are in original
+speed units (mph).
+
+Small metrics and provenance are written to
+`results/task04_baselines/metrics.json`. The larger compressed prediction file
+is written to ignored `artifacts/task04_baselines/test_predictions_horizons.npz`;
+the metrics document records its SHA-256 hash, dataset hash, split boundaries,
+package versions, model definitions, and mask policies.
+
+The Task 04 notebook was manually executed from top to bottom on 9 November
+2026. All six code cells completed in order without errors, its saved assertions
+passed, and it reproduced 6,844 test windows across 207 sensors at the three
+required horizons. The generated prediction and dataset SHA-256 hashes match
+the metrics manifest. The full automated suite also passes with 19 tests.
 
 ## Current progress
 
@@ -113,5 +148,10 @@ tests will be added with the shared metric implementation in Task 04.
 | Task 01 - Environment setup | **Completed** |
 | Task 02 - METR-LA inspection and EDA | **Completed** |
 | Task 03 - Leakage-safe preprocessing | **Completed** |
+| Task 04 - Simple baselines | **Completed** |
 
-Tasks 01, 02, and 03 are complete. Task 03 code, 14 automated tests, the real-data smoke test, and the manually executed educational notebook all passed. Model training, evaluation, and the demonstration application remain planned work.
+Tasks 01 through 04 are complete. Task 04 includes deterministic baseline
+inference, shared masked metrics, reproducible prediction/metric artifacts, five
+focused baseline tests, and a successfully executed six-code-cell notebook. The
+complete automated suite passes with 19 tests. Learned-model training and the
+demonstration application remain planned work.
