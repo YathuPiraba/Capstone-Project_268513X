@@ -30,13 +30,34 @@ Capstone-Project_268513X/
 |   |-- README.md
 |   `-- raw/                         # Local METR-LA and optional PEMS-BAY files
 |-- notebooks/
-|   `-- 01_metr_la_eda.ipynb        # Completed Task 02 notebook
+|   |-- 01_metr_la_eda.ipynb        # Completed Task 02 notebook
+|   `-- 02_metr_la_preprocessing.ipynb # Completed Task 03 notebook
 |-- scripts/check_environment.py
-|-- src/data/inspection.py          # Dataset inspection helpers
-`-- tests/test_data_inspection.py
+|-- scripts/smoke_preprocessing.py  # Real-data Task 03 verification
+|-- src/data/                       # Inspection, preprocessing, and windows
+`-- tests/                          # Data integrity and preprocessing tests
 ```
 
-Preprocessing, model, evaluation, backend, and frontend components are planned work and are not currently implemented.
+Forecasting models, evaluation, backend, and frontend components remain planned work.
+
+## Leakage-safe preprocessing
+
+Task 03 uses chronological 70%/10%/20% row ranges and 12-input/12-output
+windows. Validation and test windows may use already-observed history from the
+preceding split, but every target remains inside its assigned split. Per-sensor
+normalization is fitted only on finite, nonzero training observations and then
+reused unchanged. The fixed input policy for every learned model is
+`preserve_recorded_zeros_with_masks`: recorded zero speeds are standardized as
+recorded, accompanied by explicit zero/validity masks, and never imputed. The proposed
+primary evaluation mask excludes exact-zero targets because their meaning is
+uncertain, while retaining a configurable finite-value mask for sensitivity
+analysis.
+
+Run the focused real-data verification with:
+
+```powershell
+python scripts/smoke_preprocessing.py
+```
 
 ## Local setup
 
@@ -77,6 +98,13 @@ python -m pytest -q
 ```
 
 The current tests check METR-LA dimensions, timestamp consistency, and exact graph sensor alignment.
+They also verify chronological split boundaries, leakage-safe normalization,
+zero/validity masks, 12-input/12-output windows, forecast horizons, and
+time-of-day feature alignment.
+Extreme-case tests cover all-zero input windows, sensors with no valid training
+readings, and validation/test input context crossing a split boundary while
+targets remain wholly inside their assigned split. Masked MAE/RMSE integration
+tests will be added with the shared metric implementation in Task 04.
 
 ## Current progress
 
@@ -84,6 +112,6 @@ The current tests check METR-LA dimensions, timestamp consistency, and exact gra
 | --- | --- |
 | Task 01 - Environment setup | **Completed** |
 | Task 02 - METR-LA inspection and EDA | **Completed** |
-| Task 03 - Leakage-safe preprocessing | **Not started** |
+| Task 03 - Leakage-safe preprocessing | **Completed** |
 
-Only Tasks 01 and 02 are complete. Chronological splitting, preprocessing, forecasting windows, model training, evaluation, and the demonstration application remain planned work.
+Tasks 01, 02, and 03 are complete. Task 03 code, 14 automated tests, the real-data smoke test, and the manually executed educational notebook all passed. Model training, evaluation, and the demonstration application remain planned work.
