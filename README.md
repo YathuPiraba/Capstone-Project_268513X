@@ -32,7 +32,8 @@ Capstone-Project_268513X/
 |   |-- 02_metr_la_preprocessing.ipynb # Completed Task 03 notebook
 |   |-- 03_metr_la_baselines.ipynb  # Completed Task 04 notebook
 |   |-- 04_metr_la_xgboost.ipynb   # Task 05 artifact-review notebook
-|   `-- 05_metr_la_gru.ipynb       # Unexecuted Task 06 artifact-review notebook
+|   |-- 05_kaggle_gru_training.ipynb # Curated Kaggle training/recovery record
+|   `-- 06_metr_la_gru.ipynb       # Executed Task 06 artifact-review notebook
 |-- scripts/check_environment.py
 |-- scripts/smoke_preprocessing.py  # Real-data Task 03 verification
 |-- scripts/run_xgboost.py          # Explicit --smoke or --full mode
@@ -332,10 +333,22 @@ patience state. A configuration mismatch is rejected. The optional throughput
 probe is reset before training and therefore does not reduce or alter full
 dataset coverage.
 
-The artifact-only presentation notebook `notebooks/05_metr_la_gru.ipynb` was
+The artifact-only presentation notebook `notebooks/06_metr_la_gru.ipynb` was
 manually executed and saved after the completed Kaggle artifacts were returned.
 Its two code cells ran sequentially with execution counts 1 and 2, produced no
 errors, verified prediction shape `(6844, 3, 207)`, the required 15/30/60-minute
 horizons, and Task 04/05 alignment flags, and displayed all six primary and
 zero-inclusive metric rows from `results/task06_gru/metrics.json`. The notebook
 loads existing artifacts only and never starts training or test evaluation.
+
+`notebooks/05_kaggle_gru_training.ipynb` is a curated copy of the completed
+Kaggle execution. It preserves genuine outputs for unchanged environment,
+full-training, finalize-only, metrics, and packaging cells. The historical
+full-training traceback is intentionally retained because it shows that both
+candidates finished before finalization failed and motivates the successful
+no-retraining recovery shown later in the notebook. One-off
+checkpoint inspection, source dumps, patch-upload mechanics, and redundant
+recovery cells were removed. Markdown records the completed candidate results
+and clearly separates original full training from the optional no-retraining
+finalize-only recovery. The exact unmodified download remains separately at the
+parent workspace level and is not versioned with the repository.
