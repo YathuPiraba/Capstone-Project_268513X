@@ -1,0 +1,96 @@
+{
+  "task": "Task 06 - Sensor-local GRU",
+  "created_utc": "2026-11-11T11:01:39.668149+00:00",
+  "data_path": "data/raw/metr-la/METR-LA.csv",
+  "data_sha256": "8D67A35472DB1719D7D4BE851F2BF64CB21D9C52577C8A6B4B873D43205AF381",
+  "split_policy": "chronological_70_10_20",
+  "splits": {
+    "train": {
+      "start_row": 0,
+      "stop_row_exclusive": 23990
+    },
+    "validation": {
+      "start_row": 23990,
+      "stop_row_exclusive": 27417
+    },
+    "test": {
+      "start_row": 27417,
+      "stop_row_exclusive": 34272
+    }
+  },
+  "window_policy": "12 sensor-local input steps to 12 jointly trained target steps",
+  "feature_policy": "local standardized speed, zero/finite indicators, target time-of-day, learned sensor identity; no graph or neighbouring speeds",
+  "selection_policy": "lowest equal-weight mean validation MAE at +15/+30/+60, then candidate name",
+  "selected_config": "artifacts/task06_gru/selected_config.json",
+  "prediction_artifact": "artifacts/task06_gru/test_predictions_horizons.npz",
+  "prediction_sha256": "27C165BDE7FD72E1CD12D21F4D0D1087F9FA1CBCB08E90EE800461C39EC5FCAF",
+  "task04_alignment_verified": true,
+  "task05_alignment_verified": true,
+  "metrics": [
+    {
+      "model": "gru",
+      "horizon": "+15",
+      "forecast_step_1_based": 3,
+      "mask_policy": "finite_nonzero_targets",
+      "eligible_count": 1245040,
+      "excluded_count": 171668,
+      "mae_mph": 2.9618113483801447,
+      "rmse_mph": 5.81537973281208
+    },
+    {
+      "model": "gru",
+      "horizon": "+30",
+      "forecast_step_1_based": 6,
+      "mask_policy": "finite_nonzero_targets",
+      "eligible_count": 1245022,
+      "excluded_count": 171686,
+      "mae_mph": 3.390713080380212,
+      "rmse_mph": 6.924308797355407
+    },
+    {
+      "model": "gru",
+      "horizon": "+60",
+      "forecast_step_1_based": 12,
+      "mask_policy": "finite_nonzero_targets",
+      "eligible_count": 1244986,
+      "excluded_count": 171722,
+      "mae_mph": 4.1336423897149634,
+      "rmse_mph": 8.539686644055271
+    },
+    {
+      "model": "gru",
+      "horizon": "+15",
+      "forecast_step_1_based": 3,
+      "mask_policy": "all_finite_targets_including_zeros",
+      "eligible_count": 1416708,
+      "excluded_count": 0,
+      "mae_mph": 9.691341786742537,
+      "rmse_mph": 21.35519095880782
+    },
+    {
+      "model": "gru",
+      "horizon": "+30",
+      "forecast_step_1_based": 6,
+      "mask_policy": "all_finite_targets_including_zeros",
+      "eligible_count": 1416708,
+      "excluded_count": 0,
+      "mae_mph": 10.063154816252872,
+      "rmse_mph": 21.637162620044638
+    },
+    {
+      "model": "gru",
+      "horizon": "+60",
+      "forecast_step_1_based": 12,
+      "mask_policy": "all_finite_targets_including_zeros",
+      "eligible_count": 1416708,
+      "excluded_count": 0,
+      "mae_mph": 10.715817369964633,
+      "rmse_mph": 22.14582175993356
+    }
+  ],
+  "versions": {
+    "python": "3.13.16",
+    "torch": "2.11.0+cu130",
+    "numpy": "2.1.3"
+  }
+}

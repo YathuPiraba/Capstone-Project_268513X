@@ -1,0 +1,25 @@
+{
+  "candidate": "gru_h128",
+  "training_config": {
+    "candidate_name": "gru_h128",
+    "model": {
+      "history_features": 3,
+      "hidden_size": 128,
+      "sensor_count": 207,
+      "sensor_embedding_dim": 8,
+      "output_length": 12,
+      "future_time_features": 2
+    },
+    "learning_rate": 0.001,
+    "batch_size": 4096,
+    "max_epochs": 40,
+    "patience": 6,
+    "gradient_clip_norm": 1.0,
+    "seed": 268513
+  },
+  "parameter_count": 70649,
+  "best_epoch": 19,
+  "best_validation_score_mph": 3.2292559775068383,
+  "checkpoint": "artifacts/task06_gru/checkpoints/gru_h128_best.pt",
+  "checkpoint_sha256": "4FC1A1A86EED8BABC5F5C5A8B33EEA86CD8086399A03D2795723EAC2E9343D28"
+}

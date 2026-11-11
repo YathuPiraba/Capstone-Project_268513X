@@ -16,7 +16,7 @@ Later experiments will use 12 historical steps (60 minutes) to predict 12 future
 
 ## Planned models
 
-The planned comparison is **Persistence**, **Historical Average**, **XGBoost**, one **LSTM or GRU**, and one **spatio-temporal graph neural network (ST-GNN)**. Tasks 04 and 05 implement the deterministic baselines and conventional XGBoost model; temporal and graph models remain future work.
+The planned comparison is **Persistence**, **Historical Average**, **XGBoost**, one **LSTM or GRU**, and one **spatio-temporal graph neural network (ST-GNN)**. Tasks 04 and 05 implement the deterministic baselines and conventional XGBoost model. Task 06 implements the temporal GRU and awaits owner-operated full GPU training; graph-model work remains future work.
 
 ## Current repository structure
 
@@ -31,13 +31,17 @@ Capstone-Project_268513X/
 |   |-- 01_metr_la_eda.ipynb        # Completed Task 02 notebook
 |   |-- 02_metr_la_preprocessing.ipynb # Completed Task 03 notebook
 |   |-- 03_metr_la_baselines.ipynb  # Completed Task 04 notebook
-|   `-- 04_metr_la_xgboost.ipynb   # Task 05 artifact-review notebook
+|   |-- 04_metr_la_xgboost.ipynb   # Task 05 artifact-review notebook
+|   `-- 05_metr_la_gru.ipynb       # Unexecuted Task 06 artifact-review notebook
 |-- scripts/check_environment.py
 |-- scripts/smoke_preprocessing.py  # Real-data Task 03 verification
 |-- scripts/run_xgboost.py          # Explicit --smoke or --full mode
+|-- scripts/run_gru.py              # Guarded CPU smoke / owner GPU workflow
 |-- src/data/                       # Inspection, preprocessing, and windows
 |-- src/models/xgboost.py           # Sensor-local pooled features
 |-- src/training/xgboost.py         # Deterministic training/inference
+|-- src/models/gru.py               # Sensor-local temporal GRU
+|-- src/training/gru.py             # Dataset, loss, checkpoint utilities
 `-- tests/                          # Data integrity and preprocessing tests
 ```
 
@@ -228,12 +232,110 @@ horizon, policy, and model-file assertions passed.
 | Task 03 - Leakage-safe preprocessing | **Completed** |
 | Task 04 - Simple baselines | **Completed** |
 | Task 05 - XGBoost | **Completed** |
+| Task 06 - Temporal GRU | **Implemented; full Kaggle training pending** |
 
-Tasks 01 through 05 are complete. Task 04 includes deterministic baseline
+Tasks 01 through 06 are complete. Task 04 includes deterministic baseline
 inference, shared masked metrics, reproducible prediction/metric artifacts, five
 focused baseline tests, and a successfully executed six-code-cell notebook.
 Task 05 includes validation-only XGBoost selection, three horizon-specific
 models, aligned held-out predictions and metrics, an executed seven-code-cell
-presentation notebook, and ten focused tests. Temporal-model, graph-model, and
-demonstration-application work remain planned. The current automated suite
-passes 29 tests.
+presentation notebook, and ten focused tests. Graph-model and
+demonstration-application work remain planned. The automated suite
+passed 29 tests before Task 06 was added. The current suite passes 43 tests.
+
+## Task 06 sensor-local GRU
+
+Task 06 is complete. The GRU
+treats each forecast-origin/sensor pair as an independent example, shares model
+parameters across sensors, and never receives neighbouring histories or graph
+information. It jointly predicts all 12 future steps from 12 local historical
+steps. Inputs are training-standardized speed, recorded-zero and finite-value
+indicators, known future time-of-day, and canonical sensor identity.
+
+The two full candidates have exact trainable parameter counts of 19,769
+(`gru_h64`) and 70,649 (`gru_h128`). Training minimizes count-weighted masked
+MAE in original mph over all 12 steps. Early stopping and candidate selection
+use the equal-weight mean validation MAE at +15, +30, and +60 minutes. Full
+training checked Task 04 and Task 05 target, timestamp, mask, horizon, and sensor
+alignment. Both candidates were trained on Kaggle using Python 3.13.16,
+PyTorch 2.11.0+cu130, and an NVIDIA Tesla T4. Validation selected `gru_h128`
+(70,649 parameters) at epoch 19 with a mean three-horizon validation MAE of
+3.229256 mph.
+
+Held-out primary results in original speed units are:
+
+| Model | Metric | +15 min | +30 min | +60 min |
+| --- | --- | ---: | ---: | ---: |
+| Persistence | MAE (mph) | 4.0175 | 5.0952 | 6.7980 |
+| XGBoost | MAE (mph) | 3.0044 | 3.5235 | **4.0866** |
+| GRU-128 | MAE (mph) | **2.9618** | **3.3907** | 4.1336 |
+| GRU-128 | RMSE (mph) | 5.8154 | 6.9243 | 8.5397 |
+
+The GRU improved on XGBoost at +15 and +30 minutes, while XGBoost remained
+slightly better at +60 minutes. This is a mixed predictive result, not evidence
+that recurrent modelling is universally superior. Under the zero-inclusive
+sensitivity policy, GRU MAE was 9.6913, 10.0632, and 10.7158 mph; the sharp
+deterioration confirms that the unresolved synchronized-zero periods materially
+affect conclusions.
+
+Final metadata are stored in `results/task06_gru/`; checkpoints, selected
+configuration, and aligned test predictions are stored in
+`artifacts/task06_gru/`. The artifact-only presentation notebook can reproduce
+tables and checks without retraining. A Kaggle finalization failure caused by
+CUDA-mapped CPU RNG state was recovered with `--finalize-only`, which validates
+both saved candidates and loads only model weights for inference.
+
+Run the tiny local engineering check with:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\run_gru.py --smoke --device cpu --batch-size 64
+```
+
+Run the owner-operated Kaggle experiment from the repository root with:
+
+```bash
+python scripts/run_gru.py --full --device auto --batch-size 4096 --num-workers 2 --throughput-probe-batches 20
+```
+
+Before full training, benchmark both approved candidates without loading the
+test split or writing scientific artifacts:
+
+```bash
+python scripts/run_gru.py --probe-only --device auto --batch-size 4096 --num-workers 2 --probe-warmup-batches 5 --throughput-probe-batches 50
+```
+
+Probe-only mode performs the unchanged forward pass, masked mph loss, backward
+pass, gradient clipping, and Adam optimizer step. CUDA warm-up batches are
+excluded from timing. It prints steady-state training throughput, explicitly
+estimated full-epoch and validation durations, and peak allocated GPU memory
+for `gru_h64` and `gru_h128`. It does not construct the test dataset, run test
+alignment, save checkpoints, or create/overwrite Task 06 result artifacts.
+
+If full training completed but finalization was interrupted, recover without
+training or validation search using the existing validation manifest and best
+checkpoints:
+
+```bash
+python scripts/run_gru.py --finalize-only --device cuda --batch-size 4096 --num-workers 2
+```
+
+Finalize-only validates both candidates, their saved validation histories,
+immutable configurations, parameter counts, checkpoint scores/epochs, dataset
+hash, split boundaries, sensor ordering, and Task 04/05 locked-test alignment
+before writing Task 06 predictions or metrics. It loads model weights only and
+does not restore optimizer or RNG state.
+
+Resume the exact same configuration with `--resume`. Checkpoints include model
+and optimizer state, experiment configuration, Python/NumPy/PyTorch/CUDA RNG
+state, the DataLoader shuffle-generator state, epoch history, best score, and
+patience state. A configuration mismatch is rejected. The optional throughput
+probe is reset before training and therefore does not reduce or alter full
+dataset coverage.
+
+The artifact-only presentation notebook `notebooks/05_metr_la_gru.ipynb` was
+manually executed and saved after the completed Kaggle artifacts were returned.
+Its two code cells ran sequentially with execution counts 1 and 2, produced no
+errors, verified prediction shape `(6844, 3, 207)`, the required 15/30/60-minute
+horizons, and Task 04/05 alignment flags, and displayed all six primary and
+zero-inclusive metric rows from `results/task06_gru/metrics.json`. The notebook
+loads existing artifacts only and never starts training or test evaluation.

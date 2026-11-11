@@ -1,0 +1,680 @@
+{
+  "task": "Task 06 - Sensor-local GRU",
+  "mode": "full",
+  "created_utc": "2026-11-11T10:33:08.180127+00:00",
+  "data_sha256": "8D67A35472DB1719D7D4BE851F2BF64CB21D9C52577C8A6B4B873D43205AF381",
+  "split_rows": {
+    "train": [
+      0,
+      23990
+    ],
+    "validation": [
+      23990,
+      27417
+    ],
+    "test": [
+      27417,
+      34272
+    ]
+  },
+  "dataset_examples": {
+    "train": 4961169,
+    "validation": 707112,
+    "test": 1416708
+  },
+  "device": "cuda",
+  "versions": {
+    "python": "3.13.16",
+    "torch": "2.11.0+cu130",
+    "numpy": "2.1.3"
+  },
+  "trials": [
+    {
+      "candidate": "gru_h64",
+      "best_score_mph": 3.246907376775986,
+      "parameter_count": 19769,
+      "best_checkpoint": "artifacts/task06_gru/checkpoints/gru_h64_best.pt",
+      "latest_checkpoint": "artifacts/task06_gru/checkpoints/gru_h64_latest.pt",
+      "throughput_probe": {
+        "batches": 20,
+        "examples": 81920,
+        "seconds": 10.52765922399999,
+        "examples_per_second": 7781.406887985728
+      },
+      "history": [
+        {
+          "epoch": 0,
+          "train_mae_mph": 3.6816553855043193,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.836816240260862,
+            "30": 3.3496802110544244,
+            "60": 4.19302996354288
+          },
+          "selection_score_mph": 3.459842138286055
+        },
+        {
+          "epoch": 1,
+          "train_mae_mph": 3.483907031090611,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.8525028882258483,
+            "30": 3.3049547767912033,
+            "60": 4.046840317886519
+          },
+          "selection_score_mph": 3.4014326609678576
+        },
+        {
+          "epoch": 2,
+          "train_mae_mph": 3.4203388274363493,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.80677885883887,
+            "30": 3.260476836944079,
+            "60": 3.9991302318334023
+          },
+          "selection_score_mph": 3.3554619758721174
+        },
+        {
+          "epoch": 3,
+          "train_mae_mph": 3.384118030472521,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7919989361907582,
+            "30": 3.2388756142179522,
+            "60": 3.965972267583912
+          },
+          "selection_score_mph": 3.3322822726642074
+        },
+        {
+          "epoch": 4,
+          "train_mae_mph": 3.3612480908369577,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7938147352441773,
+            "30": 3.2288478832336014,
+            "60": 3.937189467145016
+          },
+          "selection_score_mph": 3.3199506952075986
+        },
+        {
+          "epoch": 5,
+          "train_mae_mph": 3.3456908328341406,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.797582854220583,
+            "30": 3.221148425907326,
+            "60": 3.911632066327953
+          },
+          "selection_score_mph": 3.3101211154852876
+        },
+        {
+          "epoch": 6,
+          "train_mae_mph": 3.3335885271153605,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.832967269504573,
+            "30": 3.2232856039969793,
+            "60": 3.861446793866227
+          },
+          "selection_score_mph": 3.305899889122593
+        },
+        {
+          "epoch": 7,
+          "train_mae_mph": 3.32454771853773,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.8024013032445643,
+            "30": 3.207164582636605,
+            "60": 3.8687166349447777
+          },
+          "selection_score_mph": 3.292760840275316
+        },
+        {
+          "epoch": 8,
+          "train_mae_mph": 3.3169982006528325,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.785495761629193,
+            "30": 3.1993899307750793,
+            "60": 3.873392483692181
+          },
+          "selection_score_mph": 3.2860927253654846
+        },
+        {
+          "epoch": 9,
+          "train_mae_mph": 3.310098825540299,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7920303141508644,
+            "30": 3.2031717698983373,
+            "60": 3.871620457218548
+          },
+          "selection_score_mph": 3.28894084708925
+        },
+        {
+          "epoch": 10,
+          "train_mae_mph": 3.3045245525697973,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7917207046928403,
+            "30": 3.193468967561585,
+            "60": 3.846154337575064
+          },
+          "selection_score_mph": 3.2771146699431632
+        },
+        {
+          "epoch": 11,
+          "train_mae_mph": 3.299175139531456,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.8071066068416077,
+            "30": 3.199124922075348,
+            "60": 3.8391496786522605
+          },
+          "selection_score_mph": 3.2817937358564055
+        },
+        {
+          "epoch": 12,
+          "train_mae_mph": 3.294610853049859,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7855895217370112,
+            "30": 3.186098181113203,
+            "60": 3.837662248727399
+          },
+          "selection_score_mph": 3.269783317192538
+        },
+        {
+          "epoch": 13,
+          "train_mae_mph": 3.2901018687387276,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7950593167529565,
+            "30": 3.18655268290727,
+            "60": 3.821888118469639
+          },
+          "selection_score_mph": 3.267833372709955
+        },
+        {
+          "epoch": 14,
+          "train_mae_mph": 3.286669409654322,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7917528758523824,
+            "30": 3.1827417792338846,
+            "60": 3.8195238919969157
+          },
+          "selection_score_mph": 3.2646728490277277
+        },
+        {
+          "epoch": 15,
+          "train_mae_mph": 3.283628316205691,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7893831144042514,
+            "30": 3.181142910783365,
+            "60": 3.8197608608743683
+          },
+          "selection_score_mph": 3.2634289620206616
+        },
+        {
+          "epoch": 16,
+          "train_mae_mph": 3.2806187771758153,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7782098866670113,
+            "30": 3.1836125126526134,
+            "60": 3.8418643855797896
+          },
+          "selection_score_mph": 3.2678955949664714
+        },
+        {
+          "epoch": 17,
+          "train_mae_mph": 3.277991806232601,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7833854131429856,
+            "30": 3.1771862301286014,
+            "60": 3.820179233569497
+          },
+          "selection_score_mph": 3.2602502922803613
+        },
+        {
+          "epoch": 18,
+          "train_mae_mph": 3.274982389923734,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.79272737239634,
+            "30": 3.1796434271836787,
+            "60": 3.81193452913659
+          },
+          "selection_score_mph": 3.261435109572203
+        },
+        {
+          "epoch": 19,
+          "train_mae_mph": 3.2728270862645075,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7758748006912892,
+            "30": 3.167448261053062,
+            "60": 3.803409551135529
+          },
+          "selection_score_mph": 3.24891087095996
+        },
+        {
+          "epoch": 20,
+          "train_mae_mph": 3.270804657524139,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.791745097152997,
+            "30": 3.1758553635681626,
+            "60": 3.8049863102254644
+          },
+          "selection_score_mph": 3.257528923648875
+        },
+        {
+          "epoch": 21,
+          "train_mae_mph": 3.268234321690898,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7961512984935335,
+            "30": 3.18141739958951,
+            "60": 3.808215743033155
+          },
+          "selection_score_mph": 3.261928147038733
+        },
+        {
+          "epoch": 22,
+          "train_mae_mph": 3.2663790805435067,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7791229538676334,
+            "30": 3.1715119865870864,
+            "60": 3.8091307377410035
+          },
+          "selection_score_mph": 3.253255226065241
+        },
+        {
+          "epoch": 23,
+          "train_mae_mph": 3.2640824390200507,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.772001977533421,
+            "30": 3.1648241647768094,
+            "60": 3.803895988017728
+          },
+          "selection_score_mph": 3.246907376775986
+        },
+        {
+          "epoch": 24,
+          "train_mae_mph": 3.2623403453362703,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7840151366623314,
+            "30": 3.169094354375018,
+            "60": 3.7993677501238596
+          },
+          "selection_score_mph": 3.2508257470537365
+        },
+        {
+          "epoch": 25,
+          "train_mae_mph": 3.2604062264081755,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.774986024249071,
+            "30": 3.1667347569836477,
+            "60": 3.802894956001706
+          },
+          "selection_score_mph": 3.248205245744808
+        },
+        {
+          "epoch": 26,
+          "train_mae_mph": 3.2591388782780313,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.769152825201643,
+            "30": 3.164282827427646,
+            "60": 3.80775944100142
+          },
+          "selection_score_mph": 3.247065031210236
+        },
+        {
+          "epoch": 27,
+          "train_mae_mph": 3.257760233496552,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7824111749363265,
+            "30": 3.169131832911646,
+            "60": 3.8015519432492253
+          },
+          "selection_score_mph": 3.251031650365732
+        },
+        {
+          "epoch": 28,
+          "train_mae_mph": 3.256277340997432,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.8126841803894647,
+            "30": 3.187013268423823,
+            "60": 3.802775128327615
+          },
+          "selection_score_mph": 3.267490859046968
+        },
+        {
+          "epoch": 29,
+          "train_mae_mph": 3.254773490477042,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.787293757308273,
+            "30": 3.1718610785469687,
+            "60": 3.7964355525539752
+          },
+          "selection_score_mph": 3.2518634628030725
+        }
+      ]
+    },
+    {
+      "candidate": "gru_h128",
+      "best_score_mph": 3.2292559775068383,
+      "parameter_count": 70649,
+      "best_checkpoint": "artifacts/task06_gru/checkpoints/gru_h128_best.pt",
+      "latest_checkpoint": "artifacts/task06_gru/checkpoints/gru_h128_latest.pt",
+      "throughput_probe": {
+        "batches": 20,
+        "examples": 81920,
+        "seconds": 5.030491511999571,
+        "examples_per_second": 16284.691029612253
+      },
+      "history": [
+        {
+          "epoch": 0,
+          "train_mae_mph": 3.638650121517679,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.853273464960958,
+            "30": 3.330552425825848,
+            "60": 4.118327533840218
+          },
+          "selection_score_mph": 3.434051141542341
+        },
+        {
+          "epoch": 1,
+          "train_mae_mph": 3.4476431211834826,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.812217550477564,
+            "30": 3.2649163979107874,
+            "60": 4.005871230881288
+          },
+          "selection_score_mph": 3.361001726423213
+        },
+        {
+          "epoch": 2,
+          "train_mae_mph": 3.382354250495643,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7875404972667557,
+            "30": 3.225538969855859,
+            "60": 3.9387601697750174
+          },
+          "selection_score_mph": 3.317279878965877
+        },
+        {
+          "epoch": 3,
+          "train_mae_mph": 3.344974469783914,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7691737642562995,
+            "30": 3.2019718221023385,
+            "60": 3.905501793172397
+          },
+          "selection_score_mph": 3.292215793177012
+        },
+        {
+          "epoch": 4,
+          "train_mae_mph": 3.3212384289560744,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7857758816618476,
+            "30": 3.1999483119380403,
+            "60": 3.8713647362167873
+          },
+          "selection_score_mph": 3.2856963099388916
+        },
+        {
+          "epoch": 5,
+          "train_mae_mph": 3.304394022279274,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7854363143565126,
+            "30": 3.1940751778759786,
+            "60": 3.8580424769269994
+          },
+          "selection_score_mph": 3.2791846563864966
+        },
+        {
+          "epoch": 6,
+          "train_mae_mph": 3.292125117314785,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.8023940831624703,
+            "30": 3.190979021258885,
+            "60": 3.8243980312543293
+          },
+          "selection_score_mph": 3.2725903785585615
+        },
+        {
+          "epoch": 7,
+          "train_mae_mph": 3.282384557356779,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7748546846012774,
+            "30": 3.175722019796177,
+            "60": 3.8313365344783183
+          },
+          "selection_score_mph": 3.260637746291924
+        },
+        {
+          "epoch": 8,
+          "train_mae_mph": 3.274471744836318,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7684262545179927,
+            "30": 3.167700053447749,
+            "60": 3.8190233179000415
+          },
+          "selection_score_mph": 3.251716541955261
+        },
+        {
+          "epoch": 9,
+          "train_mae_mph": 3.267576501507729,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7916076312737124,
+            "30": 3.178968680363783,
+            "60": 3.8150044522459687
+          },
+          "selection_score_mph": 3.2618602546278215
+        },
+        {
+          "epoch": 10,
+          "train_mae_mph": 3.261318789089291,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.779429539368799,
+            "30": 3.170768261558252,
+            "60": 3.8075240040553435
+          },
+          "selection_score_mph": 3.252573934994132
+        },
+        {
+          "epoch": 11,
+          "train_mae_mph": 3.2558926090433467,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.791462565601045,
+            "30": 3.1676836102949486,
+            "60": 3.788901474887593
+          },
+          "selection_score_mph": 3.2493492169278624
+        },
+        {
+          "epoch": 12,
+          "train_mae_mph": 3.251610916511528,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7858299598985683,
+            "30": 3.16618743046994,
+            "60": 3.7929242834392425
+          },
+          "selection_score_mph": 3.2483138912692504
+        },
+        {
+          "epoch": 13,
+          "train_mae_mph": 3.2468898546469473,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7763276811943367,
+            "30": 3.164976799018457,
+            "60": 3.7986386255805886
+          },
+          "selection_score_mph": 3.2466477019311277
+        },
+        {
+          "epoch": 14,
+          "train_mae_mph": 3.2424742527931047,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.776972451747819,
+            "30": 3.1622780490152795,
+            "60": 3.7934894984703913
+          },
+          "selection_score_mph": 3.244246666411163
+        },
+        {
+          "epoch": 15,
+          "train_mae_mph": 3.2386659634788155,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.786717103916303,
+            "30": 3.1639315011536135,
+            "60": 3.787257186566332
+          },
+          "selection_score_mph": 3.2459685972120833
+        },
+        {
+          "epoch": 16,
+          "train_mae_mph": 3.235340150081987,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.77277858325236,
+            "30": 3.162758525384107,
+            "60": 3.8061831459728337
+          },
+          "selection_score_mph": 3.2472400848697673
+        },
+        {
+          "epoch": 17,
+          "train_mae_mph": 3.232135279405655,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7860167292286357,
+            "30": 3.1644573133693257,
+            "60": 3.788010226183201
+          },
+          "selection_score_mph": 3.246161422927054
+        },
+        {
+          "epoch": 18,
+          "train_mae_mph": 3.229586388062026,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.8033047013551937,
+            "30": 3.1674819473429756,
+            "60": 3.773818907392387
+          },
+          "selection_score_mph": 3.2482018520301854
+        },
+        {
+          "epoch": 19,
+          "train_mae_mph": 3.2264029696116046,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.767887230403352,
+            "30": 3.1472139312775553,
+            "60": 3.7726667708396087
+          },
+          "selection_score_mph": 3.2292559775068383
+        },
+        {
+          "epoch": 20,
+          "train_mae_mph": 3.2242395391297487,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.791391272672394,
+            "30": 3.1648383177529658,
+            "60": 3.7829804318782334
+          },
+          "selection_score_mph": 3.2464033407678645
+        },
+        {
+          "epoch": 21,
+          "train_mae_mph": 3.2213820463082987,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7729617436549034,
+            "30": 3.152275051567503,
+            "60": 3.7788934802305687
+          },
+          "selection_score_mph": 3.2347100918176586
+        },
+        {
+          "epoch": 22,
+          "train_mae_mph": 3.2192144713959467,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7760468121319852,
+            "30": 3.156364919170973,
+            "60": 3.7795853044858005
+          },
+          "selection_score_mph": 3.2373323452629195
+        },
+        {
+          "epoch": 23,
+          "train_mae_mph": 3.216837722585531,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.789155518872781,
+            "30": 3.159045796702434,
+            "60": 3.7729042486905664
+          },
+          "selection_score_mph": 3.2403685214219267
+        },
+        {
+          "epoch": 24,
+          "train_mae_mph": 3.2141078116064046,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7787214620724736,
+            "30": 3.1551619806900857,
+            "60": 3.7780665846143595
+          },
+          "selection_score_mph": 3.237316675792306
+        },
+        {
+          "epoch": 25,
+          "train_mae_mph": 3.212129175967746,
+          "train_eligible_count": 55289280,
+          "validation_horizon_mae_mph": {
+            "15": 2.7782313101041027,
+            "30": 3.153504541064695,
+            "60": 3.770736725213045
+          },
+          "selection_score_mph": 3.234157525460614
+        }
+      ]
+    }
+  ],
+  "note": "Full results require locked test inference after validation selection."
+}

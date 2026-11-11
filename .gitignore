@@ -20,6 +20,20 @@ datasets/
 checkpoints/
 /models/
 artifacts/
+# Task 06 final reproducibility snapshot (about 18 MiB total) is intentionally
+# eligible for ordinary Git tracking; all other generated artifacts stay ignored.
+!artifacts/
+artifacts/*
+!artifacts/task06_gru/
+artifacts/task06_gru/*
+!artifacts/task06_gru/selected_config.json
+!artifacts/task06_gru/test_predictions_horizons.npz
+!artifacts/task06_gru/checkpoints/
+artifacts/task06_gru/checkpoints/*
+!artifacts/task06_gru/checkpoints/gru_h64_best.pt
+!artifacts/task06_gru/checkpoints/gru_h64_latest.pt
+!artifacts/task06_gru/checkpoints/gru_h128_best.pt
+!artifacts/task06_gru/checkpoints/gru_h128_latest.pt
 outputs/
 runs/
 *.h5
@@ -27,6 +41,12 @@ runs/
 *.ckpt
 *.pt
 *.pth
+# Re-allow only the four verified final Task 06 checkpoints after the generic
+# model-extension rules above.
+!artifacts/task06_gru/checkpoints/gru_h64_best.pt
+!artifacts/task06_gru/checkpoints/gru_h64_latest.pt
+!artifacts/task06_gru/checkpoints/gru_h128_best.pt
+!artifacts/task06_gru/checkpoints/gru_h128_latest.pt
 
 # Secrets and local configuration
 .env
