@@ -1,0 +1,171 @@
+{
+  "created_utc": "2026-11-09T09:52:13.352741+00:00",
+  "seed": 268513,
+  "nthread": 4,
+  "batch_samples": 512,
+  "sample_limit_per_split": null,
+  "feature_count": 39,
+  "input_zero_policy": "preserve_recorded_zeros_with_masks",
+  "supervised_target_policy": "finite_nonzero_targets",
+  "candidates": [
+    {
+      "name": "depth6_eta005",
+      "max_depth": 6,
+      "learning_rate": 0.05,
+      "min_child_weight": 1.0,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9
+    },
+    {
+      "name": "depth8_eta005",
+      "max_depth": 8,
+      "learning_rate": 0.05,
+      "min_child_weight": 1.0,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9
+    },
+    {
+      "name": "depth6_eta010_regularized",
+      "max_depth": 6,
+      "learning_rate": 0.1,
+      "min_child_weight": 5.0,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8
+    }
+  ],
+  "tie_breaking": "lowest mean three-horizon validation MAE, then candidate name",
+  "trials": [
+    {
+      "candidate": "depth6_eta005",
+      "best_iteration_zero_based": 998,
+      "boosting_rounds": 999,
+      "validation_mae_mph": 2.8573479897136953,
+      "horizon_minutes": 15
+    },
+    {
+      "candidate": "depth8_eta005",
+      "best_iteration_zero_based": 786,
+      "boosting_rounds": 787,
+      "validation_mae_mph": 2.8276097460486374,
+      "horizon_minutes": 15
+    },
+    {
+      "candidate": "depth6_eta010_regularized",
+      "best_iteration_zero_based": 973,
+      "boosting_rounds": 974,
+      "validation_mae_mph": 2.858885466203906,
+      "horizon_minutes": 15
+    },
+    {
+      "candidate": "depth6_eta005",
+      "best_iteration_zero_based": 999,
+      "boosting_rounds": 1000,
+      "validation_mae_mph": 3.398093721493663,
+      "horizon_minutes": 30
+    },
+    {
+      "candidate": "depth8_eta005",
+      "best_iteration_zero_based": 992,
+      "boosting_rounds": 993,
+      "validation_mae_mph": 3.342841371562191,
+      "horizon_minutes": 30
+    },
+    {
+      "candidate": "depth6_eta010_regularized",
+      "best_iteration_zero_based": 997,
+      "boosting_rounds": 998,
+      "validation_mae_mph": 3.396744326956586,
+      "horizon_minutes": 30
+    },
+    {
+      "candidate": "depth6_eta005",
+      "best_iteration_zero_based": 999,
+      "boosting_rounds": 1000,
+      "validation_mae_mph": 4.023998059092197,
+      "horizon_minutes": 60
+    },
+    {
+      "candidate": "depth8_eta005",
+      "best_iteration_zero_based": 993,
+      "boosting_rounds": 994,
+      "validation_mae_mph": 3.937332733254546,
+      "horizon_minutes": 60
+    },
+    {
+      "candidate": "depth6_eta010_regularized",
+      "best_iteration_zero_based": 996,
+      "boosting_rounds": 997,
+      "validation_mae_mph": 4.02526203807334,
+      "horizon_minutes": 60
+    }
+  ],
+  "selected_candidate": "depth8_eta005",
+  "selected_horizon_trials": {
+    "15": {
+      "candidate": "depth8_eta005",
+      "best_iteration_zero_based": 786,
+      "boosting_rounds": 787,
+      "validation_mae_mph": 2.8276097460486374,
+      "horizon_minutes": 15
+    },
+    "30": {
+      "candidate": "depth8_eta005",
+      "best_iteration_zero_based": 992,
+      "boosting_rounds": 993,
+      "validation_mae_mph": 3.342841371562191,
+      "horizon_minutes": 30
+    },
+    "60": {
+      "candidate": "depth8_eta005",
+      "best_iteration_zero_based": 993,
+      "boosting_rounds": 994,
+      "validation_mae_mph": 3.937332733254546,
+      "horizon_minutes": 60
+    }
+  },
+  "selected_models": {
+    "15": "artifacts/task05_xgboost/models/horizon_15.json",
+    "30": "artifacts/task05_xgboost/models/horizon_30.json",
+    "60": "artifacts/task05_xgboost/models/horizon_60.json"
+  },
+  "target_counts": {
+    "15": {
+      "train_included": 4607441,
+      "train_excluded": 353728,
+      "validation_included": 657752,
+      "validation_excluded": 49360
+    },
+    "30": {
+      "train_included": 4607439,
+      "train_excluded": 353730,
+      "validation_included": 657743,
+      "validation_excluded": 49369
+    },
+    "60": {
+      "train_included": 4607444,
+      "train_excluded": 353725,
+      "validation_included": 657751,
+      "validation_excluded": 49361
+    }
+  },
+  "resource_bounds": {
+    "max_float32_feature_batch_bytes": 16533504,
+    "fully_materialized_train_features_bytes_avoided": 773942364,
+    "note": "XGBoost native quantile storage is additional and runtime-dependent."
+  },
+  "elapsed_seconds": 4107.976115199999,
+  "peak_working_set_bytes": null,
+  "peak_working_set_start_bytes": null,
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "xgboost": "3.4.1"
+  },
+  "input_finite_indicator": {
+    "nonfinite_observation_count": 0,
+    "constant_on_verified_metr_la": true,
+    "purpose": "Retained for preprocessing-contract consistency and future datasets with missing inputs."
+  },
+  "sensor_id_sha256": "3BA026CAA2E6263AB0EA54B0FA1B125DBFA7216544CD05313B555E826292B990"
+}

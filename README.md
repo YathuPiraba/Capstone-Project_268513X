@@ -16,7 +16,7 @@ Later experiments will use 12 historical steps (60 minutes) to predict 12 future
 
 ## Planned models
 
-The planned comparison is **Persistence**, **Historical Average**, **XGBoost**, one **LSTM or GRU**, and one **spatio-temporal graph neural network (ST-GNN)**. Task 04 implements the two deterministic baselines; learned forecasting models remain future work.
+The planned comparison is **Persistence**, **Historical Average**, **XGBoost**, one **LSTM or GRU**, and one **spatio-temporal graph neural network (ST-GNN)**. Tasks 04 and 05 implement the deterministic baselines and conventional XGBoost model; temporal and graph models remain future work.
 
 ## Current repository structure
 
@@ -30,10 +30,14 @@ Capstone-Project_268513X/
 |-- notebooks/
 |   |-- 01_metr_la_eda.ipynb        # Completed Task 02 notebook
 |   |-- 02_metr_la_preprocessing.ipynb # Completed Task 03 notebook
-|   `-- 03_metr_la_baselines.ipynb  # Completed Task 04 notebook
+|   |-- 03_metr_la_baselines.ipynb  # Completed Task 04 notebook
+|   `-- 04_metr_la_xgboost.ipynb   # Task 05 artifact-review notebook
 |-- scripts/check_environment.py
 |-- scripts/smoke_preprocessing.py  # Real-data Task 03 verification
+|-- scripts/run_xgboost.py          # Explicit --smoke or --full mode
 |-- src/data/                       # Inspection, preprocessing, and windows
+|-- src/models/xgboost.py           # Sensor-local pooled features
+|-- src/training/xgboost.py         # Deterministic training/inference
 `-- tests/                          # Data integrity and preprocessing tests
 ```
 
@@ -106,6 +110,9 @@ Extreme-case tests cover all-zero input windows, sensors with no valid training
 readings, and validation/test input context crossing a split boundary while
 targets remain wholly inside their assigned split. Task 04 tests cover
 persistence, training-only historical averages, fallbacks, and masked MAE/RMSE.
+Task 05 tests cover pooled sensor-local features, exact horizon/time alignment,
+target filtering, categorical identity, deterministic training, JSON model
+reload, split boundaries, and Task 04 artifact-alignment guards.
 
 ## Task 04 baselines
 
@@ -139,7 +146,78 @@ The Task 04 notebook was manually executed from top to bottom on 9 November
 2026. All six code cells completed in order without errors, its saved assertions
 passed, and it reproduced 6,844 test windows across 207 sensors at the three
 required horizons. The generated prediction and dataset SHA-256 hashes match
-the metrics manifest. The full automated suite also passes with 19 tests.
+the metrics manifest. At Task 04 completion, the automated suite passed 19 tests.
+
+## Task 05 XGBoost
+
+Task 05 is complete. The model uses only each sensor's preceding
+12 standardized speeds, zero and finite indicators, target-time sine/cosine
+features, and stable categorical sensor identity. It does not use neighbouring
+sensor speeds, adjacency, graph distances, or future observed traffic. The
+verified METR-LA file has no non-finite observations, so its finite-input
+indicators are constant; they remain present for preprocessing-contract
+consistency. Primary supervised rows exclude exact-zero targets, while final
+evaluation also includes an all-finite, zero-inclusive sensitivity policy.
+
+The deterministic validation search selected the shared `depth8_eta005`
+configuration. Its selected boosting rounds were 787, 993, and 994 for the
++15-, +30-, and +60-minute models, respectively. The complete validation
+selection took 4,107.98 seconds (approximately 1 hour 8 minutes) using four CPU
+threads. Selection used validation MAE only; test metrics were calculated after
+the shared configuration was frozen and exact Task 04 artifact alignment was
+verified.
+
+Primary held-out results in original speed units are:
+
+| Model | Metric | +15 min | +30 min | +60 min |
+| --- | --- | ---: | ---: | ---: |
+| Persistence | MAE (mph) | 4.0175 | 5.0952 | 6.7980 |
+| Persistence | RMSE (mph) | 8.6955 | 11.1353 | 14.2136 |
+| Historical Average | MAE (mph) | 7.1104 | 7.1104 | 7.1108 |
+| Historical Average | RMSE (mph) | 9.8311 | 9.8311 | 9.8313 |
+| XGBoost | MAE (mph) | **3.0044** | **3.5235** | **4.0866** |
+| XGBoost | RMSE (mph) | **5.4669** | **6.4889** | **7.4888** |
+
+XGBoost performs best at all three required horizons under the primary policy.
+This is predictive evidence for a strong sensor-local conventional model, not
+evidence about graph structure or causality. Under the zero-inclusive
+sensitivity policy, XGBoost MAE rises to 9.5093, 9.9989, and 10.5082 mph. This
+large deterioration reinforces that METR-LA's unresolved synchronized zero
+periods materially affect conclusions and must remain explicitly qualified.
+
+Run the small deterministic engineering check with:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\run_xgboost.py --smoke --nthread 1
+```
+
+Reproduce the full experiment with:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\run_xgboost.py --full --nthread 4 --batch-samples 512
+```
+
+Keep that terminal open while training. The script reports four major phases,
+matrix-quantization batches, validation fit count and percentage, boosting-round
+progress, elapsed time, and rolling ETA. Early stopping can finish a fit before
+its configured 1,000-round maximum, so round percentages and round ETAs are
+explicit upper-bound indicators rather than promises of the final duration.
+Use **Ctrl+C** for a controlled interruption. Closing the terminal may terminate
+Python immediately; an interrupted run does not produce valid Task 05 results.
+Running the same full command again removes only incomplete Task 05 selection
+temporaries and restarts the experiment cleanly.
+
+The full command performs predetermined validation-only selection, freezes one
+shared configuration, verifies exact Task 04 artifact alignment, and only then
+evaluates the held-out test set. Large models and predictions are written under
+the Git-ignored `artifacts/task05_xgboost/`; small summaries are written under
+`results/task05_xgboost/`.
+
+The presentation notebook only loads completed artifacts and never starts
+training. It was manually executed and saved on 11 November 2026. All seven
+code cells completed sequentially without errors, its comparison chart and
+feature-importance table were produced, and its final artifact, alignment,
+horizon, policy, and model-file assertions passed.
 
 ## Current progress
 
@@ -149,9 +227,13 @@ the metrics manifest. The full automated suite also passes with 19 tests.
 | Task 02 - METR-LA inspection and EDA | **Completed** |
 | Task 03 - Leakage-safe preprocessing | **Completed** |
 | Task 04 - Simple baselines | **Completed** |
+| Task 05 - XGBoost | **Completed** |
 
-Tasks 01 through 04 are complete. Task 04 includes deterministic baseline
+Tasks 01 through 05 are complete. Task 04 includes deterministic baseline
 inference, shared masked metrics, reproducible prediction/metric artifacts, five
-focused baseline tests, and a successfully executed six-code-cell notebook. The
-complete automated suite passes with 19 tests. Learned-model training and the
-demonstration application remain planned work.
+focused baseline tests, and a successfully executed six-code-cell notebook.
+Task 05 includes validation-only XGBoost selection, three horizon-specific
+models, aligned held-out predictions and metrics, an executed seven-code-cell
+presentation notebook, and ten focused tests. Temporal-model, graph-model, and
+demonstration-application work remain planned. The current automated suite
+passes 29 tests.

@@ -1,0 +1,106 @@
+{
+  "task": "Task 05 - Conventional ML with XGBoost",
+  "created_utc": "2026-11-09T09:53:24.071830+00:00",
+  "data_path": "data/raw/metr-la/METR-LA.csv",
+  "data_sha256": "8D67A35472DB1719D7D4BE851F2BF64CB21D9C52577C8A6B4B873D43205AF381",
+  "split_policy": "chronological_70_10_20",
+  "splits": {
+    "train": {
+      "start_row": 0,
+      "stop_row_exclusive": 23990,
+      "row_count": 23990,
+      "start_timestamp": "2012-03-01T00:00:00",
+      "end_timestamp": "2012-05-23T07:05:00"
+    },
+    "validation": {
+      "start_row": 23990,
+      "stop_row_exclusive": 27417,
+      "row_count": 3427,
+      "start_timestamp": "2012-05-23T07:10:00",
+      "end_timestamp": "2012-06-04T04:40:00"
+    },
+    "test": {
+      "start_row": 27417,
+      "stop_row_exclusive": 34272,
+      "row_count": 6855,
+      "start_timestamp": "2012-06-04T04:45:00",
+      "end_timestamp": "2012-06-27T23:55:00"
+    }
+  },
+  "window_policy": "12 input steps to direct target steps 3, 6, and 12",
+  "feature_policy": "sensor-local history, input masks, target time-of-day, categorical sensor identity; no graph or neighbouring speeds",
+  "selection_artifact": "results/task05_xgboost/validation_trials.json",
+  "prediction_artifact": "artifacts/task05_xgboost/test_predictions_horizons.npz",
+  "prediction_sha256": "19AF5FC9C78053D8B7F61DDB7B5D9A7122765328B1403004E3E1E5429037D236",
+  "baseline_alignment_verified": true,
+  "metrics": [
+    {
+      "model": "xgboost",
+      "horizon": "+15",
+      "forecast_step_1_based": 3,
+      "mask_policy": "finite_nonzero_targets",
+      "eligible_count": 1245040,
+      "excluded_count": 171668,
+      "mae_mph": 3.0043811921653982,
+      "rmse_mph": 5.466920987145887
+    },
+    {
+      "model": "xgboost",
+      "horizon": "+30",
+      "forecast_step_1_based": 6,
+      "mask_policy": "finite_nonzero_targets",
+      "eligible_count": 1245022,
+      "excluded_count": 171686,
+      "mae_mph": 3.5234987052864017,
+      "rmse_mph": 6.488867622601463
+    },
+    {
+      "model": "xgboost",
+      "horizon": "+60",
+      "forecast_step_1_based": 12,
+      "mask_policy": "finite_nonzero_targets",
+      "eligible_count": 1244986,
+      "excluded_count": 171722,
+      "mae_mph": 4.086613416626871,
+      "rmse_mph": 7.488804614779162
+    },
+    {
+      "model": "xgboost",
+      "horizon": "+15",
+      "forecast_step_1_based": 3,
+      "mask_policy": "all_finite_targets_including_zeros",
+      "eligible_count": 1416708,
+      "excluded_count": 0,
+      "mae_mph": 9.509264989499966,
+      "rmse_mph": 20.703504729753224
+    },
+    {
+      "model": "xgboost",
+      "horizon": "+30",
+      "forecast_step_1_based": 6,
+      "mask_policy": "all_finite_targets_including_zeros",
+      "eligible_count": 1416708,
+      "excluded_count": 0,
+      "mae_mph": 9.998912150030655,
+      "rmse_mph": 21.091143264154244
+    },
+    {
+      "model": "xgboost",
+      "horizon": "+60",
+      "forecast_step_1_based": 12,
+      "mask_policy": "all_finite_targets_including_zeros",
+      "eligible_count": 1416708,
+      "excluded_count": 0,
+      "mae_mph": 10.508194929193545,
+      "rmse_mph": 21.431865590808236
+    }
+  ],
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "xgboost": "3.4.1"
+  },
+  "seed": 268513,
+  "nthread": 4
+}
