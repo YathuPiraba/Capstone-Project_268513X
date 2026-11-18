@@ -1,0 +1,124 @@
+{
+  "task": "Task 07 - DCRNN-style direct-head DCGRU",
+  "created_utc": "2026-11-12T04:10:47.913492+00:00",
+  "configuration": {
+    "candidate_name": "dcgru_h64_k2",
+    "model": {
+      "history_features": 3,
+      "hidden_size": 64,
+      "sensor_count": 207,
+      "sensor_embedding_dim": 8,
+      "output_length": 12,
+      "future_time_features": 2,
+      "diffusion_order": 2,
+      "graph_mode": "graph"
+    },
+    "learning_rate": 0.001,
+    "weight_decay": 0.0,
+    "batch_size": 64,
+    "max_epochs": 30,
+    "patience": 5,
+    "gradient_clip_norm": 1.0,
+    "seed": 268513,
+    "deterministic_algorithms": false
+  },
+  "metadata": {
+    "data_sha256": "8D67A35472DB1719D7D4BE851F2BF64CB21D9C52577C8A6B4B873D43205AF381",
+    "adjacency_sha256": "A35687C6E15AA228DC45027B0ED2A0EA0F4EC78F573DEB992C595092D12F61B3",
+    "sensor_order_sha256": "2A38EF551082D02D5622F03D6BC0231B2AAEFAC9775AD2F13195BE63A92C9A56",
+    "graph_normalization": "row random walk",
+    "support_definitions": [
+      "D_out^-1 A",
+      "D_in^-1 A^T"
+    ],
+    "diffusion_order": 2,
+    "split_rows": {
+      "train": [
+        0,
+        23990
+      ],
+      "validation": [
+        23990,
+        27417
+      ],
+      "test": [
+        27417,
+        34272
+      ]
+    },
+    "feature_policy": "standardized recorded speed, zero/finite indicators, future time-of-day, sensor identity",
+    "mask_policy": "training and primary validation exclude finite exact-zero targets",
+    "window_policy": "12 history steps to 12 direct forecast steps"
+  },
+  "checkpoint": "artifacts/task07_dcrnn/checkpoints/dcgru_h64_k2_best.pt",
+  "checkpoint_sha256": "62D7E743847B731B4012983996CE4142E1BEC43A08B2F7DBC65ADFF5FD6AC0A6",
+  "prediction_artifact": "artifacts/task07_dcrnn/test_predictions_horizons.npz",
+  "prediction_sha256": "1A34095B3FF057F719F1C2AA059E71928E7EEB1BE4F9F32C2A5B85550351A8E5",
+  "locked_reference_hashes": {
+    "task04_baselines": "48FD54D29C5BDB130F978F2526865649BF247CE8D6C371C8807EE8DC4D5B4321",
+    "task05_xgboost": "19AF5FC9C78053D8B7F61DDB7B5D9A7122765328B1403004E3E1E5429037D236",
+    "task06_gru": "27C165BDE7FD72E1CD12D21F4D0D1087F9FA1CBCB08E90EE800461C39EC5FCAF"
+  },
+  "metrics": [
+    {
+      "model": "direct_head_dcgru",
+      "horizon": "+15",
+      "forecast_step_1_based": 3,
+      "mask_policy": "finite_nonzero_targets",
+      "eligible_count": 1245040,
+      "excluded_count": 171668,
+      "mae_mph": 2.974847811968862,
+      "rmse_mph": 5.734966850568159
+    },
+    {
+      "model": "direct_head_dcgru",
+      "horizon": "+30",
+      "forecast_step_1_based": 6,
+      "mask_policy": "finite_nonzero_targets",
+      "eligible_count": 1245022,
+      "excluded_count": 171686,
+      "mae_mph": 3.2627386553705944,
+      "rmse_mph": 6.482867108687476
+    },
+    {
+      "model": "direct_head_dcgru",
+      "horizon": "+60",
+      "forecast_step_1_based": 12,
+      "mask_policy": "finite_nonzero_targets",
+      "eligible_count": 1244986,
+      "excluded_count": 171722,
+      "mae_mph": 3.962102068913437,
+      "rmse_mph": 8.035471661324507
+    },
+    {
+      "model": "direct_head_dcgru",
+      "horizon": "+15",
+      "forecast_step_1_based": 3,
+      "mask_policy": "all_finite_targets_including_zeros",
+      "eligible_count": 1416708,
+      "excluded_count": 0,
+      "mae_mph": 9.881870437251546,
+      "rmse_mph": 21.79032425598576
+    },
+    {
+      "model": "direct_head_dcgru",
+      "horizon": "+30",
+      "forecast_step_1_based": 6,
+      "mask_policy": "all_finite_targets_including_zeros",
+      "eligible_count": 1416708,
+      "excluded_count": 0,
+      "mae_mph": 10.127414720095702,
+      "rmse_mph": 21.959704058966437
+    },
+    {
+      "model": "direct_head_dcgru",
+      "horizon": "+60",
+      "forecast_step_1_based": 12,
+      "mask_policy": "all_finite_targets_including_zeros",
+      "eligible_count": 1416708,
+      "excluded_count": 0,
+      "mae_mph": 10.736201466574776,
+      "rmse_mph": 22.39876048096668
+    }
+  ]
+}

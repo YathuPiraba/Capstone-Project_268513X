@@ -1,0 +1,37 @@
+{
+  "format_version": 1,
+  "source": "data/raw/metr-la/adj_mx_METR-LA.pkl",
+  "adjacency_sha256": "A35687C6E15AA228DC45027B0ED2A0EA0F4EC78F573DEB992C595092D12F61B3",
+  "sensor_order_sha256": "2A38EF551082D02D5622F03D6BC0231B2AAEFAC9775AD2F13195BE63A92C9A56",
+  "sensor_count": 207,
+  "shape": [
+    207,
+    207
+  ],
+  "dtype": "float32",
+  "weight_min": 0.0,
+  "weight_max": 1.0,
+  "nonzero_entries": 1722,
+  "off_diagonal_nonzero_entries": 1515,
+  "density": 0.04018763565077365,
+  "self_loops": "source adjacency has diagonal weight 1.0 for all 207 nodes; no loops added",
+  "asymmetric_entry_count": 2606,
+  "zero_out_degree_nodes": [],
+  "zero_in_degree_nodes": [],
+  "normalization": "row random walk",
+  "supports": [
+    "D_out^-1 A",
+    "D_in^-1 A^T"
+  ],
+  "diffusion_order": 2,
+  "basis": "order-zero identity plus orders 1 and 2 for both directed supports",
+  "forward_row_sum_range": [
+    0.9999999403953552,
+    1.0000001192092896
+  ],
+  "reverse_row_sum_range": [
+    0.9999998807907104,
+    1.0000001192092896
+  ],
+  "alignment_verified": true
+}

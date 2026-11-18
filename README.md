@@ -16,7 +16,7 @@ Later experiments will use 12 historical steps (60 minutes) to predict 12 future
 
 ## Planned models
 
-The planned comparison is **Persistence**, **Historical Average**, **XGBoost**, one **LSTM or GRU**, and one **spatio-temporal graph neural network (ST-GNN)**. Tasks 04 and 05 implement the deterministic baselines and conventional XGBoost model. Task 06 implements the temporal GRU and awaits owner-operated full GPU training; graph-model work remains future work.
+The planned comparison is **Persistence**, **Historical Average**, **XGBoost**, one **LSTM or GRU**, and one **spatio-temporal graph neural network (ST-GNN)**. Tasks 04-07 have completed their scientific experiments, including the validation-selected Task 07 DCGRU and its single approved locked-test finalization.
 
 ## Current repository structure
 
@@ -33,16 +33,20 @@ Capstone-Project_268513X/
 |   |-- 03_metr_la_baselines.ipynb  # Completed Task 04 notebook
 |   |-- 04_metr_la_xgboost.ipynb   # Task 05 artifact-review notebook
 |   |-- 05_kaggle_gru_training.ipynb # Curated Kaggle training/recovery record
-|   `-- 06_metr_la_gru.ipynb       # Executed Task 06 artifact-review notebook
+|   |-- 06_metr_la_gru.ipynb       # Executed Task 06 artifact-review notebook
+|   `-- 07_dcrnn_training.ipynb       # Executed staged Task 07 Kaggle record
 |-- scripts/check_environment.py
 |-- scripts/smoke_preprocessing.py  # Real-data Task 03 verification
 |-- scripts/run_xgboost.py          # Explicit --smoke or --full mode
 |-- scripts/run_gru.py              # Guarded CPU smoke / owner GPU workflow
+|-- scripts/run_dcrnn.py            # Task 07 integrity/smoke/probe/train/finalize modes
 |-- src/data/                       # Inspection, preprocessing, and windows
 |-- src/models/xgboost.py           # Sensor-local pooled features
 |-- src/training/xgboost.py         # Deterministic training/inference
 |-- src/models/gru.py               # Sensor-local temporal GRU
 |-- src/training/gru.py             # Dataset, loss, checkpoint utilities
+|-- src/models/dcrnn.py             # Direct-head diffusion-convolutional GRU
+|-- src/training/dcrnn.py           # Graph-window and recovery utilities
 `-- tests/                          # Data integrity and preprocessing tests
 ```
 
@@ -233,16 +237,67 @@ horizon, policy, and model-file assertions passed.
 | Task 03 - Leakage-safe preprocessing | **Completed** |
 | Task 04 - Simple baselines | **Completed** |
 | Task 05 - XGBoost | **Completed** |
-| Task 06 - Temporal GRU | **Implemented; full Kaggle training pending** |
+| Task 06 - Temporal GRU | **Completed** |
+| Task 07 - DCRNN-style ST-GNN | **Completed** |
 
-Tasks 01 through 06 are complete. Task 04 includes deterministic baseline
+Tasks 01 through 07 are complete. Task 07 completed its approved Kaggle GPU
+probe, validation-only training, and single locked-test finalization. Task 04 includes deterministic baseline
 inference, shared masked metrics, reproducible prediction/metric artifacts, five
 focused baseline tests, and a successfully executed six-code-cell notebook.
 Task 05 includes validation-only XGBoost selection, three horizon-specific
 models, aligned held-out predictions and metrics, an executed seven-code-cell
-presentation notebook, and ten focused tests. Graph-model and
-demonstration-application work remain planned. The automated suite
-passed 29 tests before Task 06 was added. The current suite passes 43 tests.
+presentation notebook, and ten focused tests. Demonstration-application work
+remains planned. The current automated suite passes 58 tests; one CUDA-specific
+RNG restoration test is skipped in the local CPU-only environment.
+
+## Task 07 direct-head DCGRU
+
+Task 07 uses a one-layer diffusion-convolutional GRU encoder that processes all
+207 sensors jointly with forward and reverse METR-LA random-walk supports. A
+shared direct head combines each node's final graph-recurrent state, the same
+8-dimensional sensor identity used by Task 06, and known future time-of-day to
+predict all 12 horizons. This is a DCRNN-style ST-GNN, not an exact reproduction
+of the original autoregressive encoder-decoder DCRNN.
+
+The primary `dcgru_h64_k2` configuration has 71,033 trainable parameters. It
+uses the same primary masked MAE loss in original mph, Adam learning rate
+0.001, zero weight decay, and gradient clipping at norm 1.0 as Task 06. Model
+selection remains the equal-weight validation MAE at +15/+30/+60 minutes.
+
+Run the local integrity check and bounded two-step CPU smoke test with:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\run_dcrnn.py --integrity-only
+.\.venv\Scripts\python.exe scripts\run_dcrnn.py --smoke --device cpu --batch-size 2
+```
+
+The approved Kaggle run used Python 3.13.16, PyTorch 2.11.0+cu130, and a Tesla
+T4. Validation selected epoch 28 with a three-horizon mean validation MAE of
+3.090367 mph. Held-out MAE was 2.9748, 3.2627, and 3.9621 mph at +15, +30,
+and +60 minutes. The mean MAE improvement over the temporal GRU was 2.73%,
+but the GRU remained slightly better at +15 minutes. This supports a modest,
+mixed predictive advantage for the graph model; it does not isolate the causal
+contribution of graph structure because the optional identity-only control has
+not been trained.
+
+For Kaggle reproduction, build the private upload package and import the
+executed workflow notebook:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\package_task07_kaggle.py
+```
+
+```text
+notebooks/07_dcrnn_training.ipynb
+```
+
+The notebook keeps package verification, GPU probing, validation-only training,
+locked-test finalization, and artifact packaging in separate stages. Probe
+commands require owner-supplied session and quota values. Full training and the
+single locked-test finalization must remain explicit commands; importing the
+notebook does not run them automatically. Reproducibility metadata, graph
+details, validation history, locked-test metrics, seeds, versions, and artifact
+hashes are retained in `results/task07_dcrnn/*.json` and the executed notebook.
 
 ## Task 06 sensor-local GRU
 
