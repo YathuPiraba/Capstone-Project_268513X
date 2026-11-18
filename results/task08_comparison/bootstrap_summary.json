@@ -1,0 +1,113 @@
+{
+  "analysis_role": "exploratory uncertainty/stability analysis; not a formal significance test",
+  "mask_policy": "finite_nonzero_targets",
+  "cluster_unit": "target calendar date, separately derived from each horizon target timestamp",
+  "calendar_dates": [
+    "2012-06-04",
+    "2012-06-05",
+    "2012-06-06",
+    "2012-06-07",
+    "2012-06-08",
+    "2012-06-09",
+    "2012-06-10",
+    "2012-06-11",
+    "2012-06-12",
+    "2012-06-13",
+    "2012-06-14",
+    "2012-06-15",
+    "2012-06-16",
+    "2012-06-17",
+    "2012-06-18",
+    "2012-06-19",
+    "2012-06-20",
+    "2012-06-21",
+    "2012-06-22",
+    "2012-06-23",
+    "2012-06-24",
+    "2012-06-25",
+    "2012-06-26",
+    "2012-06-27"
+  ],
+  "cluster_count": 24,
+  "partial_days_retained": true,
+  "aggregation": "sum(sampled daily absolute-error sums) / sum(sampled daily eligible counts)",
+  "paired_sampling": "same sampled target-date sequence for both models and all horizons",
+  "repetitions": 10000,
+  "seed": 268513,
+  "numpy_bit_generator": "PCG64",
+  "interval": "empirical percentile interval, 2.5th to 97.5th percentile",
+  "source_artifact_sha256": {
+    "task04_baselines": "48FD54D29C5BDB130F978F2526865649BF247CE8D6C371C8807EE8DC4D5B4321",
+    "task05_xgboost": "19AF5FC9C78053D8B7F61DDB7B5D9A7122765328B1403004E3E1E5429037D236",
+    "task06_gru": "27C165BDE7FD72E1CD12D21F4D0D1087F9FA1CBCB08E90EE800461C39EC5FCAF",
+    "task07_dcrnn": "1A34095B3FF057F719F1C2AA059E71928E7EEB1BE4F9F32C2A5B85550351A8E5"
+  },
+  "comparisons": [
+    {
+      "comparator": "gru",
+      "comparator_label": "GRU-128",
+      "rows": [
+        {
+          "horizon_minutes": 15,
+          "dcgru_minus_comparator_mae_mph": 0.013036463588718128,
+          "interval_95_low_mph": -0.015508245610244985,
+          "interval_95_high_mph": 0.03989449086291123
+        },
+        {
+          "horizon_minutes": 30,
+          "dcgru_minus_comparator_mae_mph": -0.12797442500961864,
+          "interval_95_low_mph": -0.1604929812203414,
+          "interval_95_high_mph": -0.09699614661322863
+        },
+        {
+          "horizon_minutes": 60,
+          "dcgru_minus_comparator_mae_mph": -0.17154032080152337,
+          "interval_95_low_mph": -0.21310004687384723,
+          "interval_95_high_mph": -0.13155710402816992
+        }
+      ],
+      "equal_horizon_mean": {
+        "dcgru_minus_comparator_mae_mph": -0.09549276074080797,
+        "interval_95_low_mph": -0.1261662492477059,
+        "interval_95_high_mph": -0.06671131760402248
+      }
+    },
+    {
+      "comparator": "xgboost",
+      "comparator_label": "XGBoost",
+      "rows": [
+        {
+          "horizon_minutes": 15,
+          "dcgru_minus_comparator_mae_mph": -0.02953338019653584,
+          "interval_95_low_mph": -0.0801074370067571,
+          "interval_95_high_mph": 0.012736329932341982
+        },
+        {
+          "horizon_minutes": 30,
+          "dcgru_minus_comparator_mae_mph": -0.2607600499158065,
+          "interval_95_low_mph": -0.32640506857715323,
+          "interval_95_high_mph": -0.206086325389558
+        },
+        {
+          "horizon_minutes": 60,
+          "dcgru_minus_comparator_mae_mph": -0.12451134771343053,
+          "interval_95_low_mph": -0.28830775160094513,
+          "interval_95_high_mph": 0.011519094137523708
+        }
+      ],
+      "equal_horizon_mean": {
+        "dcgru_minus_comparator_mae_mph": -0.13826825927525763,
+        "interval_95_low_mph": -0.22921343867517896,
+        "interval_95_high_mph": -0.0646223835637134
+      }
+    }
+  ],
+  "limitations": [
+    "Only 24 target-date clusters are available.",
+    "Forecast windows overlap and adjacent errors are temporally dependent.",
+    "Input history can be shared across midnight and cluster boundaries.",
+    "The locked test period is limited to 4-27 June 2012.",
+    "The bootstrap was proposed after the primary locked-test results were observed.",
+    "Intervals are exploratory and do not establish causality or formal statistical significance."
+  ]
+}

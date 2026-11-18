@@ -239,16 +239,73 @@ horizon, policy, and model-file assertions passed.
 | Task 05 - XGBoost | **Completed** |
 | Task 06 - Temporal GRU | **Completed** |
 | Task 07 - DCRNN-style ST-GNN | **Completed** |
+| Task 08 - Comparative analysis | **Implemented; awaiting owner notebook execution** |
 
-Tasks 01 through 07 are complete. Task 07 completed its approved Kaggle GPU
+Tasks 01 through 07 are complete. Task 08 code, generated summaries, figures,
+tests, and an unexecuted presentation notebook are implemented; owner execution
+and visual review of the notebook remain pending. Task 07 completed its approved Kaggle GPU
 probe, validation-only training, and single locked-test finalization. Task 04 includes deterministic baseline
 inference, shared masked metrics, reproducible prediction/metric artifacts, five
 focused baseline tests, and a successfully executed six-code-cell notebook.
 Task 05 includes validation-only XGBoost selection, three horizon-specific
 models, aligned held-out predictions and metrics, an executed seven-code-cell
 presentation notebook, and ten focused tests. Demonstration-application work
-remains planned. The current automated suite passes 58 tests; one CUDA-specific
-RNG restoration test is skipped in the local CPU-only environment.
+remains planned. After Task 08 implementation, the complete local suite passes
+79 tests with one CUDA-specific RNG restoration test skipped in the local
+CPU-only environment.
+
+## Task 08 comparative analysis
+
+Task 08 compares Persistence, Historical Average, XGBoost, GRU-128, and
+DCGRU-64 on the array-aligned locked test predictions. The integrity gate checks
+source SHA-256 values, dataset and split provenance, shape `(6844, 3, 207)`,
+targets, timestamps, sensor order, horizons, masks, and finite predictions. It
+then recomputes every Task 04-07 metric rather than copying published values.
+
+Primary finite/nonzero-target results in original speed units are:
+
+| Model | Metric | +15 min | +30 min | +60 min |
+| --- | --- | ---: | ---: | ---: |
+| Persistence | MAE (mph) | 4.0175 | 5.0952 | 6.7980 |
+| Historical Average | MAE (mph) | 7.1104 | 7.1104 | 7.1108 |
+| XGBoost | MAE (mph) | 3.0044 | 3.5235 | 4.0866 |
+| GRU-128 | MAE (mph) | **2.9618** | 3.3907 | 4.1336 |
+| DCGRU-64 | MAE (mph) | 2.9748 | **3.2627** | **3.9621** |
+| XGBoost | RMSE (mph) | **5.4669** | 6.4889 | **7.4888** |
+| GRU-128 | RMSE (mph) | 5.8154 | 6.9243 | 8.5397 |
+| DCGRU-64 | RMSE (mph) | 5.7350 | **6.4829** | 8.0355 |
+
+Relative to GRU, DCGRU MAE is 0.44% worse at +15 minutes and 3.77% and
+4.15% better at +30 and +60 minutes. Its secondary equal-horizon mean MAE is
+2.73% lower. Sensor-level results are likewise mixed: DCGRU improves 99/207,
+166/207, and 157/207 sensors at +15/+30/+60 minutes.
+
+The retrospective **Observed-Speed Evaluation Strata** use fixed target-speed
+bands below 20, 20 to below 40, and at least 40 mph. Approximately 87.65% of
+primary eligible observations are in the highest band, so these exploratory
+results are explicitly reported with counts and are not conditions known at
+forecast time. Time-of-day, weekday/weekend, and target-date results are also
+exploratory and preserve timezone-naive timestamps and partial boundary days.
+
+A paired target-day cluster bootstrap uses 24 dates, 10,000 repetitions, seed
+268513, and pooled absolute-error sums/counts. For DCGRU minus GRU, exploratory
+95% intervals are `[-0.0155, 0.0399]`, `[-0.1605, -0.0970]`, and
+`[-0.2131, -0.1316]` mph at +15/+30/+60 minutes. These stability intervals do
+not establish formal significance or causality. Zero-inclusive results remain
+separate because unresolved exact-zero readings materially worsen errors.
+
+Regenerate all lightweight Task 08 summaries and figures from the frozen
+predictions with:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\run_comparative_analysis.py
+```
+
+The lecturer-facing notebook is
+[`notebooks/08_comparative_analysis.ipynb`](notebooks/08_comparative_analysis.ipynb).
+It loads generated summaries and figures without training or inference. It is
+intentionally committed with null execution counts and empty outputs for the
+owner to execute manually in VS Code.
 
 ## Task 07 direct-head DCGRU
 

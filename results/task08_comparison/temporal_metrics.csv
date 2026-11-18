@@ -1,0 +1,901 @@
+group_type,group,mask_policy,model,model_label,horizon_minutes,eligible_count,mae_mph,rmse_mph
+time_of_day,overnight_00_06,finite_nonzero_targets,persistence,Persistence,15,288309,3.831594298599491,7.7974591960373125
+time_of_day,overnight_00_06,finite_nonzero_targets,historical_average,Historical Average,15,288309,6.113192629101776,7.809161738359058
+time_of_day,overnight_00_06,finite_nonzero_targets,xgboost,XGBoost,15,288309,2.466620579598391,3.603626542132417
+time_of_day,overnight_00_06,finite_nonzero_targets,gru,GRU-128,15,288309,2.4460020324539173,3.6352753514800145
+time_of_day,overnight_00_06,finite_nonzero_targets,dcrnn,DCGRU-64,15,288309,2.4867477944276155,3.703406401021405
+time_of_day,morning_06_12,finite_nonzero_targets,persistence,Persistence,15,301556,4.005609555897064,9.167808952357715
+time_of_day,morning_06_12,finite_nonzero_targets,historical_average,Historical Average,15,301556,7.614387491725139,10.364691301109707
+time_of_day,morning_06_12,finite_nonzero_targets,xgboost,XGBoost,15,301556,3.0294621058702167,5.740681297861272
+time_of_day,morning_06_12,finite_nonzero_targets,gru,GRU-128,15,301556,3.0070720664744015,6.222924194164971
+time_of_day,morning_06_12,finite_nonzero_targets,dcrnn,DCGRU-64,15,301556,3.081811277226764,6.249969009883836
+time_of_day,afternoon_12_18,finite_nonzero_targets,persistence,Persistence,15,324461,4.724321892478773,10.049369342345264
+time_of_day,afternoon_12_18,finite_nonzero_targets,historical_average,Historical Average,15,324461,8.544418249263593,11.598982259084076
+time_of_day,afternoon_12_18,finite_nonzero_targets,xgboost,XGBoost,15,324461,3.7321359400530465,6.683276357512336
+time_of_day,afternoon_12_18,finite_nonzero_targets,gru,GRU-128,15,324461,3.5892155420646596,7.009117077949637
+time_of_day,afternoon_12_18,finite_nonzero_targets,dcrnn,DCGRU-64,15,324461,3.578862897763057,6.762539323724776
+time_of_day,evening_18_24,finite_nonzero_targets,persistence,Persistence,15,330714,3.4971041683645323,7.478798503475017
+time_of_day,evening_18_24,finite_nonzero_targets,historical_average,Historical Average,15,330714,6.113106753929376,8.986009732221817
+time_of_day,evening_18_24,finite_nonzero_targets,xgboost,XGBoost,15,330714,2.736324476033142,5.227237911916777
+time_of_day,evening_18_24,finite_nonzero_targets,gru,GRU-128,15,330714,2.754670540530075,5.682167280406268
+time_of_day,evening_18_24,finite_nonzero_targets,dcrnn,DCGRU-64,15,330714,2.7102349273498816,5.601650792371595
+day_type,weekday,finite_nonzero_targets,persistence,Persistence,15,990682,4.065446749077748,8.36260430922228
+day_type,weekday,finite_nonzero_targets,historical_average,Historical Average,15,990682,7.378148214930842,10.106532186235372
+day_type,weekday,finite_nonzero_targets,xgboost,XGBoost,15,990682,3.0952632124461936,5.56370622073499
+day_type,weekday,finite_nonzero_targets,gru,GRU-128,15,990682,3.0806229541306562,5.9518383455041315
+day_type,weekday,finite_nonzero_targets,dcrnn,DCGRU-64,15,990682,3.1142475501159534,5.899143448252848
+day_type,weekend,finite_nonzero_targets,persistence,Persistence,15,254358,3.8309520954530156,9.885781840136993
+day_type,weekend,finite_nonzero_targets,historical_average,Historical Average,15,254358,6.067332401133703,8.675334868149609
+day_type,weekend,finite_nonzero_targets,xgboost,XGBoost,15,254358,2.6504108762491736,5.072385430262679
+day_type,weekend,finite_nonzero_targets,gru,GRU-128,15,254358,2.4990599538569587,5.250196059863672
+day_type,weekend,finite_nonzero_targets,dcrnn,DCGRU-64,15,254358,2.431909074492409,5.0448512138857
+target_date,2012-06-04,finite_nonzero_targets,persistence,Persistence,15,44995,4.480014587158715,10.147547721786022
+target_date,2012-06-04,finite_nonzero_targets,historical_average,Historical Average,15,44995,8.925855552145418,11.366436745114296
+target_date,2012-06-04,finite_nonzero_targets,xgboost,XGBoost,15,44995,3.177463515460673,5.8711014320894455
+target_date,2012-06-04,finite_nonzero_targets,gru,GRU-128,15,44995,3.098941617199878,6.279313435981648
+target_date,2012-06-04,finite_nonzero_targets,dcrnn,DCGRU-64,15,44995,3.1121172789532587,6.106856860898628
+target_date,2012-06-05,finite_nonzero_targets,persistence,Persistence,15,54001,4.876087597437202,10.876933998625844
+target_date,2012-06-05,finite_nonzero_targets,historical_average,Historical Average,15,54001,6.661018068913871,8.689878616175964
+target_date,2012-06-05,finite_nonzero_targets,xgboost,XGBoost,15,54001,3.0502806472681354,5.32452985632252
+target_date,2012-06-05,finite_nonzero_targets,gru,GRU-128,15,54001,3.0157172321766748,5.66992381492924
+target_date,2012-06-05,finite_nonzero_targets,dcrnn,DCGRU-64,15,54001,3.0585205748919577,5.70253849598368
+target_date,2012-06-06,finite_nonzero_targets,persistence,Persistence,15,58341,3.7166464584382517,6.778508362927649
+target_date,2012-06-06,finite_nonzero_targets,historical_average,Historical Average,15,58341,6.978202381630502,9.558384239375545
+target_date,2012-06-06,finite_nonzero_targets,xgboost,XGBoost,15,58341,3.0343456474469788,5.385279320545983
+target_date,2012-06-06,finite_nonzero_targets,gru,GRU-128,15,58341,3.029253492916856,5.766940022605851
+target_date,2012-06-06,finite_nonzero_targets,dcrnn,DCGRU-64,15,58341,3.0017852437589227,5.564517994845869
+target_date,2012-06-07,finite_nonzero_targets,persistence,Persistence,15,55924,4.923354881852129,10.599998451559841
+target_date,2012-06-07,finite_nonzero_targets,historical_average,Historical Average,15,55924,6.710103028855488,9.343631043988086
+target_date,2012-06-07,finite_nonzero_targets,xgboost,XGBoost,15,55924,3.274011448546907,5.69664005725678
+target_date,2012-06-07,finite_nonzero_targets,gru,GRU-128,15,55924,3.3530191691692854,6.288109269511406
+target_date,2012-06-07,finite_nonzero_targets,dcrnn,DCGRU-64,15,55924,3.2330566937424647,5.891019176137138
+target_date,2012-06-08,finite_nonzero_targets,persistence,Persistence,15,58466,3.9898993594975023,7.857826857950579
+target_date,2012-06-08,finite_nonzero_targets,historical_average,Historical Average,15,58466,6.061800613280961,8.989832870750725
+target_date,2012-06-08,finite_nonzero_targets,xgboost,XGBoost,15,58466,3.1083201737776576,5.589848234069945
+target_date,2012-06-08,finite_nonzero_targets,gru,GRU-128,15,58466,3.1171681200912076,5.935008658906699
+target_date,2012-06-08,finite_nonzero_targets,dcrnn,DCGRU-64,15,58466,3.1480164811359246,5.900719458509713
+target_date,2012-06-09,finite_nonzero_targets,persistence,Persistence,15,34428,4.536774584548199,11.33760639873779
+target_date,2012-06-09,finite_nonzero_targets,historical_average,Historical Average,15,34428,4.44067766819397,7.498088504396728
+target_date,2012-06-09,finite_nonzero_targets,xgboost,XGBoost,15,34428,2.8185803411655654,5.396926815752119
+target_date,2012-06-09,finite_nonzero_targets,gru,GRU-128,15,34428,2.724930220996726,5.6902500085892775
+target_date,2012-06-09,finite_nonzero_targets,dcrnn,DCGRU-64,15,34428,2.712149501250543,5.582717448003853
+target_date,2012-06-10,finite_nonzero_targets,persistence,Persistence,15,53369,2.926461738236364,7.988050760872306
+target_date,2012-06-10,finite_nonzero_targets,historical_average,Historical Average,15,53369,7.529302354075512,9.093793771556037
+target_date,2012-06-10,finite_nonzero_targets,xgboost,XGBoost,15,53369,2.1413374187986776,3.9709614517855045
+target_date,2012-06-10,finite_nonzero_targets,gru,GRU-128,15,53369,1.881750082876,3.884485802677284
+target_date,2012-06-10,finite_nonzero_targets,dcrnn,DCGRU-64,15,53369,1.8109783290803294,3.687575270518137
+target_date,2012-06-11,finite_nonzero_targets,persistence,Persistence,15,58996,3.414253071502292,6.544151947280592
+target_date,2012-06-11,finite_nonzero_targets,historical_average,Historical Average,15,58996,8.766152403256825,11.147696230934669
+target_date,2012-06-11,finite_nonzero_targets,xgboost,XGBoost,15,58996,2.7844415370688265,5.090259357132148
+target_date,2012-06-11,finite_nonzero_targets,gru,GRU-128,15,58996,2.6935013064602114,5.289733490618902
+target_date,2012-06-11,finite_nonzero_targets,dcrnn,DCGRU-64,15,58996,2.745084893295883,5.3381005485056905
+target_date,2012-06-12,finite_nonzero_targets,persistence,Persistence,15,55059,4.366010516280228,9.465133557325181
+target_date,2012-06-12,finite_nonzero_targets,historical_average,Historical Average,15,55059,7.587268382180885,10.257425971945436
+target_date,2012-06-12,finite_nonzero_targets,xgboost,XGBoost,15,55059,3.151489192264078,5.695063717765549
+target_date,2012-06-12,finite_nonzero_targets,gru,GRU-128,15,55059,3.1208409792475447,6.037204031437982
+target_date,2012-06-12,finite_nonzero_targets,dcrnn,DCGRU-64,15,55059,3.221897060097674,6.1296239011991895
+target_date,2012-06-13,finite_nonzero_targets,persistence,Persistence,15,58935,3.8957971453619202,7.2107302336352666
+target_date,2012-06-13,finite_nonzero_targets,historical_average,Historical Average,15,58935,7.50216490820122,10.437020350729773
+target_date,2012-06-13,finite_nonzero_targets,xgboost,XGBoost,15,58935,3.159288688755146,5.645290120881139
+target_date,2012-06-13,finite_nonzero_targets,gru,GRU-128,15,58935,3.192724684733894,6.07858286778404
+target_date,2012-06-13,finite_nonzero_targets,dcrnn,DCGRU-64,15,58935,3.219058143390112,6.103680435968072
+target_date,2012-06-14,finite_nonzero_targets,persistence,Persistence,15,56963,3.9279232843708907,7.5358308403385275
+target_date,2012-06-14,finite_nonzero_targets,historical_average,Historical Average,15,56963,6.503529651824488,9.141835281085688
+target_date,2012-06-14,finite_nonzero_targets,xgboost,XGBoost,15,56963,3.0729421293139643,5.472548717155183
+target_date,2012-06-14,finite_nonzero_targets,gru,GRU-128,15,56963,3.1285048362891015,5.979758858720385
+target_date,2012-06-14,finite_nonzero_targets,dcrnn,DCGRU-64,15,56963,3.1160413873028765,5.847756247785011
+target_date,2012-06-15,finite_nonzero_targets,persistence,Persistence,15,57712,4.032087828835905,7.705001781652039
+target_date,2012-06-15,finite_nonzero_targets,historical_average,Historical Average,15,57712,6.8038745014012285,10.544152734354308
+target_date,2012-06-15,finite_nonzero_targets,xgboost,XGBoost,15,57712,3.431786491636271,6.215952892384231
+target_date,2012-06-15,finite_nonzero_targets,gru,GRU-128,15,57712,3.5424249656163447,6.805597518692753
+target_date,2012-06-15,finite_nonzero_targets,dcrnn,DCGRU-64,15,57712,3.5131065261459926,6.643315946140318
+target_date,2012-06-16,finite_nonzero_targets,persistence,Persistence,15,37730,4.885227398937312,11.978604142062567
+target_date,2012-06-16,finite_nonzero_targets,historical_average,Historical Average,15,37730,5.031555957674762,8.381197133533895
+target_date,2012-06-16,finite_nonzero_targets,xgboost,XGBoost,15,37730,3.3415816876128974,6.1736668433719935
+target_date,2012-06-16,finite_nonzero_targets,gru,GRU-128,15,37730,3.1474524353075686,6.330611918882639
+target_date,2012-06-16,finite_nonzero_targets,dcrnn,DCGRU-64,15,37730,2.9563737172892157,5.899972072153877
+target_date,2012-06-17,finite_nonzero_targets,persistence,Persistence,15,14989,8.485171983263918,19.57681528156772
+target_date,2012-06-17,finite_nonzero_targets,historical_average,Historical Average,15,14989,8.783736104448376,12.039822974062343
+target_date,2012-06-17,finite_nonzero_targets,xgboost,XGBoost,15,14989,3.684905303154163,6.924600542751994
+target_date,2012-06-17,finite_nonzero_targets,gru,GRU-128,15,14989,3.564855724631338,7.233800297025457
+target_date,2012-06-17,finite_nonzero_targets,dcrnn,DCGRU-64,15,14989,3.5873530172849324,7.11260068148444
+target_date,2012-06-18,finite_nonzero_targets,persistence,Persistence,15,31220,4.9861646863528675,11.291527003154753
+target_date,2012-06-18,finite_nonzero_targets,historical_average,Historical Average,15,31220,10.741855889590514,13.200400128015037
+target_date,2012-06-18,finite_nonzero_targets,xgboost,XGBoost,15,31220,3.411576538983968,6.458731722828363
+target_date,2012-06-18,finite_nonzero_targets,gru,GRU-128,15,31220,3.332767946114834,6.807330546090217
+target_date,2012-06-18,finite_nonzero_targets,dcrnn,DCGRU-64,15,31220,3.3119634421288753,6.50286675192079
+target_date,2012-06-19,finite_nonzero_targets,persistence,Persistence,15,58674,3.874618987020562,7.494671990081248
+target_date,2012-06-19,finite_nonzero_targets,historical_average,Historical Average,15,58674,7.853616685811099,10.693442275806866
+target_date,2012-06-19,finite_nonzero_targets,xgboost,XGBoost,15,58674,3.142091630224685,5.741093780058547
+target_date,2012-06-19,finite_nonzero_targets,gru,GRU-128,15,58674,3.1328426883933536,6.156721128988162
+target_date,2012-06-19,finite_nonzero_targets,dcrnn,DCGRU-64,15,58674,3.16319751300588,6.019390452538057
+target_date,2012-06-20,finite_nonzero_targets,persistence,Persistence,15,58638,3.8327719997921066,7.6669221935664975
+target_date,2012-06-20,finite_nonzero_targets,historical_average,Historical Average,15,58638,7.328059091396752,10.166125391038602
+target_date,2012-06-20,finite_nonzero_targets,xgboost,XGBoost,15,58638,2.984850103525236,5.365979834831736
+target_date,2012-06-20,finite_nonzero_targets,gru,GRU-128,15,58638,2.93292601508442,5.6244631955388185
+target_date,2012-06-20,finite_nonzero_targets,dcrnn,DCGRU-64,15,58638,3.0409258020279464,5.823573712796169
+target_date,2012-06-21,finite_nonzero_targets,persistence,Persistence,15,57886,3.9393912514965104,7.808306723902095
+target_date,2012-06-21,finite_nonzero_targets,historical_average,Historical Average,15,57886,6.54312575545311,9.050888090507831
+target_date,2012-06-21,finite_nonzero_targets,xgboost,XGBoost,15,57886,3.018490050593759,5.338388288667115
+target_date,2012-06-21,finite_nonzero_targets,gru,GRU-128,15,57886,3.023376449571856,5.780966867916091
+target_date,2012-06-21,finite_nonzero_targets,dcrnn,DCGRU-64,15,57886,3.0605176549615023,5.710224743216507
+target_date,2012-06-22,finite_nonzero_targets,persistence,Persistence,15,58054,3.5380558590496753,6.602249294126052
+target_date,2012-06-22,finite_nonzero_targets,historical_average,Historical Average,15,58054,6.609013163009334,9.89871131615102
+target_date,2012-06-22,finite_nonzero_targets,xgboost,XGBoost,15,58054,2.996332275132996,5.414305286528163
+target_date,2012-06-22,finite_nonzero_targets,gru,GRU-128,15,58054,3.006194447096516,5.835274705657692
+target_date,2012-06-22,finite_nonzero_targets,dcrnn,DCGRU-64,15,58054,3.0931234441849877,5.910957374074195
+target_date,2012-06-23,finite_nonzero_targets,persistence,Persistence,15,56487,3.3405706707063656,7.543022764847847
+target_date,2012-06-23,finite_nonzero_targets,historical_average,Historical Average,15,56487,4.087029969811849,7.219708332640544
+target_date,2012-06-23,finite_nonzero_targets,xgboost,XGBoost,15,56487,2.6953822901564486,5.1625490495143165
+target_date,2012-06-23,finite_nonzero_targets,gru,GRU-128,15,56487,2.649519431608135,5.505536159012008
+target_date,2012-06-23,finite_nonzero_targets,dcrnn,DCGRU-64,15,56487,2.5862338926266735,5.3043549325891775
+target_date,2012-06-24,finite_nonzero_targets,persistence,Persistence,15,57355,2.822007028074938,6.803668263752742
+target_date,2012-06-24,finite_nonzero_targets,historical_average,Historical Average,15,57355,7.605186263358393,9.361883534870678
+target_date,2012-06-24,finite_nonzero_targets,xgboost,XGBoost,15,57355,2.2538419821252353,4.2537710220014615
+target_date,2012-06-24,finite_nonzero_targets,gru,GRU-128,15,57355,2.084638949485859,4.344623568317967
+target_date,2012-06-24,finite_nonzero_targets,dcrnn,DCGRU-64,15,57355,2.0425095331494973,4.2043434481676
+target_date,2012-06-25,finite_nonzero_targets,persistence,Persistence,15,55335,4.121790020667765,9.44330621325296
+target_date,2012-06-25,finite_nonzero_targets,historical_average,Historical Average,15,55335,8.608052314713222,10.910125455370302
+target_date,2012-06-25,finite_nonzero_targets,xgboost,XGBoost,15,55335,2.8515001893661602,5.0867896999154265
+target_date,2012-06-25,finite_nonzero_targets,gru,GRU-128,15,55335,2.7137260469432385,5.279665974166961
+target_date,2012-06-25,finite_nonzero_targets,dcrnn,DCGRU-64,15,55335,2.8124875517904115,5.362003555114092
+target_date,2012-06-26,finite_nonzero_targets,persistence,Persistence,15,56653,3.630511644404995,6.814285879151071
+target_date,2012-06-26,finite_nonzero_targets,historical_average,Historical Average,15,56653,7.177447964340979,9.421733145966456
+target_date,2012-06-26,finite_nonzero_targets,xgboost,XGBoost,15,56653,2.9357165488939394,5.097639574820085
+target_date,2012-06-26,finite_nonzero_targets,gru,GRU-128,15,56653,2.856758236043504,5.357903832150005
+target_date,2012-06-26,finite_nonzero_targets,dcrnn,DCGRU-64,15,56653,2.9421111312033874,5.393421417758379
+target_date,2012-06-27,finite_nonzero_targets,persistence,Persistence,15,54830,4.27551641581917,8.702562550414267
+target_date,2012-06-27,finite_nonzero_targets,historical_average,Historical Average,15,54830,7.292804176221101,9.909912816946605
+target_date,2012-06-27,finite_nonzero_targets,xgboost,XGBoost,15,54830,3.3033486267795835,5.951646200755455
+target_date,2012-06-27,finite_nonzero_targets,gru,GRU-128,15,54830,3.286537766188237,6.366363388733178
+target_date,2012-06-27,finite_nonzero_targets,dcrnn,DCGRU-64,15,54830,3.363066706208014,6.375459825122258
+time_of_day,overnight_00_06,all_finite_targets_including_zeros,persistence,Persistence,15,345483,3.9383439984114257,9.873422740390453
+time_of_day,overnight_00_06,all_finite_targets_including_zeros,historical_average,Historical Average,15,345483,14.574205500478916,24.54293810650644
+time_of_day,overnight_00_06,all_finite_targets_including_zeros,xgboost,XGBoost,15,345483,12.046577064765376,24.902034598489212
+time_of_day,overnight_00_06,all_finite_targets_including_zeros,gru,GRU-128,15,345483,12.069975017034276,25.00048462068647
+time_of_day,overnight_00_06,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,345483,12.322923883641016,25.534047686323134
+time_of_day,morning_06_12,all_finite_targets_including_zeros,persistence,Persistence,15,357696,3.651040689291536,9.311541813502565
+time_of_day,morning_06_12,all_finite_targets_including_zeros,historical_average,Historical Average,15,357696,15.148861501437887,24.469454392010345
+time_of_day,morning_06_12,all_finite_targets_including_zeros,xgboost,XGBoost,15,357696,10.741367007655427,21.850636700498498
+time_of_day,morning_06_12,all_finite_targets_including_zeros,gru,GRU-128,15,357696,11.12877268822061,22.899188569210654
+time_of_day,morning_06_12,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,357696,11.765672631183657,24.141968395067614
+time_of_day,afternoon_12_18,all_finite_targets_including_zeros,persistence,Persistence,15,357696,5.059208526722701,11.753442973859096
+time_of_day,afternoon_12_18,all_finite_targets_including_zeros,historical_average,Historical Average,15,357696,12.486952879997308,19.396559316199923
+time_of_day,afternoon_12_18,all_finite_targets_including_zeros,xgboost,XGBoost,15,357696,8.527972921429045,18.347507127156913
+time_of_day,afternoon_12_18,all_finite_targets_including_zeros,gru,GRU-128,15,357696,8.706634190850847,19.380158960517683
+time_of_day,afternoon_12_18,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,357696,8.604270771963485,19.060341116704883
+time_of_day,evening_18_24,all_finite_targets_including_zeros,persistence,Persistence,15,355833,3.5705328574189807,8.479430070441717
+time_of_day,evening_18_24,all_finite_targets_including_zeros,historical_average,Historical Average,15,355833,9.639085438331065,17.402460128066828
+time_of_day,evening_18_24,all_finite_targets_including_zeros,xgboost,XGBoost,15,355833,6.793631803133444,16.9157704578618
+time_of_day,evening_18_24,all_finite_targets_including_zeros,gru,GRU-128,15,355833,6.926801511343928,17.44040262334318
+time_of_day,evening_18_24,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,355833,6.9024427633010275,17.50216306991556
+day_type,weekday,all_finite_targets_including_zeros,persistence,Persistence,15,1059012,4.212901219654331,9.495846465166066
+day_type,weekday,all_finite_targets_including_zeros,historical_average,Historical Average,15,1059012,10.157658260378968,16.399888620878855
+day_type,weekday,all_finite_targets_including_zeros,xgboost,XGBoost,15,1059012,6.497864664430348,15.431707473509299
+day_type,weekday,all_finite_targets_including_zeros,gru,GRU-128,15,1059012,6.590366147898398,15.926916433468872
+day_type,weekday,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,1059012,6.667268232168094,16.085952569085332
+day_type,weekend,all_finite_targets_including_zeros,persistence,Persistence,15,357696,3.593142431002863,11.116006346377732
+day_type,weekend,all_finite_targets_including_zeros,historical_average,Historical Average,15,357696,21.228034976742837,32.58455405902721
+day_type,weekend,all_finite_targets_including_zeros,xgboost,XGBoost,15,357696,18.424961785250066,31.506050464059662
+day_type,weekend,all_finite_targets_including_zeros,gru,GRU-128,15,357696,18.87223956933894,32.48403904028791
+day_type,weekend,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,357696,19.399176502764824,33.38408212363075
+target_date,2012-06-04,all_finite_targets_including_zeros,persistence,Persistence,15,47403,5.123335540011699,12.280370440635513
+target_date,2012-06-04,all_finite_targets_including_zeros,historical_average,Historical Average,15,47403,10.888097749489434,15.515193883543354
+target_date,2012-06-04,all_finite_targets_including_zeros,xgboost,XGBoost,15,47403,5.941112432073469,14.329688250196657
+target_date,2012-06-04,all_finite_targets_including_zeros,gru,GRU-128,15,47403,5.985778149128214,14.965170663209005
+target_date,2012-06-04,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,47403,5.978215050825917,14.822594701799272
+target_date,2012-06-05,all_finite_targets_including_zeros,persistence,Persistence,15,59616,5.678136036240404,13.48430739921248
+target_date,2012-06-05,all_finite_targets_including_zeros,historical_average,Historical Average,15,59616,10.474626604980873,16.99745316697674
+target_date,2012-06-05,all_finite_targets_including_zeros,xgboost,XGBoost,15,59616,7.937307299199743,17.971941466295217
+target_date,2012-06-05,all_finite_targets_including_zeros,gru,GRU-128,15,59616,8.015853961610249,18.439275241631
+target_date,2012-06-05,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,59616,8.111436832410533,18.615968354279005
+target_date,2012-06-06,all_finite_targets_including_zeros,persistence,Persistence,15,59616,3.711673440175856,7.037945681748507
+target_date,2012-06-06,all_finite_targets_including_zeros,historical_average,Historical Average,15,59616,7.836955420061572,11.816892713196138
+target_date,2012-06-06,all_finite_targets_including_zeros,xgboost,XGBoost,15,59616,4.203420049825194,10.053361500753606
+target_date,2012-06-06,all_finite_targets_including_zeros,gru,GRU-128,15,59616,4.260844187592224,10.583725860732644
+target_date,2012-06-06,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,59616,4.183092049797759,10.262330807949912
+target_date,2012-06-07,all_finite_targets_including_zeros,persistence,Persistence,15,59616,5.749863238482905,13.074826045435067
+target_date,2012-06-07,all_finite_targets_including_zeros,historical_average,Historical Average,15,59616,9.403885835506856,15.77887382118682
+target_date,2012-06-07,all_finite_targets_including_zeros,xgboost,XGBoost,15,59616,6.399765177947347,14.883788894738426
+target_date,2012-06-07,all_finite_targets_including_zeros,gru,GRU-128,15,59616,6.568610791710434,15.476148073044389
+target_date,2012-06-07,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,59616,6.358391424583832,15.04166286756602
+target_date,2012-06-08,all_finite_targets_including_zeros,persistence,Persistence,15,59616,4.208770216688393,8.901781089153106
+target_date,2012-06-08,all_finite_targets_including_zeros,historical_average,Historical Average,15,59616,6.891378158508103,11.359398427540354
+target_date,2012-06-08,all_finite_targets_including_zeros,xgboost,XGBoost,15,59616,4.111292843429649,9.591063813265643
+target_date,2012-06-08,all_finite_targets_including_zeros,gru,GRU-128,15,59616,4.165873372011696,10.01172103606271
+target_date,2012-06-08,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,59616,4.139745969972285,9.746076988922704
+target_date,2012-06-09,all_finite_targets_including_zeros,persistence,Persistence,15,59616,3.529412612412562,11.417897259283162
+target_date,2012-06-09,all_finite_targets_including_zeros,historical_average,Historical Average,15,59616,27.694950406366175,39.55245942837861
+target_date,2012-06-09,all_finite_targets_including_zeros,xgboost,XGBoost,15,59616,25.3369966998182,37.31439711427357
+target_date,2012-06-09,all_finite_targets_including_zeros,gru,GRU-128,15,59616,26.06389540249355,38.44916118688972
+target_date,2012-06-09,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,59616,27.0166861399404,39.642830833077525
+target_date,2012-06-10,all_finite_targets_including_zeros,persistence,Persistence,15,59616,3.30272818791589,10.023098821904302
+target_date,2012-06-10,all_finite_targets_including_zeros,historical_average,Historical Average,15,59616,12.540322940607364,20.095809970046783
+target_date,2012-06-10,all_finite_targets_including_zeros,xgboost,XGBoost,15,59616,8.021732234065302,19.450384645351818
+target_date,2012-06-10,all_finite_targets_including_zeros,gru,GRU-128,15,59616,8.078098064915912,20.304573113182997
+target_date,2012-06-10,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,59616,8.094524553737159,20.45411753200417
+target_date,2012-06-11,all_finite_targets_including_zeros,persistence,Persistence,15,59616,3.474069827318116,6.953912872521483
+target_date,2012-06-11,all_finite_targets_including_zeros,historical_average,Historical Average,15,59616,9.173049868141998,12.18750640379998
+target_date,2012-06-11,all_finite_targets_including_zeros,xgboost,XGBoost,15,59616,3.344674309414026,7.779455211424287
+target_date,2012-06-11,all_finite_targets_including_zeros,gru,GRU-128,15,59616,3.2870601048366983,8.122499559886483
+target_date,2012-06-11,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,59616,3.3312806221651843,8.1226970802439
+target_date,2012-06-12,all_finite_targets_including_zeros,persistence,Persistence,15,59616,4.794626542411115,11.355657426996167
+target_date,2012-06-12,all_finite_targets_including_zeros,historical_average,Historical Average,15,59616,10.840029149519891,17.22163920674756
+target_date,2012-06-12,all_finite_targets_including_zeros,xgboost,XGBoost,15,59616,7.375126115472374,17.22727963748468
+target_date,2012-06-12,all_finite_targets_including_zeros,gru,GRU-128,15,59616,7.430498665147928,17.602382893956275
+target_date,2012-06-12,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,59616,7.430078191791491,17.385738521676423
+target_date,2012-06-13,all_finite_targets_including_zeros,persistence,Persistence,15,59616,3.970051863673542,7.667271633640228
+target_date,2012-06-13,all_finite_targets_including_zeros,historical_average,Historical Average,15,59616,7.957499466593816,11.66438048773531
+target_date,2012-06-13,all_finite_targets_including_zeros,xgboost,XGBoost,15,59616,3.75327937956306,8.233980195967913
+target_date,2012-06-13,all_finite_targets_including_zeros,gru,GRU-128,15,59616,3.8274493840872035,8.77756580289292
+target_date,2012-06-13,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,59616,3.8355624345858024,8.713482916712266
+target_date,2012-06-14,all_finite_targets_including_zeros,persistence,Persistence,15,59616,4.009547606001159,8.343268371279018
+target_date,2012-06-14,all_finite_targets_including_zeros,historical_average,Historical Average,15,59616,8.33244156838777,13.6059887393943
+target_date,2012-06-14,all_finite_targets_including_zeros,xgboost,XGBoost,15,59616,5.497815752041251,13.381118324011705
+target_date,2012-06-14,all_finite_targets_including_zeros,gru,GRU-128,15,59616,5.670675357648713,14.077776566339685
+target_date,2012-06-14,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,59616,5.608122541882126,13.82718398405864
+target_date,2012-06-15,all_finite_targets_including_zeros,persistence,Persistence,15,59616,4.146684821215568,8.402674775237179
+target_date,2012-06-15,all_finite_targets_including_zeros,historical_average,Historical Average,15,59616,8.160158645733931,13.719793165329476
+target_date,2012-06-15,all_finite_targets_including_zeros,xgboost,XGBoost,15,59616,5.089526203223257,11.78598102125048
+target_date,2012-06-15,all_finite_targets_including_zeros,gru,GRU-128,15,59616,5.178169470264976,12.001853124720117
+target_date,2012-06-15,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,59616,5.236985875656074,12.302484423224136
+target_date,2012-06-16,all_finite_targets_including_zeros,persistence,Persistence,15,59616,4.773315515596112,13.986352396254977
+target_date,2012-06-16,all_finite_targets_including_zeros,historical_average,Historical Average,15,59616,25.723111772264897,38.02961366266707
+target_date,2012-06-16,all_finite_targets_including_zeros,xgboost,XGBoost,15,59616,23.63771658269365,36.237197762561046
+target_date,2012-06-16,all_finite_targets_including_zeros,gru,GRU-128,15,59616,23.990245375939345,37.001278413315966
+target_date,2012-06-16,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,59616,24.574248540148147,38.00315652109587
+target_date,2012-06-17,all_finite_targets_including_zeros,persistence,Persistence,15,59616,3.345574547474205,13.049477660143227
+target_date,2012-06-17,all_finite_targets_including_zeros,historical_average,Historical Average,15,59616,45.09057685290355,50.24484396966098
+target_date,2012-06-17,all_finite_targets_including_zeros,xgboost,XGBoost,15,59616,43.685697975342144,50.27647439685325
+target_date,2012-06-17,all_finite_targets_including_zeros,gru,GRU-128,15,59616,45.21376460385825,51.95575008862517
+target_date,2012-06-17,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,59616,46.76045995433576,53.528008535509834
+target_date,2012-06-18,all_finite_targets_including_zeros,persistence,Persistence,15,59616,2.700051307202072,8.497298245870642
+target_date,2012-06-18,all_finite_targets_including_zeros,historical_average,Historical Average,15,59616,31.29147859461932,39.09633349577287
+target_date,2012-06-18,all_finite_targets_including_zeros,xgboost,XGBoost,15,59616,28.91256249158916,40.14594112164223
+target_date,2012-06-18,all_finite_targets_including_zeros,gru,GRU-128,15,59616,29.53704886543698,41.03040018061706
+target_date,2012-06-18,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,59616,30.8188549208873,42.670107663730676
+target_date,2012-06-19,all_finite_targets_including_zeros,persistence,Persistence,15,59616,3.9784769482359055,8.090969588504343
+target_date,2012-06-19,all_finite_targets_including_zeros,historical_average,Historical Average,15,59616,8.434686464270804,12.142824276575697
+target_date,2012-06-19,all_finite_targets_including_zeros,xgboost,XGBoost,15,59616,3.9303053145780615,8.912923200428127
+target_date,2012-06-19,all_finite_targets_including_zeros,gru,GRU-128,15,59616,3.9778403863300786,9.490440324395633
+target_date,2012-06-19,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,59616,3.9774087389432085,9.272114194813659
+target_date,2012-06-20,all_finite_targets_including_zeros,persistence,Persistence,15,59616,4.074423486237849,8.764199072870435
+target_date,2012-06-20,all_finite_targets_including_zeros,historical_average,Historical Average,15,59616,7.902124612279288,11.564069796962121
+target_date,2012-06-20,all_finite_targets_including_zeros,xgboost,XGBoost,15,59616,3.7465660133119747,8.45964811511567
+target_date,2012-06-20,all_finite_targets_including_zeros,gru,GRU-128,15,59616,3.7321220928828653,8.825475300023713
+target_date,2012-06-20,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,59616,3.8105243454497972,8.831843093830514
+target_date,2012-06-21,all_finite_targets_including_zeros,persistence,Persistence,15,59616,4.154002893651646,8.914149629306404
+target_date,2012-06-21,all_finite_targets_including_zeros,historical_average,Historical Average,15,59616,7.727022642331557,12.233751670325521
+target_date,2012-06-21,all_finite_targets_including_zeros,xgboost,XGBoost,15,59616,4.494531371750342,10.815505665567972
+target_date,2012-06-21,all_finite_targets_including_zeros,gru,GRU-128,15,59616,4.553875378924876,11.26048706998961
+target_date,2012-06-21,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,59616,4.5178429796930555,10.958061542446078
+target_date,2012-06-22,all_finite_targets_including_zeros,persistence,Persistence,15,59616,3.536260985652089,6.94064003739287
+target_date,2012-06-22,all_finite_targets_including_zeros,historical_average,Historical Average,15,59616,7.736071398728759,12.809123353587871
+target_date,2012-06-22,all_finite_targets_including_zeros,xgboost,XGBoost,15,59616,4.36152789178046,10.533655833193897
+target_date,2012-06-22,all_finite_targets_including_zeros,gru,GRU-128,15,59616,4.426811845841765,11.00198220117911
+target_date,2012-06-22,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,59616,4.4776281411109755,10.914733376203884
+target_date,2012-06-23,all_finite_targets_including_zeros,persistence,Persistence,15,59616,3.5452370701590707,8.826994142274764
+target_date,2012-06-23,all_finite_targets_including_zeros,historical_average,Historical Average,15,59616,6.85915703536141,14.963668842531872
+target_date,2012-06-23,all_finite_targets_including_zeros,xgboost,XGBoost,15,59616,5.5922510186039425,14.330001662230169
+target_date,2012-06-23,all_finite_targets_including_zeros,gru,GRU-128,15,59616,5.691221259457181,14.97993597149528
+target_date,2012-06-23,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,59616,5.669572490004841,15.078002397948453
+target_date,2012-06-24,all_finite_targets_including_zeros,persistence,Persistence,15,59616,3.0625866524593377,8.16945216012049
+target_date,2012-06-24,all_finite_targets_including_zeros,historical_average,Historical Average,15,59616,9.460090852953611,14.407397685632972
+target_date,2012-06-24,all_finite_targets_including_zeros,xgboost,XGBoost,15,59616,4.275376200977165,11.785511151811793
+target_date,2012-06-24,all_finite_targets_including_zeros,gru,GRU-128,15,59616,4.196212709369417,12.156069090794883
+target_date,2012-06-24,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,59616,4.279567338422637,12.657919074390728
+target_date,2012-06-25,all_finite_targets_including_zeros,persistence,Persistence,15,59616,4.60709079777241,11.530757774534603
+target_date,2012-06-25,all_finite_targets_including_zeros,historical_average,Historical Average,15,59616,11.62757474223922,17.449797764688093
+target_date,2012-06-25,all_finite_targets_including_zeros,xgboost,XGBoost,15,59616,6.758890478795658,16.38807075981956
+target_date,2012-06-25,all_finite_targets_including_zeros,gru,GRU-128,15,59616,6.763037125719315,16.86595426797837
+target_date,2012-06-25,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,59616,6.874590093388851,16.973413966299546
+target_date,2012-06-26,all_finite_targets_including_zeros,persistence,Persistence,15,59616,3.5736897626289736,7.212752111622813
+target_date,2012-06-26,all_finite_targets_including_zeros,historical_average,Historical Average,15,59616,9.05886731519112,13.980295848733345
+target_date,2012-06-26,all_finite_targets_including_zeros,xgboost,XGBoost,15,59616,5.28661368389155,12.660994417872889
+target_date,2012-06-26,all_finite_targets_including_zeros,gru,GRU-128,15,59616,5.3189611754816655,13.185782190844977
+target_date,2012-06-26,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,59616,5.385134204399252,13.168287711464894
+target_date,2012-06-27,all_finite_targets_including_zeros,persistence,Persistence,15,57753,4.53814303331731,10.002257103993024
+target_date,2012-06-27,all_finite_targets_including_zeros,historical_average,Historical Average,15,57753,9.222309445098196,14.433919386379246
+target_date,2012-06-27,all_finite_targets_including_zeros,xgboost,XGBoost,15,57753,5.6775556130704565,13.123068971673682
+target_date,2012-06-27,all_finite_targets_including_zeros,gru,GRU-128,15,57753,5.77679983091713,13.764874759407991
+target_date,2012-06-27,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,57753,5.766628571749747,13.502019141034936
+time_of_day,overnight_00_06,finite_nonzero_targets,persistence,Persistence,30,287691,4.2842266997996585,9.071721842030911
+time_of_day,overnight_00_06,finite_nonzero_targets,historical_average,Historical Average,30,287691,6.120524753888372,7.815325967975318
+time_of_day,overnight_00_06,finite_nonzero_targets,xgboost,XGBoost,30,287691,2.5195982669397807,3.704722567403687
+time_of_day,overnight_00_06,finite_nonzero_targets,gru,GRU-128,30,287691,2.5032744757138388,3.757156210821261
+time_of_day,overnight_00_06,finite_nonzero_targets,dcrnn,DCGRU-64,30,287691,2.5133861369098502,3.7646458491124037
+time_of_day,morning_06_12,finite_nonzero_targets,persistence,Persistence,30,301556,5.493588549032562,12.301353232775586
+time_of_day,morning_06_12,finite_nonzero_targets,historical_average,Historical Average,30,301556,7.614387491725139,10.364691301109707
+time_of_day,morning_06_12,finite_nonzero_targets,xgboost,XGBoost,30,301556,3.739964134940246,7.0127564967627025
+time_of_day,morning_06_12,finite_nonzero_targets,gru,GRU-128,30,301556,3.6444400802557064,7.781462411423796
+time_of_day,morning_06_12,finite_nonzero_targets,dcrnn,DCGRU-64,30,301556,3.416938455996766,7.109868808767115
+time_of_day,afternoon_12_18,finite_nonzero_targets,persistence,Persistence,30,324461,6.041948116346118,12.778053948052035
+time_of_day,afternoon_12_18,finite_nonzero_targets,historical_average,Historical Average,30,324461,8.544418249263593,11.598982259084076
+time_of_day,afternoon_12_18,finite_nonzero_targets,xgboost,XGBoost,30,324461,4.531343885885426,7.976304115017561
+time_of_day,afternoon_12_18,finite_nonzero_targets,gru,GRU-128,30,324461,4.250577573950553,8.499453109195807
+time_of_day,afternoon_12_18,finite_nonzero_targets,dcrnn,DCGRU-64,30,324461,4.0812361849191126,7.939465152774367
+time_of_day,evening_18_24,finite_nonzero_targets,persistence,Persistence,30,331314,4.5097528482307725,9.84165133465429
+time_of_day,evening_18_24,finite_nonzero_targets,historical_average,Historical Average,30,331314,6.1068351251716955,8.979360593819845
+time_of_day,evening_18_24,finite_nonzero_targets,xgboost,XGBoost,30,331314,3.211197434471836,6.264189060896743
+time_of_day,evening_18_24,finite_nonzero_targets,gru,GRU-128,30,331314,3.08828911698686,6.485102234708906
+time_of_day,evening_18_24,finite_nonzero_targets,dcrnn,DCGRU-64,30,331314,2.9715091068939943,6.1550633890858215
+day_type,weekday,finite_nonzero_targets,persistence,Persistence,30,990664,5.121692423641723,10.691131218202706
+day_type,weekday,finite_nonzero_targets,historical_average,Historical Average,30,990664,7.378202951528923,10.10656872083694
+day_type,weekday,finite_nonzero_targets,xgboost,XGBoost,30,990664,3.6079574912939676,6.57400179392068
+day_type,weekday,finite_nonzero_targets,gru,GRU-128,30,990664,3.53874515305175,7.114000194098622
+day_type,weekday,finite_nonzero_targets,dcrnn,DCGRU-64,30,990664,3.4073080707100587,6.650094057765383
+day_type,weekend,finite_nonzero_targets,persistence,Persistence,30,254358,4.992186334795964,12.718208896898261
+day_type,weekend,finite_nonzero_targets,historical_average,Historical Average,30,254358,6.067332401133703,8.675334868149609
+day_type,weekend,finite_nonzero_targets,xgboost,XGBoost,30,254358,3.1945517927403095,6.146059797484866
+day_type,weekend,finite_nonzero_targets,gru,GRU-128,30,254358,2.81416331492729,6.129804922254623
+day_type,weekend,finite_nonzero_targets,dcrnn,DCGRU-64,30,254358,2.6996751178453193,5.785667364936876
+target_date,2012-06-04,finite_nonzero_targets,persistence,Persistence,30,44377,6.318990720203624,13.879477578078268
+target_date,2012-06-04,finite_nonzero_targets,historical_average,Historical Average,30,44377,9.012558393671922,11.435480381250445
+target_date,2012-06-04,finite_nonzero_targets,xgboost,XGBoost,30,44377,3.847548543590742,7.119534600270106
+target_date,2012-06-04,finite_nonzero_targets,gru,GRU-128,30,44377,3.731652896265094,7.858537138000777
+target_date,2012-06-04,finite_nonzero_targets,dcrnn,DCGRU-64,30,44377,3.5184588799893763,7.1724473267268705
+target_date,2012-06-05,finite_nonzero_targets,persistence,Persistence,30,54001,6.66669119590084,14.531042342606291
+target_date,2012-06-05,finite_nonzero_targets,historical_average,Historical Average,30,54001,6.661018068913871,8.689878616175964
+target_date,2012-06-05,finite_nonzero_targets,xgboost,XGBoost,30,54001,3.455789314630215,6.1484062617587965
+target_date,2012-06-05,finite_nonzero_targets,gru,GRU-128,30,54001,3.388370631346302,6.616727817091465
+target_date,2012-06-05,finite_nonzero_targets,dcrnn,DCGRU-64,30,54001,3.2019154030549033,6.0413896915142695
+target_date,2012-06-06,finite_nonzero_targets,persistence,Persistence,30,58341,4.514559215754773,8.52505951088944
+target_date,2012-06-06,finite_nonzero_targets,historical_average,Historical Average,30,58341,6.978202381630502,9.558384239375545
+target_date,2012-06-06,finite_nonzero_targets,xgboost,XGBoost,30,58341,3.4840055542431823,6.2445622905772735
+target_date,2012-06-06,finite_nonzero_targets,gru,GRU-128,30,58341,3.476649509944566,6.863291957037375
+target_date,2012-06-06,finite_nonzero_targets,dcrnn,DCGRU-64,30,58341,3.2877657417236796,6.277847562184277
+target_date,2012-06-07,finite_nonzero_targets,persistence,Persistence,30,55924,6.610963766869549,13.967693811712044
+target_date,2012-06-07,finite_nonzero_targets,historical_average,Historical Average,30,55924,6.710103028855488,9.343631043988086
+target_date,2012-06-07,finite_nonzero_targets,xgboost,XGBoost,30,55924,3.8169227169614346,6.808626032988397
+target_date,2012-06-07,finite_nonzero_targets,gru,GRU-128,30,55924,3.8032989818213965,7.349895313734383
+target_date,2012-06-07,finite_nonzero_targets,dcrnn,DCGRU-64,30,55924,3.4881025993032373,6.507895581555358
+target_date,2012-06-08,finite_nonzero_targets,persistence,Persistence,30,58466,4.783063077224642,9.375983868866962
+target_date,2012-06-08,finite_nonzero_targets,historical_average,Historical Average,30,58466,6.061800613280961,8.989832870750725
+target_date,2012-06-08,finite_nonzero_targets,xgboost,XGBoost,30,58466,3.592743582726946,6.545491326486114
+target_date,2012-06-08,finite_nonzero_targets,gru,GRU-128,30,58466,3.5888800684280837,7.130508264383874
+target_date,2012-06-08,finite_nonzero_targets,dcrnn,DCGRU-64,30,58466,3.446779865455621,6.642334554716238
+target_date,2012-06-09,finite_nonzero_targets,persistence,Persistence,30,34428,6.013867622975762,14.518669613481274
+target_date,2012-06-09,finite_nonzero_targets,historical_average,Historical Average,30,34428,4.44067766819397,7.498088504396728
+target_date,2012-06-09,finite_nonzero_targets,xgboost,XGBoost,30,34428,3.3063421502079287,6.384276386518508
+target_date,2012-06-09,finite_nonzero_targets,gru,GRU-128,30,34428,3.0873871742986205,6.6698147492877755
+target_date,2012-06-09,finite_nonzero_targets,dcrnn,DCGRU-64,30,34428,3.040067442622747,6.4434591223377184
+target_date,2012-06-10,finite_nonzero_targets,persistence,Persistence,30,53369,3.8340011233558995,10.733180226274252
+target_date,2012-06-10,finite_nonzero_targets,historical_average,Historical Average,30,53369,7.529302354075512,9.093793771556037
+target_date,2012-06-10,finite_nonzero_targets,xgboost,XGBoost,30,53369,2.5603247341570423,4.8382331814979755
+target_date,2012-06-10,finite_nonzero_targets,gru,GRU-128,30,53369,2.065121972903703,4.44678186343018
+target_date,2012-06-10,finite_nonzero_targets,dcrnn,DCGRU-64,30,53369,1.9838905354978835,4.232505473648677
+target_date,2012-06-11,finite_nonzero_targets,persistence,Persistence,30,58996,4.103933882523109,8.254263694299457
+target_date,2012-06-11,finite_nonzero_targets,historical_average,Historical Average,30,58996,8.766152403256825,11.147696230934669
+target_date,2012-06-11,finite_nonzero_targets,xgboost,XGBoost,30,58996,3.260117341688219,6.076815033426426
+target_date,2012-06-11,finite_nonzero_targets,gru,GRU-128,30,58996,3.128475146483634,6.553767361354674
+target_date,2012-06-11,finite_nonzero_targets,dcrnn,DCGRU-64,30,58996,3.036254888951633,6.191357264719048
+target_date,2012-06-12,finite_nonzero_targets,persistence,Persistence,30,55059,5.8744915915596465,12.650389864832174
+target_date,2012-06-12,finite_nonzero_targets,historical_average,Historical Average,30,55059,7.587268382180885,10.257425971945436
+target_date,2012-06-12,finite_nonzero_targets,xgboost,XGBoost,30,55059,3.704646843197165,6.7238225628619945
+target_date,2012-06-12,finite_nonzero_targets,gru,GRU-128,30,55059,3.6792066677636934,7.406850865308946
+target_date,2012-06-12,finite_nonzero_targets,dcrnn,DCGRU-64,30,55059,3.551027539941949,6.980457499597864
+target_date,2012-06-13,finite_nonzero_targets,persistence,Persistence,30,58935,4.7310516024514495,9.122803608618366
+target_date,2012-06-13,finite_nonzero_targets,historical_average,Historical Average,30,58935,7.50216490820122,10.437020350729773
+target_date,2012-06-13,finite_nonzero_targets,xgboost,XGBoost,30,58935,3.6657577678121593,6.684550859998085
+target_date,2012-06-13,finite_nonzero_targets,gru,GRU-128,30,58935,3.6781755760434103,7.332939479455243
+target_date,2012-06-13,finite_nonzero_targets,dcrnn,DCGRU-64,30,58935,3.5425240191002354,6.972441271849286
+target_date,2012-06-14,finite_nonzero_targets,persistence,Persistence,30,56963,4.742017033334643,9.278126112206154
+target_date,2012-06-14,finite_nonzero_targets,historical_average,Historical Average,30,56963,6.503529651824488,9.141835281085688
+target_date,2012-06-14,finite_nonzero_targets,xgboost,XGBoost,30,56963,3.514122605623679,6.347607195631723
+target_date,2012-06-14,finite_nonzero_targets,gru,GRU-128,30,56963,3.5541188817828444,7.0925346848347335
+target_date,2012-06-14,finite_nonzero_targets,dcrnn,DCGRU-64,30,56963,3.3713500867686372,6.499786955165553
+target_date,2012-06-15,finite_nonzero_targets,persistence,Persistence,30,57712,4.919642527096784,9.521858656987664
+target_date,2012-06-15,finite_nonzero_targets,historical_average,Historical Average,30,57712,6.8038745014012285,10.544152734354308
+target_date,2012-06-15,finite_nonzero_targets,xgboost,XGBoost,30,57712,4.114614121930532,7.594451154085821
+target_date,2012-06-15,finite_nonzero_targets,gru,GRU-128,30,57712,3.987858401950694,7.83342929974768
+target_date,2012-06-15,finite_nonzero_targets,dcrnn,DCGRU-64,30,57712,3.80096448574771,7.278847775705799
+target_date,2012-06-16,finite_nonzero_targets,persistence,Persistence,30,37730,6.532863789919183,15.283291331567488
+target_date,2012-06-16,finite_nonzero_targets,historical_average,Historical Average,30,37730,5.031555957674762,8.381197133533895
+target_date,2012-06-16,finite_nonzero_targets,xgboost,XGBoost,30,37730,4.216779331348517,7.74034419974945
+target_date,2012-06-16,finite_nonzero_targets,gru,GRU-128,30,37730,3.703343100789942,7.56891365319419
+target_date,2012-06-16,finite_nonzero_targets,dcrnn,DCGRU-64,30,37730,3.362829165621631,6.78414910534057
+target_date,2012-06-17,finite_nonzero_targets,persistence,Persistence,30,14989,14.04880078724398,27.002993193742846
+target_date,2012-06-17,finite_nonzero_targets,historical_average,Historical Average,30,14989,8.783736104448376,12.039822974062343
+target_date,2012-06-17,finite_nonzero_targets,xgboost,XGBoost,30,14989,4.669746355836847,8.569698693587329
+target_date,2012-06-17,finite_nonzero_targets,gru,GRU-128,30,14989,4.293029472372379,8.749945022325376
+target_date,2012-06-17,finite_nonzero_targets,dcrnn,DCGRU-64,30,14989,4.268927921617181,8.483678722194098
+target_date,2012-06-18,finite_nonzero_targets,persistence,Persistence,30,31220,6.99525693236936,15.186513246595712
+target_date,2012-06-18,finite_nonzero_targets,historical_average,Historical Average,30,31220,10.741855889590514,13.200400128015037
+target_date,2012-06-18,finite_nonzero_targets,xgboost,XGBoost,30,31220,4.126176299462861,7.6934229868378425
+target_date,2012-06-18,finite_nonzero_targets,gru,GRU-128,30,31220,3.948127791148896,8.200715386265571
+target_date,2012-06-18,finite_nonzero_targets,dcrnn,DCGRU-64,30,31220,3.8027343167973853,7.6820303744771
+target_date,2012-06-19,finite_nonzero_targets,persistence,Persistence,30,58674,4.778590642890418,9.416753783594926
+target_date,2012-06-19,finite_nonzero_targets,historical_average,Historical Average,30,58674,7.853616685811099,10.693442275806866
+target_date,2012-06-19,finite_nonzero_targets,xgboost,XGBoost,30,58674,3.6915359391441376,6.835629646976821
+target_date,2012-06-19,finite_nonzero_targets,gru,GRU-128,30,58674,3.6470248733572714,7.421513733623379
+target_date,2012-06-19,finite_nonzero_targets,dcrnn,DCGRU-64,30,58674,3.4557170150475987,6.784444275692982
+target_date,2012-06-20,finite_nonzero_targets,persistence,Persistence,30,58638,4.564859039617302,9.209561513993826
+target_date,2012-06-20,finite_nonzero_targets,historical_average,Historical Average,30,58638,7.328059091396752,10.166125391038602
+target_date,2012-06-20,finite_nonzero_targets,xgboost,XGBoost,30,58638,3.462485114435713,6.326150159434081
+target_date,2012-06-20,finite_nonzero_targets,gru,GRU-128,30,58638,3.359361539146808,6.757259040818306
+target_date,2012-06-20,finite_nonzero_targets,dcrnn,DCGRU-64,30,58638,3.3064028327729647,6.5034954214602925
+target_date,2012-06-21,finite_nonzero_targets,persistence,Persistence,30,57886,4.680256253533902,9.337328151559559
+target_date,2012-06-21,finite_nonzero_targets,historical_average,Historical Average,30,57886,6.54312575545311,9.050888090507831
+target_date,2012-06-21,finite_nonzero_targets,xgboost,XGBoost,30,57886,3.4199716564141407,6.153677896498247
+target_date,2012-06-21,finite_nonzero_targets,gru,GRU-128,30,57886,3.386264952647875,6.720580753486727
+target_date,2012-06-21,finite_nonzero_targets,dcrnn,DCGRU-64,30,57886,3.279706976480201,6.282030364132022
+target_date,2012-06-22,finite_nonzero_targets,persistence,Persistence,30,58054,4.244631831556935,8.186933673141132
+target_date,2012-06-22,finite_nonzero_targets,historical_average,Historical Average,30,58054,6.609013163009334,9.89871131615102
+target_date,2012-06-22,finite_nonzero_targets,xgboost,XGBoost,30,58054,3.5699162018686703,6.596494864207157
+target_date,2012-06-22,finite_nonzero_targets,gru,GRU-128,30,58054,3.3839816335441832,6.834086012928339
+target_date,2012-06-22,finite_nonzero_targets,dcrnn,DCGRU-64,30,58054,3.3601631617502807,6.624573663791391
+target_date,2012-06-23,finite_nonzero_targets,persistence,Persistence,30,56487,3.8313852941581445,8.763710897231137
+target_date,2012-06-23,finite_nonzero_targets,historical_average,Historical Average,30,56487,4.087029969811849,7.219708332640544
+target_date,2012-06-23,finite_nonzero_targets,xgboost,XGBoost,30,56487,3.198823026904623,6.14807364318676
+target_date,2012-06-23,finite_nonzero_targets,gru,GRU-128,30,56487,2.913868534566979,6.281400382050478
+target_date,2012-06-23,finite_nonzero_targets,dcrnn,DCGRU-64,30,56487,2.8033635797810694,5.948455372009349
+target_date,2012-06-24,finite_nonzero_targets,persistence,Persistence,30,57355,3.219499683812734,7.985176448404789
+target_date,2012-06-24,finite_nonzero_targets,historical_average,Historical Average,30,57355,7.605186263358393,9.361883534870678
+target_date,2012-06-24,finite_nonzero_targets,xgboost,XGBoost,30,57355,2.65541379117905,5.043873671412412
+target_date,2012-06-24,finite_nonzero_targets,gru,GRU-128,30,57355,2.277531974254138,4.997883982727884
+target_date,2012-06-24,finite_nonzero_targets,dcrnn,DCGRU-64,30,57355,2.21292239829448,4.788011832691059
+target_date,2012-06-25,finite_nonzero_targets,persistence,Persistence,30,55335,5.463027877817795,12.49254914718396
+target_date,2012-06-25,finite_nonzero_targets,historical_average,Historical Average,30,55335,8.608052314713222,10.910125455370302
+target_date,2012-06-25,finite_nonzero_targets,xgboost,XGBoost,30,55335,3.3018776974661646,5.828208198722569
+target_date,2012-06-25,finite_nonzero_targets,gru,GRU-128,30,55335,3.118704848433282,6.360260941314301
+target_date,2012-06-25,finite_nonzero_targets,dcrnn,DCGRU-64,30,55335,3.1028470066324445,6.135036789697601
+target_date,2012-06-26,finite_nonzero_targets,persistence,Persistence,30,56653,4.405326564754133,8.552998117530157
+target_date,2012-06-26,finite_nonzero_targets,historical_average,Historical Average,30,56653,7.177447964340979,9.421733145966456
+target_date,2012-06-26,finite_nonzero_targets,xgboost,XGBoost,30,56653,3.351901160440004,5.869023910663895
+target_date,2012-06-26,finite_nonzero_targets,gru,GRU-128,30,56653,3.2891858704138373,6.49712550243066
+target_date,2012-06-26,finite_nonzero_targets,dcrnn,DCGRU-64,30,56653,3.277656133760066,6.2251750649060655
+target_date,2012-06-27,finite_nonzero_targets,persistence,Persistence,30,55430,5.170967951856912,10.425881664600407
+target_date,2012-06-27,finite_nonzero_targets,historical_average,Historical Average,30,55430,7.242548053839773,9.864248650238592
+target_date,2012-06-27,finite_nonzero_targets,xgboost,XGBoost,30,55430,3.8586660039679863,7.031509406196264
+target_date,2012-06-27,finite_nonzero_targets,gru,GRU-128,30,55430,3.7821431529942817,7.591890159808016
+target_date,2012-06-27,finite_nonzero_targets,dcrnn,DCGRU-64,30,55430,3.7084504840164456,7.236167384712087
+time_of_day,overnight_00_06,all_finite_targets_including_zeros,persistence,Persistence,30,344862,4.796601706014819,12.065976573970033
+time_of_day,overnight_00_06,all_finite_targets_including_zeros,historical_average,Historical Average,30,344862,14.59508171146689,24.563780593663935
+time_of_day,overnight_00_06,all_finite_targets_including_zeros,xgboost,XGBoost,30,344862,12.147167582847873,25.03863175263594
+time_of_day,overnight_00_06,all_finite_targets_including_zeros,gru,GRU-128,30,344862,12.138299425602042,25.04648466579085
+time_of_day,overnight_00_06,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,344862,12.356477896325886,25.549859280010228
+time_of_day,morning_06_12,all_finite_targets_including_zeros,persistence,Persistence,30,357696,5.0957597861321275,12.424643389022433
+time_of_day,morning_06_12,all_finite_targets_including_zeros,historical_average,Historical Average,30,357696,15.148861501437887,24.469454392010345
+time_of_day,morning_06_12,all_finite_targets_including_zeros,xgboost,XGBoost,30,357696,11.348780411528525,22.287818507453565
+time_of_day,morning_06_12,all_finite_targets_including_zeros,gru,GRU-128,30,357696,11.662240148702807,23.293852629908105
+time_of_day,morning_06_12,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,357696,12.040769253858878,24.333455067407012
+time_of_day,afternoon_12_18,all_finite_targets_including_zeros,persistence,Persistence,30,357696,6.837889074068749,15.165659200782518
+time_of_day,afternoon_12_18,all_finite_targets_including_zeros,historical_average,Historical Average,30,357696,12.486952879997308,19.396559316199923
+time_of_day,afternoon_12_18,all_finite_targets_including_zeros,xgboost,XGBoost,30,357696,9.31042527692649,19.004619511895225
+time_of_day,afternoon_12_18,all_finite_targets_including_zeros,gru,GRU-128,30,357696,9.294905671824807,19.89849676642949
+time_of_day,afternoon_12_18,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,357696,9.064430602768311,19.490124917859372
+time_of_day,evening_18_24,all_finite_targets_including_zeros,persistence,Persistence,30,356454,4.761675347187433,11.198954416695775
+time_of_day,evening_18_24,all_finite_targets_including_zeros,historical_average,Historical Average,30,356454,9.630162838883301,17.39404518769414
+time_of_day,evening_18_24,all_finite_targets_including_zeros,xgboost,XGBoost,30,356454,7.256832829346682,17.335578265613645
+time_of_day,evening_18_24,all_finite_targets_including_zeros,gru,GRU-128,30,356454,7.221763496811838,17.66225559975239
+time_of_day,evening_18_24,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,356454,7.117508023695855,17.597095252640344
+day_type,weekday,all_finite_targets_including_zeros,persistence,Persistence,30,1059012,5.475391235805353,12.17044485182605
+day_type,weekday,all_finite_targets_including_zeros,historical_average,Historical Average,30,1059012,10.158559294599154,16.40169069330966
+day_type,weekday,all_finite_targets_including_zeros,xgboost,XGBoost,30,1059012,6.992291899366569,15.875408255668098
+day_type,weekday,all_finite_targets_including_zeros,gru,GRU-128,30,1059012,7.013831378688287,16.35419708000442
+day_type,weekday,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,1059012,6.936451903684417,16.34385145807665
+day_type,weekend,all_finite_targets_including_zeros,persistence,Persistence,30,357696,5.0925851030812375,14.532165864703432
+day_type,weekend,all_finite_targets_including_zeros,historical_average,Historical Average,30,357696,21.228034976742837,32.58455405902721
+day_type,weekend,all_finite_targets_including_zeros,xgboost,XGBoost,30,357696,18.900456827344005,31.869612382414346
+day_type,weekend,all_finite_targets_including_zeros,gru,GRU-128,30,357696,19.091128604783233,32.59432074341372
+day_type,weekend,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,357696,19.57473287331337,33.45272940114561
+target_date,2012-06-04,all_finite_targets_including_zeros,persistence,Persistence,30,46782,7.694468008656158,16.929841414145255
+target_date,2012-06-04,all_finite_targets_including_zeros,historical_average,Historical Average,30,46782,10.99305989220179,15.6033888514055
+target_date,2012-06-04,all_finite_targets_including_zeros,xgboost,XGBoost,30,46782,6.648201239523068,15.063169002358336
+target_date,2012-06-04,all_finite_targets_including_zeros,gru,GRU-128,30,46782,6.620951958272033,15.735428859270666
+target_date,2012-06-04,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,46782,6.400350736085727,15.354487479001786
+target_date,2012-06-05,all_finite_targets_including_zeros,persistence,Persistence,30,59616,8.440620839776688,18.230202240591733
+target_date,2012-06-05,all_finite_targets_including_zeros,historical_average,Historical Average,30,59616,10.474626604980873,16.99745316697674
+target_date,2012-06-05,all_finite_targets_including_zeros,xgboost,XGBoost,30,59616,8.34921844931699,18.342162569513345
+target_date,2012-06-05,all_finite_targets_including_zeros,gru,GRU-128,30,59616,8.344323526984164,18.71570449604746
+target_date,2012-06-05,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,59616,8.189796759310958,18.606617103492557
+target_date,2012-06-06,all_finite_targets_including_zeros,persistence,Persistence,30,59616,4.530265870885839,8.825214834908335
+target_date,2012-06-06,all_finite_targets_including_zeros,historical_average,Historical Average,30,59616,7.836955420061572,11.816892713196138
+target_date,2012-06-06,all_finite_targets_including_zeros,xgboost,XGBoost,30,59616,4.645058020077809,10.557301114958149
+target_date,2012-06-06,all_finite_targets_including_zeros,gru,GRU-128,30,59616,4.694766570355881,11.188873707819996
+target_date,2012-06-06,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,59616,4.461936309273242,10.648473052034927
+target_date,2012-06-07,all_finite_targets_including_zeros,persistence,Persistence,30,59616,8.260883237375287,17.38789750288205
+target_date,2012-06-07,all_finite_targets_including_zeros,historical_average,Historical Average,30,59616,9.403885835506856,15.77887382118682
+target_date,2012-06-07,all_finite_targets_including_zeros,xgboost,XGBoost,30,59616,6.893037749213771,15.29020739126293
+target_date,2012-06-07,all_finite_targets_including_zeros,gru,GRU-128,30,59616,6.9690056736689945,15.855459605519671
+target_date,2012-06-07,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,59616,6.589819145316901,15.265461124355863
+target_date,2012-06-08,all_finite_targets_including_zeros,persistence,Persistence,30,59616,5.013487077880445,10.321510574579108
+target_date,2012-06-08,all_finite_targets_including_zeros,historical_average,Historical Average,30,59616,6.891378158508103,11.359398427540354
+target_date,2012-06-08,all_finite_targets_including_zeros,xgboost,XGBoost,30,59616,4.587789664201261,10.187819894384393
+target_date,2012-06-08,all_finite_targets_including_zeros,gru,GRU-128,30,59616,4.628268063240345,10.749311219445904
+target_date,2012-06-08,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,59616,4.436092764759806,10.218163823361602
+target_date,2012-06-09,all_finite_targets_including_zeros,persistence,Persistence,30,59616,5.046213764122128,14.786326096049933
+target_date,2012-06-09,all_finite_targets_including_zeros,historical_average,Historical Average,30,59616,27.694950406366175,39.55245942837861
+target_date,2012-06-09,all_finite_targets_including_zeros,xgboost,XGBoost,30,59616,25.61772960533553,37.51173106158149
+target_date,2012-06-09,all_finite_targets_including_zeros,gru,GRU-128,30,59616,26.286833287487152,38.561726986730186
+target_date,2012-06-09,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,59616,27.202923271696033,39.713775085452525
+target_date,2012-06-10,all_finite_targets_including_zeros,persistence,Persistence,30,59616,4.768378142599409,13.708565633661337
+target_date,2012-06-10,all_finite_targets_including_zeros,historical_average,Historical Average,30,59616,12.540322940607364,20.095809970046783
+target_date,2012-06-10,all_finite_targets_including_zeros,xgboost,XGBoost,30,59616,8.540135649727397,20.057924706613584
+target_date,2012-06-10,all_finite_targets_including_zeros,gru,GRU-128,30,59616,8.249451044136618,20.437104089431756
+target_date,2012-06-10,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,59616,8.265767799495492,20.610444616177283
+target_date,2012-06-11,all_finite_targets_including_zeros,persistence,Persistence,30,59616,4.209548524578466,8.759625605308175
+target_date,2012-06-11,all_finite_targets_including_zeros,historical_average,Historical Average,30,59616,9.173049868141998,12.18750640379998
+target_date,2012-06-11,all_finite_targets_including_zeros,xgboost,XGBoost,30,59616,3.814084490504997,8.454493252580766
+target_date,2012-06-11,all_finite_targets_including_zeros,gru,GRU-128,30,59616,3.715874464086566,8.981539062930047
+target_date,2012-06-11,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,59616,3.6199982632725867,8.70617485337878
+target_date,2012-06-12,all_finite_targets_including_zeros,persistence,Persistence,30,59616,6.902283203773996,15.391123757151918
+target_date,2012-06-12,all_finite_targets_including_zeros,historical_average,Historical Average,30,59616,10.840029149519891,17.22163920674756
+target_date,2012-06-12,all_finite_targets_including_zeros,xgboost,XGBoost,30,59616,7.891650569614964,17.588458902132516
+target_date,2012-06-12,all_finite_targets_including_zeros,gru,GRU-128,30,59616,7.923096665181314,18.00481720975716
+target_date,2012-06-12,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,59616,7.709245121032541,17.58707491597925
+target_date,2012-06-13,all_finite_targets_including_zeros,persistence,Persistence,30,59616,4.8408955676115495,9.612866304263425
+target_date,2012-06-13,all_finite_targets_including_zeros,historical_average,Historical Average,30,59616,7.957499466593816,11.66438048773531
+target_date,2012-06-13,all_finite_targets_including_zeros,xgboost,XGBoost,30,59616,4.251339867322798,8.975566105792028
+target_date,2012-06-13,all_finite_targets_including_zeros,gru,GRU-128,30,59616,4.29966972152518,9.642305825376017
+target_date,2012-06-13,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,59616,4.149985515696838,9.310898030607287
+target_date,2012-06-14,all_finite_targets_including_zeros,persistence,Persistence,30,59616,4.890175975449224,10.173650682318746
+target_date,2012-06-14,all_finite_targets_including_zeros,historical_average,Historical Average,30,59616,8.33244156838777,13.6059887393943
+target_date,2012-06-14,all_finite_targets_including_zeros,xgboost,XGBoost,30,59616,5.947015542255625,13.865957670185038
+target_date,2012-06-14,all_finite_targets_including_zeros,gru,GRU-128,30,59616,6.064536873399813,14.518227225897308
+target_date,2012-06-14,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,59616,5.843786907850042,14.075618051110018
+target_date,2012-06-15,all_finite_targets_including_zeros,persistence,Persistence,30,59616,5.072037921001287,10.220498404290518
+target_date,2012-06-15,all_finite_targets_including_zeros,historical_average,Historical Average,30,59616,8.160158645733931,13.719793165329476
+target_date,2012-06-15,all_finite_targets_including_zeros,xgboost,XGBoost,30,59616,5.758006445950194,12.590462713739676
+target_date,2012-06-15,all_finite_targets_including_zeros,gru,GRU-128,30,59616,5.59767074345484,12.557167348711806
+target_date,2012-06-15,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,59616,5.510775052437103,12.636076168261846
+target_date,2012-06-16,all_finite_targets_including_zeros,persistence,Persistence,30,59616,7.141199330476957,18.346340180961498
+target_date,2012-06-16,all_finite_targets_including_zeros,historical_average,Historical Average,30,59616,25.723111772264897,38.02961366266707
+target_date,2012-06-16,all_finite_targets_including_zeros,xgboost,XGBoost,30,59616,24.37020222738726,36.7548622291756
+target_date,2012-06-16,all_finite_targets_including_zeros,gru,GRU-128,30,59616,24.342723464363218,37.15864469033246
+target_date,2012-06-16,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,59616,24.803820237038995,38.06107607229883
+target_date,2012-06-17,all_finite_targets_including_zeros,persistence,Persistence,30,59616,5.943649209437757,18.18761942082563
+target_date,2012-06-17,all_finite_targets_including_zeros,historical_average,Historical Average,30,59616,45.09057685290355,50.24484396966098
+target_date,2012-06-17,all_finite_targets_including_zeros,xgboost,XGBoost,30,59616,44.09684056971075,50.65146892002061
+target_date,2012-06-17,all_finite_targets_including_zeros,gru,GRU-128,30,59616,45.33890452224248,51.975982012992624
+target_date,2012-06-17,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,59616,46.856892143791505,53.51958211396279
+target_date,2012-06-18,all_finite_targets_including_zeros,persistence,Persistence,30,59616,3.7950941914496163,11.349267490829288
+target_date,2012-06-18,all_finite_targets_including_zeros,historical_average,Historical Average,30,59616,31.29147859461932,39.09633349577287
+target_date,2012-06-18,all_finite_targets_including_zeros,xgboost,XGBoost,30,59616,29.343290877604854,40.44481098763882
+target_date,2012-06-18,all_finite_targets_including_zeros,gru,GRU-128,30,59616,29.856192222299416,41.1603773735828
+target_date,2012-06-18,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,59616,31.076165379767758,42.772269729931274
+target_date,2012-06-19,all_finite_targets_including_zeros,persistence,Persistence,30,59616,4.927728880177049,10.056986436054899
+target_date,2012-06-19,all_finite_targets_including_zeros,historical_average,Historical Average,30,59616,8.434686464270804,12.142824276575697
+target_date,2012-06-19,all_finite_targets_including_zeros,xgboost,XGBoost,30,59616,4.476130037030144,9.692847912161914
+target_date,2012-06-19,all_finite_targets_including_zeros,gru,GRU-128,30,59616,4.478884088933046,10.326245620662448
+target_date,2012-06-19,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,59616,4.261706978898299,9.762688367745467
+target_date,2012-06-20,all_finite_targets_including_zeros,persistence,Persistence,30,59616,4.849325631129173,10.287946718527232
+target_date,2012-06-20,all_finite_targets_including_zeros,historical_average,Historical Average,30,59616,7.902124612279288,11.564069796962121
+target_date,2012-06-20,all_finite_targets_including_zeros,xgboost,XGBoost,30,59616,4.217132780502122,9.102700434237788
+target_date,2012-06-20,all_finite_targets_including_zeros,gru,GRU-128,30,59616,4.148854724236656,9.56594909605081
+target_date,2012-06-20,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,59616,4.069975921819324,9.285069469116472
+target_date,2012-06-21,all_finite_targets_including_zeros,persistence,Persistence,30,59616,4.95018110616943,10.460911282524112
+target_date,2012-06-21,all_finite_targets_including_zeros,historical_average,Historical Average,30,59616,7.727022642331557,12.233751670325521
+target_date,2012-06-21,all_finite_targets_including_zeros,xgboost,XGBoost,30,59616,4.890887195646485,11.284490917380051
+target_date,2012-06-21,all_finite_targets_including_zeros,gru,GRU-128,30,59616,4.905584226054556,11.756827501660881
+target_date,2012-06-21,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,59616,4.726928382303625,11.24243617724912
+target_date,2012-06-22,all_finite_targets_including_zeros,persistence,Persistence,30,59616,4.277303192814968,8.618681279522992
+target_date,2012-06-22,all_finite_targets_including_zeros,historical_average,Historical Average,30,59616,7.736071398728759,12.809123353587871
+target_date,2012-06-22,all_finite_targets_including_zeros,xgboost,XGBoost,30,59616,4.927670383786538,11.236321290520584
+target_date,2012-06-22,all_finite_targets_including_zeros,gru,GRU-128,30,59616,4.790605913705446,11.531196885832731
+target_date,2012-06-22,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,59616,4.736519982127906,11.300101481607674
+target_date,2012-06-23,all_finite_targets_including_zeros,persistence,Persistence,30,59616,4.107032641178676,10.149902679580482
+target_date,2012-06-23,all_finite_targets_including_zeros,historical_average,Historical Average,30,59616,6.85915703536141,14.963668842531872
+target_date,2012-06-23,all_finite_targets_including_zeros,xgboost,XGBoost,30,59616,6.094564980514171,14.807833960160119
+target_date,2012-06-23,all_finite_targets_including_zeros,gru,GRU-128,30,59616,5.9455030832506655,15.282118689265678
+target_date,2012-06-23,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,59616,5.875716881912939,15.30431502130411
+target_date,2012-06-24,all_finite_targets_including_zeros,persistence,Persistence,30,59616,3.5490375306724946,9.494452829261459
+target_date,2012-06-24,all_finite_targets_including_zeros,historical_average,Historical Average,30,59616,9.460090852953611,14.407397685632972
+target_date,2012-06-24,all_finite_targets_including_zeros,xgboost,XGBoost,30,59616,4.683267931388933,12.199168079269354
+target_date,2012-06-24,all_finite_targets_including_zeros,gru,GRU-128,30,59616,4.383356227219257,12.403456111733087
+target_date,2012-06-24,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,59616,4.443276905945234,12.857800270550605
+target_date,2012-06-25,all_finite_targets_including_zeros,persistence,Persistence,30,59616,6.562818047408173,15.51167157993019
+target_date,2012-06-25,all_finite_targets_including_zeros,historical_average,Historical Average,30,59616,11.62757474223922,17.449797764688093
+target_date,2012-06-25,all_finite_targets_including_zeros,xgboost,XGBoost,30,59616,7.205848028306486,16.737962938702488
+target_date,2012-06-25,all_finite_targets_including_zeros,gru,GRU-128,30,59616,7.149429545066724,17.24942980502481
+target_date,2012-06-25,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,59616,7.140227125013365,17.204389142678927
+target_date,2012-06-26,all_finite_targets_including_zeros,persistence,Persistence,30,59616,4.371001645984033,9.010239751281254
+target_date,2012-06-26,all_finite_targets_including_zeros,historical_average,Historical Average,30,59616,9.05886731519112,13.980295848733345
+target_date,2012-06-26,all_finite_targets_including_zeros,xgboost,XGBoost,30,59616,5.710234282470972,13.107090751744947
+target_date,2012-06-26,all_finite_targets_including_zeros,gru,GRU-128,30,59616,5.72578279818008,13.652924025498292
+target_date,2012-06-26,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,59616,5.708243227808203,13.527562405465213
+target_date,2012-06-27,all_finite_targets_including_zeros,persistence,Persistence,30,58374,5.44602953668762,11.605530603012738
+target_date,2012-06-27,all_finite_targets_including_zeros,historical_average,Historical Average,30,58374,9.172258422866463,14.406783665445712
+target_date,2012-06-27,all_finite_targets_including_zeros,xgboost,XGBoost,30,58374,6.214376930819217,13.676905142407191
+target_date,2012-06-27,all_finite_targets_including_zeros,gru,GRU-128,30,58374,6.234656008980043,14.316231450707944
+target_date,2012-06-27,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,58374,6.0915682834319576,13.908615547985582
+time_of_day,overnight_00_06,finite_nonzero_targets,persistence,Persistence,60,286455,4.988519712644968,10.671496935144624
+time_of_day,overnight_00_06,finite_nonzero_targets,historical_average,Historical Average,60,286455,6.136824557912316,7.828795635841705
+time_of_day,overnight_00_06,finite_nonzero_targets,xgboost,XGBoost,60,286455,2.5781159072201874,3.781895996457927
+time_of_day,overnight_00_06,finite_nonzero_targets,gru,GRU-128,60,286455,2.6500597109249866,4.015396081802993
+time_of_day,overnight_00_06,finite_nonzero_targets,dcrnn,DCGRU-64,60,286455,2.656825592812864,4.054088975535597
+time_of_day,morning_06_12,finite_nonzero_targets,persistence,Persistence,60,301556,7.7303698823372615,15.915173621455384
+time_of_day,morning_06_12,finite_nonzero_targets,historical_average,Historical Average,60,301556,7.614387491725139,10.364691301109707
+time_of_day,morning_06_12,finite_nonzero_targets,xgboost,XGBoost,60,301556,4.540003667197662,8.325055071329352
+time_of_day,morning_06_12,finite_nonzero_targets,gru,GRU-128,60,301556,4.803804970385062,10.087333616666033
+time_of_day,morning_06_12,finite_nonzero_targets,dcrnn,DCGRU-64,60,301556,4.382747561882817,9.133493970865407
+time_of_day,afternoon_12_18,finite_nonzero_targets,persistence,Persistence,60,324461,7.99583281782637,16.080798587030475
+time_of_day,afternoon_12_18,finite_nonzero_targets,historical_average,Historical Average,60,324461,8.544418249263593,11.598982259084076
+time_of_day,afternoon_12_18,finite_nonzero_targets,xgboost,XGBoost,60,324461,5.43246047427264,9.275234906557525
+time_of_day,afternoon_12_18,finite_nonzero_targets,gru,GRU-128,60,324461,5.286664655964964,10.4928733685527
+time_of_day,afternoon_12_18,finite_nonzero_targets,dcrnn,DCGRU-64,60,324461,5.026352205056853,9.832902812229829
+time_of_day,evening_18_24,finite_nonzero_targets,persistence,Persistence,60,332514,6.34255342130958,13.276817790191444
+time_of_day,evening_18_24,finite_nonzero_targets,historical_average,Historical Average,60,332514,6.094290118375758,8.966031888066805
+time_of_day,evening_18_24,finite_nonzero_targets,xgboost,XGBoost,60,332514,3.661726709556377,7.131538907952548
+time_of_day,evening_18_24,finite_nonzero_targets,gru,GRU-128,60,332514,3.678856640984052,7.709927729928428
+time_of_day,evening_18_24,finite_nonzero_targets,dcrnn,DCGRU-64,60,332514,3.6666171788344926,7.589374420494892
+day_type,weekday,finite_nonzero_targets,persistence,Persistence,60,990628,6.734580154253281,13.490274129275747
+day_type,weekday,finite_nonzero_targets,historical_average,Historical Average,60,990628,7.3787345525260575,10.106856689217459
+day_type,weekday,finite_nonzero_targets,xgboost,XGBoost,60,990628,4.131002242017177,7.498914151674833
+day_type,weekday,finite_nonzero_targets,gru,GRU-128,60,990628,4.346859989104153,8.837796847971887
+day_type,weekday,finite_nonzero_targets,dcrnn,DCGRU-64,60,990628,4.169756803375845,8.306354380474376
+day_type,weekend,finite_nonzero_targets,persistence,Persistence,60,254358,7.045132788095069,16.735329046335114
+day_type,weekend,finite_nonzero_targets,historical_average,Historical Average,60,254358,6.067332401133703,8.675334868149609
+day_type,weekend,finite_nonzero_targets,xgboost,XGBoost,60,254358,3.9137357665480517,7.4493010336281245
+day_type,weekend,finite_nonzero_targets,gru,GRU-128,60,254358,3.303240656536876,7.262956248844269
+day_type,weekend,finite_nonzero_targets,dcrnn,DCGRU-64,60,254358,3.1533655861174443,6.879565030829259
+target_date,2012-06-04,finite_nonzero_targets,persistence,Persistence,60,43141,8.908148262820731,17.778763728355997
+target_date,2012-06-04,finite_nonzero_targets,historical_average,Historical Average,60,43141,9.203646081496762,11.583007144375424
+target_date,2012-06-04,finite_nonzero_targets,xgboost,XGBoost,60,43141,4.5410518999703715,8.18558066462743
+target_date,2012-06-04,finite_nonzero_targets,gru,GRU-128,60,43141,4.888637122240836,10.09641498141369
+target_date,2012-06-04,finite_nonzero_targets,dcrnn,DCGRU-64,60,43141,4.5849874070959045,9.349706735941549
+target_date,2012-06-05,finite_nonzero_targets,persistence,Persistence,60,54001,9.14543707009541,18.26058067708727
+target_date,2012-06-05,finite_nonzero_targets,historical_average,Historical Average,60,54001,6.661018068913871,8.689878616175964
+target_date,2012-06-05,finite_nonzero_targets,xgboost,XGBoost,60,54001,3.8916031771064543,6.976594856463989
+target_date,2012-06-05,finite_nonzero_targets,gru,GRU-128,60,54001,4.141608529531376,8.28617435974755
+target_date,2012-06-05,finite_nonzero_targets,dcrnn,DCGRU-64,60,54001,3.8702676537993526,7.517461834635862
+target_date,2012-06-06,finite_nonzero_targets,persistence,Persistence,60,58341,5.789553128119487,10.977585839191526
+target_date,2012-06-06,finite_nonzero_targets,historical_average,Historical Average,60,58341,6.978202381630502,9.558384239375545
+target_date,2012-06-06,finite_nonzero_targets,xgboost,XGBoost,60,58341,3.99756264335144,7.1259245197050625
+target_date,2012-06-06,finite_nonzero_targets,gru,GRU-128,60,58341,4.268170808661253,8.58619849980194
+target_date,2012-06-06,finite_nonzero_targets,dcrnn,DCGRU-64,60,58341,4.040293247700594,7.938286640940395
+target_date,2012-06-07,finite_nonzero_targets,persistence,Persistence,60,55924,8.081419248969405,15.813898490840748
+target_date,2012-06-07,finite_nonzero_targets,historical_average,Historical Average,60,55924,6.710103028855488,9.343631043988086
+target_date,2012-06-07,finite_nonzero_targets,xgboost,XGBoost,60,55924,4.335678311601872,7.8035196223733605
+target_date,2012-06-07,finite_nonzero_targets,gru,GRU-128,60,55924,4.588542545597771,8.999267095544702
+target_date,2012-06-07,finite_nonzero_targets,dcrnn,DCGRU-64,60,55924,4.309359667048395,8.297405764396377
+target_date,2012-06-08,finite_nonzero_targets,persistence,Persistence,60,58466,6.051277787822959,11.513056345642019
+target_date,2012-06-08,finite_nonzero_targets,historical_average,Historical Average,60,58466,6.061800613280961,8.989832870750725
+target_date,2012-06-08,finite_nonzero_targets,xgboost,XGBoost,60,58466,4.067782038139709,7.361862038803179
+target_date,2012-06-08,finite_nonzero_targets,gru,GRU-128,60,58466,4.400104181095737,8.79289367108714
+target_date,2012-06-08,finite_nonzero_targets,dcrnn,DCGRU-64,60,58466,4.191013400874399,8.18604185677687
+target_date,2012-06-09,finite_nonzero_targets,persistence,Persistence,60,34428,8.438629905798344,18.76268356210437
+target_date,2012-06-09,finite_nonzero_targets,historical_average,Historical Average,60,34428,4.44067766819397,7.498088504396728
+target_date,2012-06-09,finite_nonzero_targets,xgboost,XGBoost,60,34428,3.8687684395105815,7.295848359864831
+target_date,2012-06-09,finite_nonzero_targets,gru,GRU-128,60,34428,3.5595638896502213,7.749555232000444
+target_date,2012-06-09,finite_nonzero_targets,dcrnn,DCGRU-64,60,34428,3.571592377138531,7.667144861790501
+target_date,2012-06-10,finite_nonzero_targets,persistence,Persistence,60,53369,5.564306384985993,14.773161861836755
+target_date,2012-06-10,finite_nonzero_targets,historical_average,Historical Average,60,53369,7.529302354075512,9.093793771556037
+target_date,2012-06-10,finite_nonzero_targets,xgboost,XGBoost,60,53369,3.2038727857734326,6.037209657040008
+target_date,2012-06-10,finite_nonzero_targets,gru,GRU-128,60,53369,2.3494888278687447,5.134804030167517
+target_date,2012-06-10,finite_nonzero_targets,dcrnn,DCGRU-64,60,53369,2.249869560060983,4.887149233599429
+target_date,2012-06-11,finite_nonzero_targets,persistence,Persistence,60,58996,5.354874018900394,10.829942838325987
+target_date,2012-06-11,finite_nonzero_targets,historical_average,Historical Average,60,58996,8.766152403256825,11.147696230934669
+target_date,2012-06-11,finite_nonzero_targets,xgboost,XGBoost,60,58996,3.8425542212608392,7.106614847837799
+target_date,2012-06-11,finite_nonzero_targets,gru,GRU-128,60,58996,3.9541385988232194,8.445241417736533
+target_date,2012-06-11,finite_nonzero_targets,dcrnn,DCGRU-64,60,58996,3.8445870984417554,8.08362894954042
+target_date,2012-06-12,finite_nonzero_targets,persistence,Persistence,60,55059,8.592456259764056,17.118871812252273
+target_date,2012-06-12,finite_nonzero_targets,historical_average,Historical Average,60,55059,7.587268382180885,10.257425971945436
+target_date,2012-06-12,finite_nonzero_targets,xgboost,XGBoost,60,55059,4.196302891369689,7.50813340319976
+target_date,2012-06-12,finite_nonzero_targets,gru,GRU-128,60,55059,4.580676299562811,9.235912394350235
+target_date,2012-06-12,finite_nonzero_targets,dcrnn,DCGRU-64,60,55059,4.308802518490138,8.509551285511236
+target_date,2012-06-13,finite_nonzero_targets,persistence,Persistence,60,58935,6.2132616845839035,11.862721852091202
+target_date,2012-06-13,finite_nonzero_targets,historical_average,Historical Average,60,58935,7.50216490820122,10.437020350729773
+target_date,2012-06-13,finite_nonzero_targets,xgboost,XGBoost,60,58935,4.238392851446054,7.692883175947279
+target_date,2012-06-13,finite_nonzero_targets,gru,GRU-128,60,58935,4.56012428779774,9.281524791379814
+target_date,2012-06-13,finite_nonzero_targets,dcrnn,DCGRU-64,60,58935,4.412109319408997,8.869143053888186
+target_date,2012-06-14,finite_nonzero_targets,persistence,Persistence,60,56963,6.225731747620078,11.864661046691051
+target_date,2012-06-14,finite_nonzero_targets,historical_average,Historical Average,60,56963,6.503529651824488,9.141835281085688
+target_date,2012-06-14,finite_nonzero_targets,xgboost,XGBoost,60,56963,3.9902763181405585,7.178626558084532
+target_date,2012-06-14,finite_nonzero_targets,gru,GRU-128,60,56963,4.417368169554152,8.915858700561387
+target_date,2012-06-14,finite_nonzero_targets,dcrnn,DCGRU-64,60,56963,4.215954643541337,8.336206189897785
+target_date,2012-06-15,finite_nonzero_targets,persistence,Persistence,60,57712,6.31920166805286,11.947916026863078
+target_date,2012-06-15,finite_nonzero_targets,historical_average,Historical Average,60,57712,6.8038745014012285,10.544152734354308
+target_date,2012-06-15,finite_nonzero_targets,xgboost,XGBoost,60,57712,4.83686128737434,8.989375167132636
+target_date,2012-06-15,finite_nonzero_targets,gru,GRU-128,60,57712,4.739088475901493,9.333323833761952
+target_date,2012-06-15,finite_nonzero_targets,dcrnn,DCGRU-64,60,57712,4.475212312021676,8.667454883427736
+target_date,2012-06-16,finite_nonzero_targets,persistence,Persistence,60,37730,9.538092861139507,20.151336021474773
+target_date,2012-06-16,finite_nonzero_targets,historical_average,Historical Average,60,37730,5.031555957674762,8.381197133533895
+target_date,2012-06-16,finite_nonzero_targets,xgboost,XGBoost,60,37730,5.455575550211176,9.930533211668573
+target_date,2012-06-16,finite_nonzero_targets,gru,GRU-128,60,37730,4.638933290495506,9.274192680952545
+target_date,2012-06-16,finite_nonzero_targets,dcrnn,DCGRU-64,60,37730,4.081539283063867,8.16925267179948
+target_date,2012-06-17,finite_nonzero_targets,persistence,Persistence,60,14989,24.478039133459774,37.276424244292215
+target_date,2012-06-17,finite_nonzero_targets,historical_average,Historical Average,60,14989,8.783736104448376,12.039822974062343
+target_date,2012-06-17,finite_nonzero_targets,xgboost,XGBoost,60,14989,5.621521151266712,10.23602389572162
+target_date,2012-06-17,finite_nonzero_targets,gru,GRU-128,60,14989,5.416750039293214,10.722167841805112
+target_date,2012-06-17,finite_nonzero_targets,dcrnn,DCGRU-64,60,14989,5.393001020604956,10.478420023388754
+target_date,2012-06-18,finite_nonzero_targets,persistence,Persistence,60,31220,10.446443430137377,20.45668775701753
+target_date,2012-06-18,finite_nonzero_targets,historical_average,Historical Average,60,31220,10.741855889590514,13.200400128015037
+target_date,2012-06-18,finite_nonzero_targets,xgboost,XGBoost,60,31220,4.779740434600417,8.73489070391088
+target_date,2012-06-18,finite_nonzero_targets,gru,GRU-128,60,31220,4.819830634402415,9.902615602249881
+target_date,2012-06-18,finite_nonzero_targets,dcrnn,DCGRU-64,60,31220,4.690646327757013,9.452235637213244
+target_date,2012-06-19,finite_nonzero_targets,persistence,Persistence,60,58674,6.210379506133162,11.971389872970736
+target_date,2012-06-19,finite_nonzero_targets,historical_average,Historical Average,60,58674,7.853616685811099,10.693442275806866
+target_date,2012-06-19,finite_nonzero_targets,xgboost,XGBoost,60,58674,4.179276724896688,7.682024846679235
+target_date,2012-06-19,finite_nonzero_targets,gru,GRU-128,60,58674,4.509316332882106,9.19901542716339
+target_date,2012-06-19,finite_nonzero_targets,dcrnn,DCGRU-64,60,58674,4.275428761083655,8.52901092440818
+target_date,2012-06-20,finite_nonzero_targets,persistence,Persistence,60,58638,5.90433865952898,11.587236322756844
+target_date,2012-06-20,finite_nonzero_targets,historical_average,Historical Average,60,58638,7.328059091396752,10.166125391038602
+target_date,2012-06-20,finite_nonzero_targets,xgboost,XGBoost,60,58638,3.954755032435042,7.165270867276481
+target_date,2012-06-20,finite_nonzero_targets,gru,GRU-128,60,58638,4.167113584417898,8.52237786830345
+target_date,2012-06-20,finite_nonzero_targets,dcrnn,DCGRU-64,60,58638,4.0415076560741765,8.118242585861967
+target_date,2012-06-21,finite_nonzero_targets,persistence,Persistence,60,57886,5.974269945744482,11.656936364805269
+target_date,2012-06-21,finite_nonzero_targets,historical_average,Historical Average,60,57886,6.54312575545311,9.050888090507831
+target_date,2012-06-21,finite_nonzero_targets,xgboost,XGBoost,60,57886,3.8097898836095414,6.856620094761919
+target_date,2012-06-21,finite_nonzero_targets,gru,GRU-128,60,57886,4.095868952397001,8.285338499107427
+target_date,2012-06-21,finite_nonzero_targets,dcrnn,DCGRU-64,60,57886,3.904644451721833,7.675672861436504
+target_date,2012-06-22,finite_nonzero_targets,persistence,Persistence,60,58054,5.2333801972000895,10.208048078417372
+target_date,2012-06-22,finite_nonzero_targets,historical_average,Historical Average,60,58054,6.609013163009334,9.89871131615102
+target_date,2012-06-22,finite_nonzero_targets,xgboost,XGBoost,60,58054,4.17113980812142,7.693606533680259
+target_date,2012-06-22,finite_nonzero_targets,gru,GRU-128,60,58054,3.963571066950153,8.130476224222408
+target_date,2012-06-22,finite_nonzero_targets,dcrnn,DCGRU-64,60,58054,3.904632030948989,7.85342664017989
+target_date,2012-06-23,finite_nonzero_targets,persistence,Persistence,60,56487,4.644536620450104,10.53297640616591
+target_date,2012-06-23,finite_nonzero_targets,historical_average,Historical Average,60,56487,4.087029969811849,7.219708332640544
+target_date,2012-06-23,finite_nonzero_targets,xgboost,XGBoost,60,56487,3.821917135733766,7.216306206689891
+target_date,2012-06-23,finite_nonzero_targets,gru,GRU-128,60,56487,3.334779608558876,7.3395310571141055
+target_date,2012-06-23,finite_nonzero_targets,dcrnn,DCGRU-64,60,56487,3.2344815229881303,7.0693865068772475
+target_date,2012-06-24,finite_nonzero_targets,persistence,Persistence,60,57355,3.7550301727060513,9.388016833930047
+target_date,2012-06-24,finite_nonzero_targets,historical_average,Historical Average,60,57355,7.605186263358393,9.361883534870678
+target_date,2012-06-24,finite_nonzero_targets,xgboost,XGBoost,60,57355,3.2311058543495617,6.057102866079752
+target_date,2012-06-24,finite_nonzero_targets,gru,GRU-128,60,57355,2.574785754162239,5.803144358165051
+target_date,2012-06-24,finite_nonzero_targets,dcrnn,DCGRU-64,60,57355,2.4672542168209053,5.528625946000351
+target_date,2012-06-25,finite_nonzero_targets,persistence,Persistence,60,55335,7.170170799502596,15.36992886060794
+target_date,2012-06-25,finite_nonzero_targets,historical_average,Historical Average,60,55335,8.608052314713222,10.910125455370302
+target_date,2012-06-25,finite_nonzero_targets,xgboost,XGBoost,60,55335,3.747882736721604,6.520949730035299
+target_date,2012-06-25,finite_nonzero_targets,gru,GRU-128,60,55335,3.7845745845189667,7.847511120820909
+target_date,2012-06-25,finite_nonzero_targets,dcrnn,DCGRU-64,60,55335,3.7455398402710656,7.59918242807198
+target_date,2012-06-26,finite_nonzero_targets,persistence,Persistence,60,56653,5.642222732149126,10.888591908204496
+target_date,2012-06-26,finite_nonzero_targets,historical_average,Historical Average,60,56653,7.177447964340979,9.421733145966456
+target_date,2012-06-26,finite_nonzero_targets,xgboost,XGBoost,60,56653,3.790189205025122,6.609714294733272
+target_date,2012-06-26,finite_nonzero_targets,gru,GRU-128,60,56653,4.077603297904536,8.240318639268668
+target_date,2012-06-26,finite_nonzero_targets,dcrnn,DCGRU-64,60,56653,4.054634309175864,7.97529200735249
+target_date,2012-06-27,finite_nonzero_targets,persistence,Persistence,60,56630,6.577257847514778,12.757690010388698
+target_date,2012-06-27,finite_nonzero_targets,historical_average,Historical Average,60,56630,7.1448216560974815,9.774744110718059
+target_date,2012-06-27,finite_nonzero_targets,xgboost,XGBoost,60,56630,4.372314175108043,8.01717972029916
+target_date,2012-06-27,finite_nonzero_targets,gru,GRU-128,60,56630,4.631820586249417,9.424889082721396
+target_date,2012-06-27,finite_nonzero_targets,dcrnn,DCGRU-64,60,56630,4.514787893397533,9.010126751903282
+time_of_day,overnight_00_06,all_finite_targets_including_zeros,persistence,Persistence,60,343620,6.1969267661859755,14.929506335925705
+time_of_day,overnight_00_06,all_finite_targets_including_zeros,historical_average,Historical Average,60,343620,14.63833582268265,24.605900947746104
+time_of_day,overnight_00_06,all_finite_targets_including_zeros,xgboost,XGBoost,60,343620,12.246118283379197,25.10943736398721
+time_of_day,overnight_00_06,all_finite_targets_including_zeros,gru,GRU-128,60,343620,12.311671951231524,25.162659095731463
+time_of_day,overnight_00_06,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,343620,12.512490664943329,25.635914745571174
+time_of_day,morning_06_12,all_finite_targets_including_zeros,persistence,Persistence,60,357696,7.171941440430395,15.865952971811092
+time_of_day,morning_06_12,all_finite_targets_including_zeros,historical_average,Historical Average,60,357696,15.148861501437887,24.469454392010345
+time_of_day,morning_06_12,all_finite_targets_including_zeros,xgboost,XGBoost,60,357696,12.027905826652557,22.725645182447746
+time_of_day,morning_06_12,all_finite_targets_including_zeros,gru,GRU-128,60,357696,12.638637300937393,24.030781901758512
+time_of_day,morning_06_12,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,357696,12.846780440248732,24.888360953616125
+time_of_day,afternoon_12_18,all_finite_targets_including_zeros,persistence,Persistence,60,357696,9.353808941822017,19.037103518523026
+time_of_day,afternoon_12_18,all_finite_targets_including_zeros,historical_average,Historical Average,60,357696,12.486952879997308,19.396559316199923
+time_of_day,afternoon_12_18,all_finite_targets_including_zeros,xgboost,XGBoost,60,357696,10.154288165235588,19.635182365110296
+time_of_day,afternoon_12_18,all_finite_targets_including_zeros,gru,GRU-128,60,357696,10.2202208532869,20.727058231179
+time_of_day,afternoon_12_18,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,357696,9.929355540225249,20.295192247364334
+time_of_day,evening_18_24,all_finite_targets_including_zeros,persistence,Persistence,60,357696,6.93042998670326,15.116323834097809
+time_of_day,evening_18_24,all_finite_targets_including_zeros,historical_average,Historical Average,60,357696,9.612306918329404,17.377075430635745
+time_of_day,evening_18_24,all_finite_targets_including_zeros,xgboost,XGBoost,60,357696,7.6728579438706275,17.650940300967868
+time_of_day,evening_18_24,all_finite_targets_including_zeros,gru,GRU-128,60,357696,7.755539207461805,18.08638233184961
+time_of_day,evening_18_24,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,357696,7.726079490262013,18.01142587659329
+day_type,weekday,all_finite_targets_including_zeros,persistence,Persistence,60,1059012,7.27106197599032,15.130659577067544
+day_type,weekday,all_finite_targets_including_zeros,historical_average,Historical Average,60,1059012,10.160740154776153,16.405345081008374
+day_type,weekday,all_finite_targets_including_zeros,xgboost,XGBoost,60,1059012,7.480264367353817,16.25113008160259
+day_type,weekday,all_finite_targets_including_zeros,gru,GRU-128,60,1059012,7.768181506833106,17.11859212060448
+day_type,weekday,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,1059012,7.648124412143094,17.033869098691945
+day_type,weekend,all_finite_targets_including_zeros,persistence,Persistence,60,357696,7.882190416815769,19.46690912533245
+day_type,weekend,all_finite_targets_including_zeros,historical_average,Historical Average,60,357696,21.228034976742837,32.58455405902721
+day_type,weekend,all_finite_targets_including_zeros,xgboost,XGBoost,60,357696,19.47283193982552,32.20744127999683
+day_type,weekend,all_finite_targets_including_zeros,gru,GRU-128,60,357696,19.442730029560032,32.784804206582855
+day_type,weekend,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,357696,19.8789110791167,33.58622992875503
+target_date,2012-06-04,all_finite_targets_including_zeros,persistence,Persistence,60,45540,11.066404869955596,21.476620239149003
+target_date,2012-06-04,all_finite_targets_including_zeros,historical_average,Historical Average,60,45540,11.221194863577109,15.78850500444319
+target_date,2012-06-04,all_finite_targets_including_zeros,xgboost,XGBoost,60,45540,7.402951028715568,15.804542913306916
+target_date,2012-06-04,all_finite_targets_including_zeros,gru,GRU-128,60,45540,7.802372879844546,17.081527878866382
+target_date,2012-06-04,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,45540,7.4900521959602555,16.590379439129876
+target_date,2012-06-05,all_finite_targets_including_zeros,persistence,Persistence,60,59616,11.968891367716349,22.767221607939092
+target_date,2012-06-05,all_finite_targets_including_zeros,historical_average,Historical Average,60,59616,10.474626604980873,16.99745316697674
+target_date,2012-06-05,all_finite_targets_including_zeros,xgboost,XGBoost,60,59616,8.768351472433865,18.659840351424048
+target_date,2012-06-05,all_finite_targets_including_zeros,gru,GRU-128,60,59616,9.014266341656679,19.300315041727576
+target_date,2012-06-05,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,59616,8.738980774473324,18.98088881440993
+target_date,2012-06-06,all_finite_targets_including_zeros,persistence,Persistence,60,59616,5.823929238395572,11.294757199221076
+target_date,2012-06-06,all_finite_targets_including_zeros,historical_average,Historical Average,60,59616,7.836955420061572,11.816892713196138
+target_date,2012-06-06,all_finite_targets_including_zeros,xgboost,XGBoost,60,59616,5.144787184318297,11.08819334753612
+target_date,2012-06-06,all_finite_targets_including_zeros,gru,GRU-128,60,59616,5.458591246544588,12.260999259398254
+target_date,2012-06-06,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,59616,5.190225164009735,11.654035941661412
+target_date,2012-06-07,all_finite_targets_including_zeros,persistence,Persistence,60,59616,9.718396161358621,18.916451015749093
+target_date,2012-06-07,all_finite_targets_including_zeros,historical_average,Historical Average,60,59616,9.403885835506856,15.77887382118682
+target_date,2012-06-07,all_finite_targets_including_zeros,xgboost,XGBoost,60,59616,7.398220508752292,15.758949385666503
+target_date,2012-06-07,all_finite_targets_including_zeros,gru,GRU-128,60,59616,7.677437506079139,16.552191653176436
+target_date,2012-06-07,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,59616,7.320093399306534,15.942339504764332
+target_date,2012-06-08,all_finite_targets_including_zeros,persistence,Persistence,60,59616,6.2783565280759825,12.313004646804206
+target_date,2012-06-08,all_finite_targets_including_zeros,historical_average,Historical Average,60,59616,6.891378158508103,11.359398427540354
+target_date,2012-06-08,all_finite_targets_including_zeros,xgboost,XGBoost,60,59616,5.050206585779538,10.707847223080668
+target_date,2012-06-08,all_finite_targets_including_zeros,gru,GRU-128,60,59616,5.4248336803971124,11.901687910653957
+target_date,2012-06-08,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,59616,5.174203835024752,11.300523307531732
+target_date,2012-06-09,all_finite_targets_including_zeros,persistence,Persistence,60,59616,7.723712733718017,19.463839478729156
+target_date,2012-06-09,all_finite_targets_including_zeros,historical_average,Historical Average,60,59616,27.694950406366175,39.55245942837861
+target_date,2012-06-09,all_finite_targets_including_zeros,xgboost,XGBoost,60,59616,26.004394452943927,37.75027734901935
+target_date,2012-06-09,all_finite_targets_including_zeros,gru,GRU-128,60,59616,26.616207247878386,38.76719896971878
+target_date,2012-06-09,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,59616,27.52565726357975,39.86424300490456
+target_date,2012-06-10,all_finite_targets_including_zeros,persistence,Persistence,60,59616,7.647330680908076,19.132021465141733
+target_date,2012-06-10,all_finite_targets_including_zeros,historical_average,Historical Average,60,59616,12.540322940607364,20.095809970046783
+target_date,2012-06-10,all_finite_targets_including_zeros,xgboost,XGBoost,60,59616,9.204129301056721,20.606560558444542
+target_date,2012-06-10,all_finite_targets_including_zeros,gru,GRU-128,60,59616,8.544009843557209,20.702875295990506
+target_date,2012-06-10,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,59616,8.568184702317414,20.938424434974408
+target_date,2012-06-11,all_finite_targets_including_zeros,persistence,Persistence,60,59616,5.509127470041066,11.365569392594075
+target_date,2012-06-11,all_finite_targets_including_zeros,historical_average,Historical Average,60,59616,9.173049868141998,12.18750640379998
+target_date,2012-06-11,all_finite_targets_including_zeros,xgboost,XGBoost,60,59616,4.392734068845127,9.23457446975669
+target_date,2012-06-11,all_finite_targets_including_zeros,gru,GRU-128,60,59616,4.532366807097944,10.42651326492868
+target_date,2012-06-11,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,59616,4.4248664548329035,10.154111245002076
+target_date,2012-06-12,all_finite_targets_including_zeros,persistence,Persistence,60,59616,10.797876835024582,21.08403296258271
+target_date,2012-06-12,all_finite_targets_including_zeros,historical_average,Historical Average,60,59616,10.840029149519891,17.22163920674756
+target_date,2012-06-12,all_finite_targets_including_zeros,xgboost,XGBoost,60,59616,8.3132372539094,17.76651044712269
+target_date,2012-06-12,all_finite_targets_including_zeros,gru,GRU-128,60,59616,8.751170977952153,18.744540825701105
+target_date,2012-06-12,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,59616,8.411181969010846,18.18396969781934
+target_date,2012-06-13,all_finite_targets_including_zeros,persistence,Persistence,60,59616,6.370499863145294,12.383314784110452
+target_date,2012-06-13,all_finite_targets_including_zeros,historical_average,Historical Average,60,59616,7.957499466593816,11.66438048773531
+target_date,2012-06-13,all_finite_targets_including_zeros,xgboost,XGBoost,60,59616,4.814396862659399,9.733821077795847
+target_date,2012-06-13,all_finite_targets_including_zeros,gru,GRU-128,60,59616,5.1643758276261424,11.154528542069679
+target_date,2012-06-13,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,59616,5.01009051569093,10.790381648766841
+target_date,2012-06-14,all_finite_targets_including_zeros,persistence,Persistence,60,59616,6.475413719231654,12.878493109358246
+target_date,2012-06-14,all_finite_targets_including_zeros,historical_average,Historical Average,60,59616,8.33244156838777,13.6059887393943
+target_date,2012-06-14,all_finite_targets_including_zeros,xgboost,XGBoost,60,59616,6.422996074764953,14.329574204477257
+target_date,2012-06-14,all_finite_targets_including_zeros,gru,GRU-128,60,59616,6.882335102582715,15.423461615181322
+target_date,2012-06-14,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,59616,6.652150451749208,14.973587041378915
+target_date,2012-06-15,all_finite_targets_including_zeros,persistence,Persistence,60,59616,6.488142398386713,12.600685663639275
+target_date,2012-06-15,all_finite_targets_including_zeros,historical_average,Historical Average,60,59616,8.160158645733931,13.719793165329476
+target_date,2012-06-15,all_finite_targets_including_zeros,xgboost,XGBoost,60,59616,6.437568587368762,13.362922700083407
+target_date,2012-06-15,all_finite_targets_including_zeros,gru,GRU-128,60,59616,6.329297470824725,13.521933386157366
+target_date,2012-06-15,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,59616,6.171622311338869,13.484906581682521
+target_date,2012-06-16,all_finite_targets_including_zeros,persistence,Persistence,60,59616,11.674371473461903,24.758090224039325
+target_date,2012-06-16,all_finite_targets_including_zeros,historical_average,Historical Average,60,59616,25.723111772264897,38.02961366266707
+target_date,2012-06-16,all_finite_targets_including_zeros,xgboost,XGBoost,60,59616,25.268017132188444,37.26327033494472
+target_date,2012-06-16,all_finite_targets_including_zeros,gru,GRU-128,60,59616,24.94482509173203,37.43977955708911
+target_date,2012-06-16,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,59616,25.199332897758428,38.16677564476131
+target_date,2012-06-17,all_finite_targets_including_zeros,persistence,Persistence,60,59616,10.968886162444939,25.41406524885901
+target_date,2012-06-17,all_finite_targets_including_zeros,historical_average,Historical Average,60,59616,45.09057685290355,50.24484396966098
+target_date,2012-06-17,all_finite_targets_including_zeros,xgboost,XGBoost,60,59616,44.39704643391261,50.877944099152316
+target_date,2012-06-17,all_finite_targets_including_zeros,gru,GRU-128,60,59616,45.532864287168444,52.01604045300264
+target_date,2012-06-17,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,59616,47.02386674121619,53.521897463162645
+target_date,2012-06-18,all_finite_targets_including_zeros,persistence,Persistence,60,59616,5.639875926831191,15.147716525200709
+target_date,2012-06-18,all_finite_targets_including_zeros,historical_average,Historical Average,60,59616,31.29147859461932,39.09633349577287
+target_date,2012-06-18,all_finite_targets_including_zeros,xgboost,XGBoost,60,59616,29.654777693036735,40.549922162181765
+target_date,2012-06-18,all_finite_targets_including_zeros,gru,GRU-128,60,59616,30.311752009255482,41.35455405726862
+target_date,2012-06-18,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,59616,31.54240338722719,42.957944755877335
+target_date,2012-06-19,all_finite_targets_including_zeros,persistence,Persistence,60,59616,6.388807448357317,12.565315875551883
+target_date,2012-06-19,all_finite_targets_including_zeros,historical_average,Historical Average,60,59616,8.434686464270804,12.142824276575697
+target_date,2012-06-19,all_finite_targets_including_zeros,xgboost,XGBoost,60,59616,4.9518365808740255,10.273190804263043
+target_date,2012-06-19,all_finite_targets_including_zeros,gru,GRU-128,60,59616,5.315968233624372,11.615941047781302
+target_date,2012-06-19,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,59616,5.049060885937949,10.952026577698513
+target_date,2012-06-20,all_finite_targets_including_zeros,persistence,Persistence,60,59616,6.2539878702532175,12.645471055550418
+target_date,2012-06-20,all_finite_targets_including_zeros,historical_average,Historical Average,60,59616,7.902124612279288,11.564069796962121
+target_date,2012-06-20,all_finite_targets_including_zeros,xgboost,XGBoost,60,59616,4.706066799920144,9.731959091522338
+target_date,2012-06-20,all_finite_targets_including_zeros,gru,GRU-128,60,59616,4.945911567302502,10.882721909409979
+target_date,2012-06-20,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,59616,4.7987033081897295,10.497730676374323
+target_date,2012-06-21,all_finite_targets_including_zeros,persistence,Persistence,60,59616,6.3307722000166144,12.819924347013405
+target_date,2012-06-21,all_finite_targets_including_zeros,historical_average,Historical Average,60,59616,7.727022642331557,12.233751670325521
+target_date,2012-06-21,all_finite_targets_including_zeros,xgboost,XGBoost,60,59616,5.271734434557174,11.691368586752743
+target_date,2012-06-21,all_finite_targets_including_zeros,gru,GRU-128,60,59616,5.596827290033841,12.700152682078514
+target_date,2012-06-21,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,59616,5.33084751408511,12.040815519140025
+target_date,2012-06-22,all_finite_targets_including_zeros,persistence,Persistence,60,59616,5.322240274263221,10.753870504092733
+target_date,2012-06-22,all_finite_targets_including_zeros,historical_average,Historical Average,60,59616,7.736071398728759,12.809123353587871
+target_date,2012-06-22,all_finite_targets_including_zeros,xgboost,XGBoost,60,59616,5.510352790831046,11.883682246804346
+target_date,2012-06-22,all_finite_targets_including_zeros,gru,GRU-128,60,59616,5.353152293488953,12.315029001797138
+target_date,2012-06-22,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,59616,5.266135398950994,12.038429694983739
+target_date,2012-06-23,all_finite_targets_including_zeros,persistence,Persistence,60,59616,5.072330181681278,12.14987293491156
+target_date,2012-06-23,all_finite_targets_including_zeros,historical_average,Historical Average,60,59616,6.85915703536141,14.963668842531872
+target_date,2012-06-23,all_finite_targets_including_zeros,xgboost,XGBoost,60,59616,6.715859247254742,15.380048575862775
+target_date,2012-06-23,all_finite_targets_including_zeros,gru,GRU-128,60,59616,6.349521987349776,15.743074160949872
+target_date,2012-06-23,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,59616,6.278496382889644,15.734301351054226
+target_date,2012-06-24,all_finite_targets_including_zeros,persistence,Persistence,60,59616,4.206511268680401,11.064847781054201
+target_date,2012-06-24,all_finite_targets_including_zeros,historical_average,Historical Average,60,59616,9.460090852953611,14.407397685632972
+target_date,2012-06-24,all_finite_targets_including_zeros,xgboost,XGBoost,60,59616,5.247545071596696,12.670416679904362
+target_date,2012-06-24,all_finite_targets_including_zeros,gru,GRU-128,60,59616,4.668951719674347,12.73992221231111
+target_date,2012-06-24,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,59616,4.677928486938775,13.106069075407683
+target_date,2012-06-25,all_finite_targets_including_zeros,persistence,Persistence,60,59616,8.887759884158083,19.022096492700907
+target_date,2012-06-25,all_finite_targets_including_zeros,historical_average,Historical Average,60,59616,11.62757474223922,17.449797764688093
+target_date,2012-06-25,all_finite_targets_including_zeros,xgboost,XGBoost,60,59616,7.597789986096361,16.90306502346933
+target_date,2012-06-25,all_finite_targets_including_zeros,gru,GRU-128,60,59616,7.770476229831273,17.82034061129212
+target_date,2012-06-25,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,59616,7.7317528019501385,17.727431595424576
+target_date,2012-06-26,all_finite_targets_including_zeros,persistence,Persistence,60,59616,5.589783496653716,11.271146093154057
+target_date,2012-06-26,all_finite_targets_including_zeros,historical_average,Historical Average,60,59616,9.05886731519112,13.980295848733345
+target_date,2012-06-26,all_finite_targets_including_zeros,xgboost,XGBoost,60,59616,6.111701639707996,13.388969670022702
+target_date,2012-06-26,all_finite_targets_including_zeros,gru,GRU-128,60,59616,6.472671669613992,14.51644083268655
+target_date,2012-06-26,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,59616,6.458506242958274,14.417459610365773
+target_date,2012-06-27,all_finite_targets_including_zeros,persistence,Persistence,60,59616,6.8649726437027665,13.830880352382158
+target_date,2012-06-27,all_finite_targets_including_zeros,historical_average,Historical Average,60,59616,9.074662574876758,14.352497451926334
+target_date,2012-06-27,all_finite_targets_including_zeros,xgboost,XGBoost,60,59616,6.6767945215084294,14.123405838212072
+target_date,2012-06-27,all_finite_targets_including_zeros,gru,GRU-128,60,59616,7.031532952311911,15.305767938320503
+target_date,2012-06-27,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,59616,6.868040201280227,14.907243641376194

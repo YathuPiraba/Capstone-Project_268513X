@@ -1,0 +1,91 @@
+stratum_label,speed_band,mask_policy,model,model_label,horizon_minutes,eligible_count,eligible_percent,mae_mph,rmse_mph
+Observed-Speed Evaluation Strata,low_below_20,finite_nonzero_targets,persistence,Persistence,15,41992,3.37274304440018,6.734391773792137,11.934107690867007
+Observed-Speed Evaluation Strata,low_below_20,finite_nonzero_targets,historical_average,Historical Average,15,41992,3.37274304440018,16.42791685470782,21.48451950121559
+Observed-Speed Evaluation Strata,low_below_20,finite_nonzero_targets,xgboost,XGBoost,15,41992,3.37274304440018,8.471300171754867,13.140857069754043
+Observed-Speed Evaluation Strata,low_below_20,finite_nonzero_targets,gru,GRU-128,15,41992,3.37274304440018,8.815534155497001,14.511697960872304
+Observed-Speed Evaluation Strata,low_below_20,finite_nonzero_targets,dcrnn,DCGRU-64,15,41992,3.37274304440018,8.631749255958702,14.145493626741477
+Observed-Speed Evaluation Strata,medium_20_to_below_40,finite_nonzero_targets,persistence,Persistence,15,111730,8.97400886718499,7.672590126566454,11.387969893106112
+Observed-Speed Evaluation Strata,medium_20_to_below_40,finite_nonzero_targets,historical_average,Historical Average,15,111730,8.97400886718499,9.460729734378429,12.858481810583019
+Observed-Speed Evaluation Strata,medium_20_to_below_40,finite_nonzero_targets,xgboost,XGBoost,15,111730,8.97400886718499,6.902192733674223,10.171992638133592
+Observed-Speed Evaluation Strata,medium_20_to_below_40,finite_nonzero_targets,gru,GRU-128,15,111730,8.97400886718499,7.775569485928547,11.650402160641034
+Observed-Speed Evaluation Strata,medium_20_to_below_40,finite_nonzero_targets,dcrnn,DCGRU-64,15,111730,8.97400886718499,7.525774999380737,11.286434193270004
+Observed-Speed Evaluation Strata,high_40_and_above,finite_nonzero_targets,persistence,Persistence,15,1091318,87.65324808841483,3.5387936010940257,8.21612814418033
+Observed-Speed Evaluation Strata,high_40_and_above,finite_nonzero_targets,historical_average,Historical Average,15,1091318,87.65324808841483,6.511195404975168,8.69343383936545
+Observed-Speed Evaluation Strata,high_40_and_above,finite_nonzero_targets,xgboost,XGBoost,15,1091318,87.65324808841483,2.3949627226416643,4.106010638403074
+Observed-Speed Evaluation Strata,high_40_and_above,finite_nonzero_targets,gru,GRU-128,15,1091318,87.65324808841483,2.243734009946495,4.072205417487685
+Observed-Speed Evaluation Strata,high_40_and_above,finite_nonzero_targets,dcrnn,DCGRU-64,15,1091318,87.65324808841483,2.2912526544753096,4.0965521328062575
+Observed-Speed Evaluation Strata,low_below_20,finite_nonzero_targets,persistence,Persistence,30,41992,3.3727918060885673,9.948833829270578,16.68399739130124
+Observed-Speed Evaluation Strata,low_below_20,finite_nonzero_targets,historical_average,Historical Average,30,41992,3.3727918060885673,16.42791685470782,21.48451950121559
+Observed-Speed Evaluation Strata,low_below_20,finite_nonzero_targets,xgboost,XGBoost,30,41992,3.3727918060885673,12.043979079648995,17.38821203992869
+Observed-Speed Evaluation Strata,low_below_20,finite_nonzero_targets,gru,GRU-128,30,41992,3.3727918060885673,11.419719732984744,18.26934961667543
+Observed-Speed Evaluation Strata,low_below_20,finite_nonzero_targets,dcrnn,DCGRU-64,30,41992,3.3727918060885673,10.334667391476634,16.649446647980945
+Observed-Speed Evaluation Strata,medium_20_to_below_40,finite_nonzero_targets,persistence,Persistence,30,111724,8.973656690403864,9.719394011915986,14.111091649015027
+Observed-Speed Evaluation Strata,medium_20_to_below_40,finite_nonzero_targets,historical_average,Historical Average,30,111724,8.973656690403864,9.461343167586511,12.858984341802378
+Observed-Speed Evaluation Strata,medium_20_to_below_40,finite_nonzero_targets,xgboost,XGBoost,30,111724,8.973656690403864,8.454382543361387,12.065347520345435
+Observed-Speed Evaluation Strata,medium_20_to_below_40,finite_nonzero_targets,gru,GRU-128,30,111724,8.973656690403864,9.176650578239904,13.645443082338945
+Observed-Speed Evaluation Strata,medium_20_to_below_40,finite_nonzero_targets,dcrnn,DCGRU-64,30,111724,8.973656690403864,8.410253175246943,12.538994389051444
+Observed-Speed Evaluation Strata,high_40_and_above,finite_nonzero_targets,persistence,Persistence,30,1091306,87.65355150350757,4.4350693830828405,10.505422325513663
+Observed-Speed Evaluation Strata,high_40_and_above,finite_nonzero_targets,historical_average,Historical Average,30,1091306,87.65355150350757,6.511184209600872,8.693399481317302
+Observed-Speed Evaluation Strata,high_40_and_above,finite_nonzero_targets,xgboost,XGBoost,30,1091306,87.65355150350757,2.690835751169662,4.63669481966421
+Observed-Speed Evaluation Strata,high_40_and_above,finite_nonzero_targets,gru,GRU-128,30,1091306,87.65355150350757,2.4894240483699015,4.774328212163612
+Observed-Speed Evaluation Strata,high_40_and_above,finite_nonzero_targets,dcrnn,DCGRU-64,30,1091306,87.65355150350757,2.4636361637639976,4.602678068895911
+Observed-Speed Evaluation Strata,low_below_20,finite_nonzero_targets,persistence,Persistence,60,41992,3.3728893336953187,15.416796283192264,23.117193205797815
+Observed-Speed Evaluation Strata,low_below_20,finite_nonzero_targets,historical_average,Historical Average,60,41992,3.3728893336953187,16.42791685470782,21.48451950121559
+Observed-Speed Evaluation Strata,low_below_20,finite_nonzero_targets,xgboost,XGBoost,60,41992,3.3728893336953187,16.220047380214506,21.361277364831707
+Observed-Speed Evaluation Strata,low_below_20,finite_nonzero_targets,gru,GRU-128,60,41992,3.3728893336953187,16.14729502937323,23.752760361494865
+Observed-Speed Evaluation Strata,low_below_20,finite_nonzero_targets,dcrnn,DCGRU-64,60,41992,3.3728893336953187,13.960200427423343,21.101634209954895
+Observed-Speed Evaluation Strata,medium_20_to_below_40,finite_nonzero_targets,persistence,Persistence,60,111716,8.973273595044443,12.841059550379164,17.65796030650382
+Observed-Speed Evaluation Strata,medium_20_to_below_40,finite_nonzero_targets,historical_average,Historical Average,60,111716,8.973273595044443,9.46213708776133,12.859555146073655
+Observed-Speed Evaluation Strata,medium_20_to_below_40,finite_nonzero_targets,xgboost,XGBoost,60,111716,8.973273595044443,10.070071118649915,13.749782129741146
+Observed-Speed Evaluation Strata,medium_20_to_below_40,finite_nonzero_targets,gru,GRU-128,60,111716,8.973273595044443,11.717374651752174,16.70870102434871
+Observed-Speed Evaluation Strata,medium_20_to_below_40,finite_nonzero_targets,dcrnn,DCGRU-64,60,111716,8.973273595044443,10.616422224610952,15.260377144693335
+Observed-Speed Evaluation Strata,high_40_and_above,finite_nonzero_targets,persistence,Persistence,60,1091278,87.65383707126024,5.847745154312591,13.341616660865128
+Observed-Speed Evaluation Strata,high_40_and_above,finite_nonzero_targets,historical_average,Historical Average,60,1091278,87.65383707126024,6.511578530611004,8.69360439537053
+Observed-Speed Evaluation Strata,high_40_and_above,finite_nonzero_targets,xgboost,XGBoost,60,1091278,87.65383707126024,3.0071862499120843,5.202786062361121
+Observed-Speed Evaluation Strata,high_40_and_above,finite_nonzero_targets,gru,GRU-128,60,1091278,87.65383707126024,2.8950015163258924,5.73653452542191
+Observed-Speed Evaluation Strata,high_40_and_above,finite_nonzero_targets,dcrnn,DCGRU-64,60,1091278,87.65383707126024,2.8961645380693732,5.717429045330532
+Observed-Speed Evaluation Strata,low_below_20,all_finite_targets_including_zeros,persistence,Persistence,15,213660,15.081442329682616,4.809313729423248,15.530229542133165
+Observed-Speed Evaluation Strata,low_below_20,all_finite_targets_including_zeros,historical_average,Historical Average,15,213660,15.081442329682616,47.6805818051702,51.362696880697875
+Observed-Speed Evaluation Strata,low_below_20,all_finite_targets_including_zeros,xgboost,XGBoost,15,213660,15.081442329682616,47.21053946486588,51.97995277862486
+Observed-Speed Evaluation Strata,low_below_20,all_finite_targets_including_zeros,gru,GRU-128,15,213660,15.081442329682616,48.73354745428651,53.555549559846405
+Observed-Speed Evaluation Strata,low_below_20,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,213660,15.081442329682616,49.88479265356299,54.73601275295959
+Observed-Speed Evaluation Strata,medium_20_to_below_40,all_finite_targets_including_zeros,persistence,Persistence,15,111730,7.886593426450617,7.672590126566454,11.387969893106112
+Observed-Speed Evaluation Strata,medium_20_to_below_40,all_finite_targets_including_zeros,historical_average,Historical Average,15,111730,7.886593426450617,9.460729734378429,12.858481810583019
+Observed-Speed Evaluation Strata,medium_20_to_below_40,all_finite_targets_including_zeros,xgboost,XGBoost,15,111730,7.886593426450617,6.902192733674223,10.171992638133592
+Observed-Speed Evaluation Strata,medium_20_to_below_40,all_finite_targets_including_zeros,gru,GRU-128,15,111730,7.886593426450617,7.775569485928547,11.650402160641034
+Observed-Speed Evaluation Strata,medium_20_to_below_40,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,111730,7.886593426450617,7.525774999380737,11.286434193270004
+Observed-Speed Evaluation Strata,high_40_and_above,all_finite_targets_including_zeros,persistence,Persistence,15,1091318,77.03196424386677,3.5387936010940257,8.21612814418033
+Observed-Speed Evaluation Strata,high_40_and_above,all_finite_targets_including_zeros,historical_average,Historical Average,15,1091318,77.03196424386677,6.511195404975168,8.69343383936545
+Observed-Speed Evaluation Strata,high_40_and_above,all_finite_targets_including_zeros,xgboost,XGBoost,15,1091318,77.03196424386677,2.3949627226416643,4.106010638403074
+Observed-Speed Evaluation Strata,high_40_and_above,all_finite_targets_including_zeros,gru,GRU-128,15,1091318,77.03196424386677,2.243734009946495,4.072205417487685
+Observed-Speed Evaluation Strata,high_40_and_above,all_finite_targets_including_zeros,dcrnn,DCGRU-64,15,1091318,77.03196424386677,2.2912526544753096,4.0965521328062575
+Observed-Speed Evaluation Strata,low_below_20,all_finite_targets_including_zeros,persistence,Persistence,30,213678,15.082712880847712,7.928728927089078,20.490228497621068
+Observed-Speed Evaluation Strata,low_below_20,all_finite_targets_including_zeros,historical_average,Historical Average,30,213678,15.082712880847712,47.68139862613334,51.36343581147161
+Observed-Speed Evaluation Strata,low_below_20,all_finite_targets_including_zeros,xgboost,XGBoost,30,213678,15.082712880847712,48.13062738655905,52.56802970690547
+Observed-Speed Evaluation Strata,low_below_20,all_finite_targets_including_zeros,gru,GRU-128,30,213678,15.082712880847712,49.207575996079825,53.760808764680725
+Observed-Speed Evaluation Strata,low_below_20,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,213678,15.082712880847712,50.16605078760292,54.83451849179164
+Observed-Speed Evaluation Strata,medium_20_to_below_40,all_finite_targets_including_zeros,persistence,Persistence,30,111724,7.886169909395584,9.719394011915986,14.111091649015027
+Observed-Speed Evaluation Strata,medium_20_to_below_40,all_finite_targets_including_zeros,historical_average,Historical Average,30,111724,7.886169909395584,9.461343167586511,12.858984341802378
+Observed-Speed Evaluation Strata,medium_20_to_below_40,all_finite_targets_including_zeros,xgboost,XGBoost,30,111724,7.886169909395584,8.454382543361387,12.065347520345435
+Observed-Speed Evaluation Strata,medium_20_to_below_40,all_finite_targets_including_zeros,gru,GRU-128,30,111724,7.886169909395584,9.176650578239904,13.645443082338945
+Observed-Speed Evaluation Strata,medium_20_to_below_40,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,111724,7.886169909395584,8.410253175246943,12.538994389051444
+Observed-Speed Evaluation Strata,high_40_and_above,all_finite_targets_including_zeros,persistence,Persistence,30,1091306,77.0311172097567,4.4350693830828405,10.505422325513663
+Observed-Speed Evaluation Strata,high_40_and_above,all_finite_targets_including_zeros,historical_average,Historical Average,30,1091306,77.0311172097567,6.511184209600872,8.693399481317302
+Observed-Speed Evaluation Strata,high_40_and_above,all_finite_targets_including_zeros,xgboost,XGBoost,30,1091306,77.0311172097567,2.690835751169662,4.63669481966421
+Observed-Speed Evaluation Strata,high_40_and_above,all_finite_targets_including_zeros,gru,GRU-128,30,1091306,77.0311172097567,2.4894240483699015,4.774328212163612
+Observed-Speed Evaluation Strata,high_40_and_above,all_finite_targets_including_zeros,dcrnn,DCGRU-64,30,1091306,77.0311172097567,2.4636361637639976,4.602678068895911
+Observed-Speed Evaluation Strata,low_below_20,all_finite_targets_including_zeros,persistence,Persistence,60,213714,15.085253983177903,12.650095096309546,26.397331909503784
+Observed-Speed Evaluation Strata,low_below_20,all_finite_targets_including_zeros,historical_average,Historical Average,60,213714,15.085253983177903,47.682952212800046,51.36479772721593
+Observed-Speed Evaluation Strata,low_below_20,all_finite_targets_including_zeros,xgboost,XGBoost,60,213714,15.085253983177903,49.03927473270482,52.9887935406051
+Observed-Speed Evaluation Strata,low_below_20,all_finite_targets_including_zeros,gru,GRU-128,60,213714,15.085253983177903,50.127340760266584,54.195307022917554
+Observed-Speed Evaluation Strata,low_below_20,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,213714,15.085253983177903,50.83203551142322,55.11026570299948
+Observed-Speed Evaluation Strata,medium_20_to_below_40,all_finite_targets_including_zeros,persistence,Persistence,60,111716,7.885605219988876,12.841059550379164,17.65796030650382
+Observed-Speed Evaluation Strata,medium_20_to_below_40,all_finite_targets_including_zeros,historical_average,Historical Average,60,111716,7.885605219988876,9.46213708776133,12.859555146073655
+Observed-Speed Evaluation Strata,medium_20_to_below_40,all_finite_targets_including_zeros,xgboost,XGBoost,60,111716,7.885605219988876,10.070071118649915,13.749782129741146
+Observed-Speed Evaluation Strata,medium_20_to_below_40,all_finite_targets_including_zeros,gru,GRU-128,60,111716,7.885605219988876,11.717374651752174,16.70870102434871
+Observed-Speed Evaluation Strata,medium_20_to_below_40,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,111716,7.885605219988876,10.616422224610952,15.260377144693335
+Observed-Speed Evaluation Strata,high_40_and_above,all_finite_targets_including_zeros,persistence,Persistence,60,1091278,77.02914079683322,5.847745154312591,13.341616660865128
+Observed-Speed Evaluation Strata,high_40_and_above,all_finite_targets_including_zeros,historical_average,Historical Average,60,1091278,77.02914079683322,6.511578530611004,8.69360439537053
+Observed-Speed Evaluation Strata,high_40_and_above,all_finite_targets_including_zeros,xgboost,XGBoost,60,1091278,77.02914079683322,3.0071862499120843,5.202786062361121
+Observed-Speed Evaluation Strata,high_40_and_above,all_finite_targets_including_zeros,gru,GRU-128,60,1091278,77.02914079683322,2.8950015163258924,5.73653452542191
+Observed-Speed Evaluation Strata,high_40_and_above,all_finite_targets_including_zeros,dcrnn,DCGRU-64,60,1091278,77.02914079683322,2.8961645380693732,5.717429045330532
